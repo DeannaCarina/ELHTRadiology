@@ -310,12 +310,15 @@ The fonts I used for the text body of the website was 'Lato' as this font is eas
 The main colour theme of the website is blues/greys and white. This keeps the website feeling modern and clean and also keeps it feeling fairly medical.
 
 #### Icons
-The only icons used throughout the website are the NHS icon and icons related to ELHT, these were taken from the ELHT Website.<br><br>
+The main icons used throughout the website are the NHS icon and icons related to ELHT, these were taken from the ELHT Website.<br><br>
 <img src="readmeassets/logo1.png" height="70px"><br><br>  
 <img src="readmeassets/logo2.png" height="100px"><br><br>
 <img src="readmeassets/logo3.png" height="100px"><br><br>
 <img src="readmeassets/logo4.png" height="100px"><br><br>
 <img src="readmeassets/logo5.png" height="100px">
+
+The favicon was handmade by myself using the ELHT theme colours of blue, green purple and pink.<br><br>
+<img src="readmeassets/fav.png" height="200px">
 
 
 #### Images & Videos
