@@ -1,7 +1,110 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<p>Testy test!</p>
+<!-- -----HERO IMAGE----- -->
+<div class="hero-container">
+    <div class="hero-text">
+        <p>Welcome to</p>
+        <h1>ELHT Radiology</h1>
+        <p>Booking Service</p>
+    </div>
+</div>
+<!-- -----END OF HERO IMAGE----- -->
 
+<!-- -----BOOK APPOINTMENT LINKS SECTION----- -->
+<section class="booking-section-container">
+    <h1 class="booking-section-header" aria-label="booking section">Booking Section</h1>
+    <img src="{% static 'images/radiographer.png' %}" class="booking-image" alt="Radiographer looking at x-ray on film">
+    <div class="booking-link-container container-fluid">
+        <div class="row">
+            <div class="col please-choose">
+                Please choose from the following:
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book an</p>
+                    <h2>X-RAY</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book a</p>
+                    <h2>CT Scan</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book an</p>
+                    <h2>MRI Scan</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book an</p>
+                    <h2>Ultrasound</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book a</p>
+                    <h2>Mammogram</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 booking-link">
+                <a href="#">
+                    <p>Book</p>
+                    <h2>Something else</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col please-note">
+                Please note: Weekend appointments available by direct arrangement a minimum of 3 days in advance.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----END OF BOOK APPOINTMENT LINKS SECTION----- -->
+
+<!-- -----IMAGE SECTION----- -->
+<section class="image-container">
+    <h1 class="booking-section-header" aria-label="Image section">Image Section</h1>
+</section>
+<!-- -----END OF IMAGE SECTION----- -->
+
+<!-- -----OTHER LINKS SECTION----- -->
+<section class="other-links-container">
+    <h1 class="booking-section-header" aria-label="other links section">Other Links</h1>
+    <div class="otherlinks-text-container">
+        <h2>Looking for information about your visit to radiology?</h2>
+        <div>
+            It's understandable to be aprehensive about any visit to hospital. For information regarding our radiology department, radiation safety and how to get your results, you can visit out 'Patient information board':
+            <button>HERE</button>
+        </div>
+        <div>
+            Or for information on the different types of examination, you can visit our examination board:
+            <button>HERE</button>
+        </div>
+    </div>
+</section>
+<!-- -----END OF OTHER LINKS SECTION----- -->
+
+<!-- -----ADVERT SECTION----- -->
+<section class="advert-container">
+    <h1 class="booking-section-header" aria-label="advert section">Come Partner with us</h1>
+    <div class="advert-text-container">
+        <h2>State of the art digital equipment at the majority of our sites across East Lancashire</h2>
+        <div>
+            Are you a company looking to showcase your healthcare/radiology products? The radiology department at ELHT has partnered with companies such as Siemens, Fuji, Samsung and Agfa, maybe you're next? Please contact our contracts manager for further information:
+            <button>HERE</button>
+        </div>
+    </div>
+</section>
+<!-- -----END OF ADVERT SECTION----- -->
 {% endblock content %}
