@@ -17,21 +17,117 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 </head>
 
 <body>
     <header>
-
+        <!-- -----NAVBAR----- -->
+        <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="logo">
+                        <span class="ELHT-radiology">ELHT Radiology</span>
+                        <span class="booking-service">Booking Service</span>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item separater">
+                            <a class="nav-link disabled" href="#">|</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Patient Information
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Requests</a></li>
+                                <li><a class="dropdown-item" href="#">Locations</a></li>
+                                <li><a class="dropdown-item" href="#">Radiation</a></li>
+                                <li><a class="dropdown-item" href="#">Results</a></li>
+                                <li><a class="dropdown-item" href="#">Department</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item separater">
+                            <a class="nav-link disabled" href="#">|</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Examinations
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">X-Rays</a></li>
+                                <li><a class="dropdown-item" href="#">CT Scans</a></li>
+                                <li><a class="dropdown-item" href="#">MRI Scans</a></li>
+                                <li><a class="dropdown-item" href="#">Ultrasound</a></li>
+                                <li><a class="dropdown-item" href="#">Mammograms</a></li>
+                                <li><a class="dropdown-item" href="#">Nuclear Medicine</a></li>
+                                <li><a class="dropdown-item" href="#">Fluoroscopy</a></li>
+                                <li><a class="dropdown-item" href="#">Angiography</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="nhs-logo-container">
+                <span class="NHS-reverse">NHS</span>
+                <span class="NHS-words">East Lancashire Hospitals</span>
+                <span class="NHS-trust">NHS Trust</span>
+            </span>
+        </nav>
     </header>
+        <!-- -----END OF NAVBAR----- -->    
 
-{% block content %}
-<!-- Content Goes here -->
-{% endblock content %}
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
 
+    <!-- -----FOOTER----- -->
     <footer>
-
-    </footer>
+        <div class="upper-footer">
+            <span class="slogan-container">
+                <span class="safe-text spe-text">Safe</span>
+                <span class="personal-text spe-text">Personal</span>
+                <span class="effective-text spe-text">Effective</span>
+            </span>
+        </div>
+        <div class="lower-footer">
+            <span class="nhs-bottom-container">
+                <span class="NHS-reverse-bottom">NHS</span>
+            </span>
+            <span class="lower-nav-container">
+                <nav aria-label="lower navigation">
+                    <ul class="nav lower-nav">
+                        <li class="nav-item bottom-nav-item">
+                            <a class="nav-link" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item bottom-nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item bottom-nav-item">
+                            <a class="nav-link" href="#">Admin Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </span>
+            <span class="social-container">
+                <a href="#" aria-label="facebook link"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" aria-label="twitter link"><i class="fab fa-twitter-square"></i></a>
+            </span>
+        </div>
+    </footer>                 
+    <!-- -----END OF FOOTER----- --> 
+    
 </body>
 
 </html>
