@@ -1,1 +1,1 @@
-web: gunicorn ELHTRadiology.wsgi
+web: gunicorn ELHT_radiology.wsgi
