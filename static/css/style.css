@@ -412,19 +412,22 @@ nav {
     text-align: center;
 }
 
-.otherlinks-text-container button {
+.otherlinks-text-container a {
     display: block;
     margin: auto;
     margin-top: 15px;
     width: 200px;
     height: 50px;
+    line-height: 45px;
     border-radius: 10px;
     font-weight: 600;
     border: 2px solid rgb(140, 168, 179);
     background-color: rgb(181, 200, 207);
+    text-decoration: none;
+    color: black;
 }
 
-.otherlinks-text-container button:hover {
+.otherlinks-text-container a:hover {
     border: 2px solid rgb(83, 106, 141);
     background-color: rgb(226, 226, 226);
 }
@@ -487,10 +490,13 @@ nav {
     font-weight: 700;
 }
 
-.advert-text-container button {
+.advert-text-container a {
     display: block;
     margin: auto;
     margin-top: 15px;
+    text-decoration: none;
+    color: black;
+    line-height: 45px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -499,7 +505,7 @@ nav {
     background-color: rgb(255, 255, 255);
 }
 
-.advert-text-container button:hover {
+.advert-text-container a:hover {
     border: 2px solid rgb(70, 89, 117);
     background-color: rgb(219, 219, 219);
 }

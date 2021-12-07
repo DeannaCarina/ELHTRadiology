@@ -21,7 +21,7 @@
         <!-- -----NAVBAR----- -->
         <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <span class="logo">
                         <span class="ELHT-radiology">ELHT Radiology</span>
                         <span class="booking-service">Booking Service</span>
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item separater">
                             <a class="nav-link disabled" href="#">|</a>
@@ -46,11 +46,11 @@
                                 Patient Information
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Requests</a></li>
-                                <li><a class="dropdown-item" href="#">Locations</a></li>
-                                <li><a class="dropdown-item" href="#">Radiation</a></li>
-                                <li><a class="dropdown-item" href="#">Results</a></li>
-                                <li><a class="dropdown-item" href="#">Department</a></li>
+                                <li><a class="dropdown-item" href="{% url 'requests' %}">Requests</a></li>
+                                <li><a class="dropdown-item" href="{% url 'locations' %}">Locations</a></li>
+                                <li><a class="dropdown-item" href="{% url 'radiation' %}">Radiation</a></li>
+                                <li><a class="dropdown-item" href="{% url 'results' %}">Results</a></li>
+                                <li><a class="dropdown-item" href="{% url 'department' %}">Department</a></li>
                             </ul>
                         </li>
                         <li class="nav-item separater">
@@ -62,14 +62,14 @@
                                 Examinations
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">X-Rays</a></li>
-                                <li><a class="dropdown-item" href="#">CT Scans</a></li>
-                                <li><a class="dropdown-item" href="#">MRI Scans</a></li>
-                                <li><a class="dropdown-item" href="#">Ultrasound</a></li>
-                                <li><a class="dropdown-item" href="#">Mammograms</a></li>
-                                <li><a class="dropdown-item" href="#">Nuclear Medicine</a></li>
-                                <li><a class="dropdown-item" href="#">Fluoroscopy</a></li>
-                                <li><a class="dropdown-item" href="#">Angiography</a></li>
+                                <li><a class="dropdown-item" href="{% url 'xray' %}">X-Rays</a></li>
+                                <li><a class="dropdown-item" href="{% url 'computed_tomography' %}">CT Scans</a></li>
+                                <li><a class="dropdown-item" href="{% url 'magnetic_resonance' %}">MRI Scans</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ultrasound' %}">Ultrasound</a></li>
+                                <li><a class="dropdown-item" href="{% url 'mammography' %}">Mammograms</a></li>
+                                <li><a class="dropdown-item" href="{% url 'nuclear_medicine' %}">Nuclear Medicine</a></li>
+                                <li><a class="dropdown-item" href="{% url 'fluoroscopy' %}">Fluoroscopy</a></li>
+                                <li><a class="dropdown-item" href="{% url 'angiography' %}">Angiography</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -105,20 +105,20 @@
                 <nav aria-label="lower navigation">
                     <ul class="nav lower-nav">
                         <li class="nav-item bottom-nav-item">
-                            <a class="nav-link" href="#">Privacy Policy</a>
+                            <a class="nav-link" href="{% url 'privacy' %}">Privacy Policy</a>
                         </li>
                         <li class="nav-item bottom-nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                         <li class="nav-item bottom-nav-item">
-                            <a class="nav-link" href="#">Admin Login</a>
+                            <a class="nav-link" href="{% url 'admin' %}">Admin Login</a>
                         </li>
                     </ul>
                 </nav>
             </span>
             <span class="social-container">
-                <a href="#" aria-label="facebook link"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" aria-label="twitter link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="facebook link"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.twitter.com/" target="_blank" aria-label="twitter link"><i class="fab fa-twitter-square"></i></a>
             </span>
         </div>
     </footer>                 
