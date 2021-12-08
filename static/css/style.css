@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* -----HEADER----- */
+
 nav {
     background-color: #0069B4;
     display: inline-flex;
@@ -541,5 +542,292 @@ nav {
 
 
 /* -----END OF ADVERT SECTION----- */
+
+/* -----GENERAL INFORMATION PAGES----- */
+
+.information-hero {
+    min-width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.information-title {
+    background-color: rgba(255, 255, 255, 0.685);
+    font-size: xx-large;
+    margin: auto auto;
+    max-width: 40%;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 8px #3d3d3d;
+}
+
+/* -----GENERAL INFORMATION BOARD----- */
+
+.info-board-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/info-board-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/info-board-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/info-board-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF GENERAL INFORMATION BOARD----- */
+
+/* -----DEPARTMENT INFORMATION----- */
+
+.dept-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/dept-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/dept-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/dept-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF DEPARTMENT INFORMATION----- */
+
+/* -----LOCATION INFORMATION----- */
+
+.locations-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/locations-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/locations-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/locations-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF LOCATION INFORMATION----- */
+
+/* -----RADIATION INFORMATION----- */
+
+.radiation-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/radiation-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/radiation-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/radiation-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF RADIATION INFORMATION----- */
+
+/* -----REQUEST INFORMATION----- */
+
+.request-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/requests-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/requests-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/requests-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF REQUEST INFORMATION----- */
+
+/* -----RESULTS INFORMATION----- */
+
+.results-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/results-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/results-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/results-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF RESULTS INFORMATION----- */
+
+/* -----END OF GENERAL INFORMATION PAGES----- */
+
+
+/* -----EXAMINATION INFORMATION PAGES----- */
+
+.examination-hero {
+    min-width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.examination-title {
+    background-color: rgba(255, 255, 255, 0.685);
+    font-size: xx-large;
+    margin: auto auto;
+    max-width: 40%;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 8px #3d3d3d;
+}
+
+@media screen and (max-width: 640px) {
+    .examination-title {
+        min-width: 90%;
+        font-size: x-large;
+    }
+}
+
+/* -----EXAMINATION BOARD----- */
+
+.exam-board-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/exam-board-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/exam-board-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/exam-board-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF EXAMINATION BOARD----- */
+
+/* -----ANGIOGRAPHY----- */
+
+.angio-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/angio-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/angio-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/angio-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF ANGIOGRAPHY----- */
+
+/* -----COMPUTED TOMOGRAPHY----- */
+
+.ct-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/ct-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/ct-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/ct-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF COMPUTED TOMOGRAPHY----- */
+
+/* -----FLUOROSCOPY----- */
+
+.fluoro-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/fluoro-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/fluoro-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/fluoro-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF FLUOROSCOPY----- */
+
+/* -----MAGNETIC RESONANCE----- */
+
+.mri-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/mri-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/mri-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/mri-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF MAGNETIC RESONANCE----- */
+
+/* -----MAMMOGRAPHY----- */
+
+.mammo-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/mammo-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/mammo-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/mammo-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF MAMMOGRAPHY----- */
+
+/* -----NUCLEAR MEDICINE----- */
+
+.nm-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/nm-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/nm-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/nm-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF NUCLEAR MEDICINE----- */
+
+/* -----ULTRASOUND----- */
+
+.us-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/us-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/us-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/us-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF ULTRASOUND----- */
+
+/* -----XRAY----- */
+
+.xray-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/xray-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/xray-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/xray-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----END OF XRAY----- */
+
+/* -----END OF EXAMINATION INFORMATION PAGES----- */
 
 /* ---------------END OF INDEX.HTML--------------- */
