@@ -37,9 +37,7 @@ Portfolio Project Four: Full Stack Frameworks - Code Institute - Deadline 26th J
 This is my submission for Code Institute's (5P) Portfolio Project Four. It will be a progressive web application intended to make the work-flow and patient management easier within the radiology departments throughout East Lancashire Hospitals Trust. It will allow patients with radiology request froms (authorised by referring physicians) to book appointments within their preferred radiology location. The project will be deployed via Heroku to enable back-end functionality such as storing patient's confidential data within the PostgreSQL database and allowing the manipulation of this data. Members of staff will be able to log in as site administrators and manage bookings made by patients or add bookings themselves, this will be managed through Django's user authentication application. In the nearly 7 years I have worked at ELHT, we have never had a patient-lead booking system. As we are open-access at the majority of our hospital sites this means we cannot manage or predict our workflow meaning that at times during the work day we can be extremely busy, reducing the quality of patient care.
 
 ### Demo
-A live of the website can be found <a href="#"><strong>HERE</strong></a> [INSERT LINK TO DEPLOYED SITE HERE]
-[Insert responsive gif/image here]
-
+A live of the website can be found <a href="https://elht-rbs.herokuapp.com/"><strong>HERE</strong></a>
 
 ## UX
 
@@ -428,6 +426,43 @@ If you want to make changes to the repo without affecting it, you can make a cop
 ### Code
 ### Content
 ### Images
+
+<ul>
+    <li>index hero image: https://www.istockphoto.com/photo/medical-technology-concept-remote-medicine-electronic-medical-record-gm1300745916-392975316</li>
+    <li>radiographer image in booking section of index page: https://www.pexels.com/photo/photo-of-doctor-holding-x-ray-result-4225880/</li>
+    <li>collaboration section background of index page: https://www.istockphoto.com/photo/modern-operating-room-in-a-hospital-generated-digitally-gm1281627829-379609702</li>
+    <li>background of extra links section in index page: https://www.istockphoto.com/photo/portrait-of-a-beautiful-medical-specialist-working-as-an-orthopedist-gm1312204391-401081571</li>
+    <li>extra: https://www.istockphoto.com/photo/doctor-sees-virtual-images-of-the-patient-gm928162118-254586367</li>
+    <li>angio hero: https://www.istockphoto.com/photo/x-ray-monitoring-of-surgical-procedure-in-the-hospital-cathlab-gm1139755594-304750515?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_noresults&referrer_url=http%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fangiography%2F&utm_term=angiography</li>
+    <li>xray hero: https://www.istockphoto.com/photo/ct-scan-device-in-modern-hospital-gm1255307625-367203639</li>
+    <li>mammo hero: https://www.istockphoto.com/photo/operating-room-with-mammography-x-ray-system-machine-in-hospital-laboratory-cancer-gm1132664249-300370098</li>
+    <li>nuclear medicine hero: https://www.istockphoto.com/photo/gamma-camera-gm186831409-17106701</li>
+    <li>ct hero: https://www.istockphoto.com/photo/medical-ct-or-mri-or-pet-scan-standing-in-the-modern-hospital-laboratory-gm1074166156-287587561</li>
+    <li>mri hero: https://www.istockphoto.com/photo/mri-scan-device-gm906612074-249859283</li>
+    <li>ultrasound hero: https://www.istockphoto.com/photo/doctor-prepare-an-ultrasound-machine-for-the-diagnosis-of-a-patient-doctor-puts-gm1184471397-333441192</li>
+    <li>fluoroscopy hero: https://www.istockphoto.com/photo/barium-enema-or-be-is-image-of-large-bowel-after-injection-of-barium-contrast-fill-gm1326802025-411372792</li>
+    <li>dexa hero: https://www.istockphoto.com/photo/medical-scan-gm185093593-19277599</li>
+    <li>opg hero: https://www.istockphoto.com/photo/young-woman-making-panoramic-shot-of-the-jaw-holding-her-face-at-the-x-ray-machine-gm1334632201-416679313</li>
+    <li>exam-board-hero: https://www.istockphoto.com/photo/healthcare-and-medicine-covid-19-doctor-holding-and-diagnose-virtual-human-lungs-gm1220059276-357092137</li>
+    <li>info-board-hero: https://www.istockphoto.com/photo/medical-technology-concept-gm1127069581-296928242</li>
+    <li>department-hero: https://www.istockphoto.com/photo/waiting-area-in-hospital-gm1053085842-281347392</li>
+    <li>locatons-hero: https://www.istockphoto.com/photo/a-white-3d-rendered-image-of-the-united-kingom-gm93293761-9241291</li>
+    <li>radiation-hero: https://www.istockphoto.com/photo/hospital-ai-gm1057025412-282493246</li>
+    <li>request-hero: https://www.istockphoto.com/photo/cropped-close-up-shot-of-doctor-giving-prescriptions-medications-to-female-patient-gm1352061644-427596207</li>
+    <li>results-hero: https://www.istockphoto.com/photo/medical-diagnosis-in-the-digital-age-gm1127376129-297113241</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
 ### Video
 ### Acknowledgements
 
