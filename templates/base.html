@@ -13,6 +13,9 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwYkzHU45wiq0jlVNe6YVlMQKNi3ZOGhs&callback=initMap"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
 </head>
 
@@ -90,13 +93,6 @@
 
     <!-- -----FOOTER----- -->
     <footer>
-        <div class="upper-footer">
-            <span class="slogan-container">
-                <span class="safe-text spe-text">Safe</span>
-                <span class="personal-text spe-text">Personal</span>
-                <span class="effective-text spe-text">Effective</span>
-            </span>
-        </div>
         <div class="lower-footer">
             <span class="nhs-bottom-container">
                 <span class="NHS-reverse-bottom">NHS</span>
