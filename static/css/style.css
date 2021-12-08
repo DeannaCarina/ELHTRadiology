@@ -569,6 +569,19 @@ nav {
     box-shadow: 10px 10px 8px #3d3d3d;
 }
 
+@media screen and (max-width: 640px) {
+    .information-title {
+        min-width: 90%;
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .information-hero {
+        height: 500px;
+    }
+}
+
 /* -----GENERAL INFORMATION BOARD----- */
 
 .info-board-hero {
@@ -580,6 +593,7 @@ nav {
         url("../images/info-board-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF GENERAL INFORMATION BOARD----- */
@@ -595,6 +609,7 @@ nav {
         url("../images/dept-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF DEPARTMENT INFORMATION----- */
@@ -610,6 +625,7 @@ nav {
         url("../images/locations-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF LOCATION INFORMATION----- */
@@ -625,6 +641,7 @@ nav {
         url("../images/radiation-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF RADIATION INFORMATION----- */
@@ -640,6 +657,7 @@ nav {
         url("../images/requests-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF REQUEST INFORMATION----- */
@@ -655,6 +673,7 @@ nav {
         url("../images/results-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF RESULTS INFORMATION----- */
@@ -694,6 +713,12 @@ nav {
     }
 }
 
+@media screen and (max-width: 790px) {
+    .examination-hero {
+        height: 500px;
+    }
+}
+
 /* -----EXAMINATION BOARD----- */
 
 .exam-board-hero {
@@ -705,6 +730,7 @@ nav {
         url("../images/exam-board-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center right;
 }
 
 /* -----END OF EXAMINATION BOARD----- */
@@ -720,6 +746,7 @@ nav {
         url("../images/angio-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF ANGIOGRAPHY----- */
@@ -735,6 +762,7 @@ nav {
         url("../images/ct-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center right;
 }
 
 /* -----END OF COMPUTED TOMOGRAPHY----- */
@@ -750,6 +778,7 @@ nav {
         url("../images/fluoro-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF FLUOROSCOPY----- */
@@ -780,6 +809,7 @@ nav {
         url("../images/mammo-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF MAMMOGRAPHY----- */
@@ -795,6 +825,7 @@ nav {
         url("../images/nm-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 /* -----END OF NUCLEAR MEDICINE----- */
@@ -810,6 +841,7 @@ nav {
         url("../images/us-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center right;
 }
 
 /* -----END OF ULTRASOUND----- */
@@ -825,6 +857,7 @@ nav {
         url("../images/xray-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center right;
 }
 
 /* -----END OF XRAY----- */
