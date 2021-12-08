@@ -37,7 +37,8 @@ Portfolio Project Four: Full Stack Frameworks - Code Institute - Deadline 26th J
 This is my submission for Code Institute's (5P) Portfolio Project Four. It will be a progressive web application intended to make the work-flow and patient management easier within the radiology departments throughout East Lancashire Hospitals Trust. It will allow patients with radiology request froms (authorised by referring physicians) to book appointments within their preferred radiology location. The project will be deployed via Heroku to enable back-end functionality such as storing patient's confidential data within the PostgreSQL database and allowing the manipulation of this data. Members of staff will be able to log in as site administrators and manage bookings made by patients or add bookings themselves, this will be managed through Django's user authentication application. In the nearly 7 years I have worked at ELHT, we have never had a patient-lead booking system. As we are open-access at the majority of our hospital sites this means we cannot manage or predict our workflow meaning that at times during the work day we can be extremely busy, reducing the quality of patient care.
 
 ### Demo
-A live of the website can be found <a href="https://elht-rbs.herokuapp.com/"><strong>HERE</strong></a>
+A live of the website can be found <a href="https://elht-rbs.herokuapp.com/"><strong>HERE</strong></a><br>
+<img src="readmeassets/responsive.png" width="600px">
 
 ## UX
 

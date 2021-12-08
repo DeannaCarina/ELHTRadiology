@@ -38,7 +38,7 @@ else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 
