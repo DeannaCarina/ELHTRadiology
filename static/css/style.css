@@ -727,8 +727,59 @@ footer {
     border-radius: 30px;
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     box-shadow: 10px 10px 8px #3d3d3d;
+}
+
+.book-here {
+    width: 250px;
+    background-color: white;
+    border: 1px solid rgb(190, 227, 241);
+    border-radius: 20px;
+    margin: auto auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.book-here > a {
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 5px 5px 4px #3d3d3d;
+    color: black;
+}
+
+.book-here > a:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.grid {
+    margin: 2rem auto;
+    width: min(90%, 75rem);
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2em;
+}
+
+.grid-div-2, .grid-div-3, .grid-div-4, .grid-div-5 {
+    background-color: rgba(255, 255, 255, 0.788);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px #8b8b8b;
+}
+
+.grid-2 {
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 950px) {
+    .grid {
+        grid-auto-flow: row;
+    }
 }
 
 @media screen and (max-width: 640px) {
