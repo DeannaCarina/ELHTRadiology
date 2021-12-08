@@ -567,7 +567,13 @@ footer {
 .accordion-container {
     max-width: 70%;
     margin: auto auto;
-    margin-bottom: 100px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 445px) {
+    .accordion-container {
+        padding-bottom: 70px;
+    }
 }
 
 @media screen and (max-width: 640px) {
