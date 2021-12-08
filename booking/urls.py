@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, AdminTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView
+from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, AdminTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
@@ -27,4 +27,5 @@ urlpatterns = [
     path('examinations/nuclear_medicine', NmTemplateView.as_view(), name='nuclear_medicine'),
     path('examinations/fluoroscopy', FluoroTemplateView.as_view(), name='fluoroscopy'),
     path('examinations/angiography', AngioTemplateView.as_view(), name='angiography'),
+    path('examinations/dexa', DexaTemplateView.as_view(), name='dexa'),
 ]

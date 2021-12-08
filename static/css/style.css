@@ -938,6 +938,22 @@ footer {
 
 /* -----END OF XRAY----- */
 
+/* -----DEXA----- */
+
+.dexa-hero {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/dexa-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/dexa-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/dexa-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+
+/* -----END OF DEXA----- */
+
 /* -----END OF EXAMINATION INFORMATION PAGES----- */
 
 /* ---------------END OF INDEX.HTML--------------- */

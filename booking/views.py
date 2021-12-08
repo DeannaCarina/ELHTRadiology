@@ -66,3 +66,6 @@ class UsTemplateView(TemplateView):
 
 class FluoroTemplateView(TemplateView):
     template_name = 'examinations/fluoroscopy.html'
+
+class DexaTemplateView(TemplateView):
+    template_name = 'examinations/dexa.html'
