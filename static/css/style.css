@@ -7,6 +7,12 @@ body {
     overflow-x: hidden;
 }
 
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 0.85em;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
@@ -106,6 +112,9 @@ nav {
 @media screen and (max-width: 991px) {
     .nhs-logo-container, .separater {
         display: none;
+    }
+    .nav-link {
+        margin-left: 5px;
     }
 }
 /* -----END OF HEADER----- */
@@ -513,16 +522,20 @@ footer {
     }
 }
 
+@media screen and (max-width: 445px) {
+    .advert-container {
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .advert-text-container h2 {
         font-size: 1.3em;
     }
     .advert-container {
         padding-top: 20px;
-        padding-bottom: 20px;
     }
 }
-
 
 /* -----END OF ADVERT SECTION----- */
 
@@ -562,7 +575,12 @@ footer {
         min-width: 90%;
         font-size: x-large;
     }
+    .accordion-container {
+        max-width: 90%;
+        margin-bottom: 40px;
+    }
 }
+
 
 @media screen and (max-width: 790px) {
     .information-hero {
@@ -621,6 +639,12 @@ footer {
     max-width: 70%;
     margin: auto auto;
     margin-bottom: 100px;
+}
+
+@media screen and (max-width: 640px) {
+    #map {
+        max-width: 90%;
+    }
 }
 
 /* -----END OF LOCATION INFORMATION----- */
