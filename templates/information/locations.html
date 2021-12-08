@@ -1,7 +1,48 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 <div class="information-hero locations-hero"></div>
 <h1 class="information-title">Locations</h1>
+<div class="accordion-container">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Where can I go for my examination?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsam totam ad, omnis, nesciunt illo soluta incidunt ut fugit fugiat perspiciatis praesentium, possimus ea necessitatibus. Magnam at laboriosam deleniti voluptate?
+                    Molestiae sequi consectetur maiores, quasi cupiditate nostrum quibusdam eligendi. Reprehenderit ducimus, omnis dolores animi ipsum, magnam quo aspernatur eum quisquam provident necessitatibus unde accusantium est, dolorum eaque harum corporis. Quas.
+                    Dolorum excepturi modi quas, iusto fugiat, corporis quasi, ducimus iure distinctio magni fuga repellendus. Quos quibusdam provident, necessitatibus, enim officiis natus minus, facilis voluptas quas sunt ipsa vel et excepturi?
+                    Possimus corporis assumenda architecto culpa a id asperiores magni tempore eos, sapiente voluptatem dicta suscipit repudiandae excepturi inventore voluptas amet sequi cupiditate tenetur illum expedita quisquam harum. Dolorum, tempora veniam?
+                    A mollitia fugiat harum excepturi hic repudiandae necessitatibus, vel esse. Nam eos amet id! Tempore eos perferendis culpa molestiae architecto iste aspernatur nobis, saepe voluptates earum deleniti beatae. Cupiditate, debitis.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Are some places better than others?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus labore sed esse! Modi eos fugiat, quis pariatur sapiente maiores nobis, facere nostrum architecto voluptate impedit, sunt omnis repellendus tempore molestias?
+                    Accusamus non aut iste perspiciatis tempora! Veniam praesentium exercitationem recusandae animi nobis officia, ullam commodi at quas accusamus velit blanditiis, iusto aperiam doloremque in ipsum et quo similique? Facilis, adipisci!
+                    Animi quis earum voluptas, optio, eligendi accusantium ad totam possimus, quisquam sed repudiandae. Ad praesentium natus, consectetur recusandae autem voluptates suscipit? Laborum quis consequatur dignissimos a maxime quibusdam est in.
+                    Libero veniam possimus ex est nam tenetur fugit iste, consequuntur unde atque ut ea dolores amet exercitationem omnis voluptates itaque quidem tempore perspiciatis? Ducimus facilis, minima eaque eos vitae facere?
+                    Quibusdam, dicta maxime impedit accusantium saepe nobis eius incidunt odio. Assumenda ea amet dolor harum vitae beatae dicta sunt voluptatem quam. Dolor aliquam accusantium vel dolore delectus, quisquam repellendus corporis!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="map"></div>
+
 {% endblock content %}
