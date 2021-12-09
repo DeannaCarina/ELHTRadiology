@@ -5,11 +5,20 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    margin-top: 90px;
 }
 
 @media screen and (max-width: 640px) {
     body {
         font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        margin-top: 70px;
     }
 }
 
@@ -19,8 +28,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -----HEADER----- */
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 3px 3px 3px #202020c9;
+}
+
 nav {
-    background-color: #0069B4;
+    background-color: #0069b4;
     display: inline-flex;
     width: 100%;
 }
@@ -121,13 +138,39 @@ nav {
 
 /* -----FOOTER----- */
 
-
-
 footer {
-    position:fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    margin-top: 300px;
+}
+
+.upper-footer {
+    background-color: #A2C4C9;
+    height: 87px;
+}
+
+.slogan-container {
+    display: grid;
+    justify-items: left;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.spe-text {
+    line-height: 25px;
+}
+
+.safe-text {
+    color: #60BB46;
+}
+
+.personal-text {
+    color: #00A0C0;
+}
+
+.effective-text {
+    color: #4E419A;
 }
 
 .lower-footer {
@@ -463,11 +506,10 @@ footer {
     position: relative;
     background-attachment: fixed;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 200px;
     text-align: center;
     padding-right: 150px;
     padding-left: 150px;
-    min-height: 30vh;
 }
 
 .advert-text-container {
@@ -522,12 +564,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 445px) {
-    .advert-container {
-        margin-bottom: 30px;
-    }
-}
-
 @media screen and (max-width: 400px) {
     .advert-text-container h2 {
         font-size: 1.3em;
@@ -540,6 +576,14 @@ footer {
 /* -----END OF ADVERT SECTION----- */
 
 /* -----GENERAL INFORMATION PAGES----- */
+
+.information-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 145px; /* height of the footer */
+}
 
 .information-hero {
     min-width: 100%;
@@ -708,6 +752,14 @@ footer {
 
 /* -----EXAMINATION INFORMATION PAGES----- */
 
+.examination-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 145px; /* height of the footer */
+}
+
 .examination-hero {
     min-width: 100%;
     height: 100%;
@@ -726,7 +778,7 @@ footer {
     padding: 30px;
     border-radius: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 100px;
     box-shadow: 10px 10px 8px #3d3d3d;
 }
@@ -773,7 +825,11 @@ footer {
 }
 
 .grid-2 {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+}
+
+.grid-div:hover {
+    background-color: white;
 }
 
 @media screen and (max-width: 950px) {
