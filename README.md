@@ -451,6 +451,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>radiation-hero: https://www.istockphoto.com/photo/hospital-ai-gm1057025412-282493246</li>
     <li>request-hero: https://www.istockphoto.com/photo/cropped-close-up-shot-of-doctor-giving-prescriptions-medications-to-female-patient-gm1352061644-427596207</li>
     <li>results-hero: https://www.istockphoto.com/photo/medical-diagnosis-in-the-digital-age-gm1127376129-297113241</li>
+    <li>contact-hero: https://www.istockphoto.com/photo/social-network-gm1142791580-306657206</li>
 </ul>
 
 

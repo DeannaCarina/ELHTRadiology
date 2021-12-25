@@ -1013,3 +1013,150 @@ footer {
 /* -----END OF EXAMINATION INFORMATION PAGES----- */
 
 /* ---------------END OF INDEX.HTML--------------- */
+
+
+/* ---------------CONTACT.HTML--------------- */
+
+.contact-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 145px; /* height of the footer */
+}
+
+.contact-hero {
+    min-width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/contact-hero.jpg");
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+        url("../images/contact-hero.jpg");
+    background: linear-gradient(to top, #ffffff, transparent), 
+        url("../images/contact-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+
+.contact-title {
+    background-color: rgba(255, 255, 255, 0.685);
+    font-size: xx-large;
+    margin: auto auto;
+    max-width: 40%;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    box-shadow: 10px 10px 8px #3d3d3d;
+}
+
+.center-form{
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+button[type="submit"]{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgb(200, 200, 200);
+    color: rgb(34, 76, 138);
+}
+
+.form-control{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.contact-form, .form-information{
+    background-color: rgb(245, 245, 245);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border: 2px solid #0069b4;
+    box-shadow: 0px 3px 3px 3px #202020c9;
+    
+}
+.form-control:hover,
+.form-control:active,
+.form-control:focus{
+    background-color: #d7eaf8;
+}
+
+.form-information {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.contact-address-heading {
+    font-weight: 600;
+}
+
+.contact-hospital-address {
+    color: #0069b4;
+}
+
+.center-form > h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.map-download {
+    display: block;
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #0069b4;
+    text-decoration: none;
+    color: black;
+}
+
+.map-download:hover {
+    background-color: #f2faff;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .center-form{
+        max-width: 70%;
+    }
+  }
+
+@media screen and (max-width: 640px) {
+.contact-title {
+    min-width: 90%;
+    font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 600px) {
+.center-form{
+    max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+button[type="submit"]{
+    width: 90%;
+    }
+}
+
+
+
+/* ---------------END OF CONTACT.HTML--------------- */

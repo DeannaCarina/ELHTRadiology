@@ -2,6 +2,73 @@
 
 
 {% block content %}
+<div class="contact-container">
+<div class="contact-hero"></div>
+<h1 class="contact-title">Contact</h1>
 
-<h1>Contact</h1>
+<div class="center-form">
+    <form class="contact-form" method="POST">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required/>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" required/>
+        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required/>
+        <textarea rows="10" name="message" id="message" class="form-control" placeholder="Your message" required></textarea>
+        <div class="form-row text-center">
+            <div class="col">
+                <a href="#"><button type="submit" class="btn btn-secondary" id="contact-button">Send <i class="fas fa-paper-plane"></i></button></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="center-form form-information">
+    <h2>Need to rearrange your appointment?</h2>
+    <p>Please use the contact form above if you are more than 48 hours away from your booked appointment time.<br>
+       If you are more than 48 hours away from your booked appointment time, please call:<br>
+       01254 000 000 for appointments at RBH, AVH and BCW or<br>
+       01254 000 000 for appointments at BGH, RPH, CCH and PCH</p>
+
+    <h2>Addresses</h2>
+    <p>
+        <p>
+            <span class="contact-address-heading">Royal Blackburn Hospital (RBH)</span>,
+            <span class="contact-hospital-address">Haslingden Rd, Blackburn BB2 3HH</span>
+        </p>    
+        <p>
+            <span class="contact-address-heading">Burnley General Hospital (BGH)</span>,
+            <span class="contact-hospital-address">Casterton Ave, Burnley BB10 2PQ</span>
+        </p>
+        <p>
+            <span class="contact-address-heading">Accrington Victoria Hospital (RBH)</span>,
+            <span class="contact-hospital-address">Haywood Rd, Accrington BB5 6AS</span>
+        </p>
+        <p>
+            <span class="contact-address-heading">Barbara Casle Way Health Centre (BCW)</span>,
+            <span class="contact-hospital-address">Simmons' St, Blackburn BB2 1AX</span>
+        </p>
+        <p>
+            <span class="contact-address-heading">Rossendale Primary Health Center (RPH)</span>,
+            <span class="contact-hospital-address">Bacup Rd, Rossendale BB4 7PL</span>
+        </p>
+        <p>
+            <span class="contact-address-heading">Clitheroe Community Hospital (CCH)</span>,
+            <span class="contact-hospital-address">Chatburn Rd, Clitheroe BB7 4JX</span>
+        </p>
+        <p>
+            <span class="contact-address-heading">Pendle Community Hospital (PCH)</span>,
+            <span class="contact-hospital-address">Leeds Rd, Nelson BB9 9SZ</span>
+        </p>
+    </p>
+
+    <h2>Compliments & Complaints</h2>
+    <p>Please call the departmental line manager on 01254 000 000<br>
+    or use the contact form above.</p>
+
+    <h2>Site maps</h2>
+    <a href="static/docs/site-map-rbh.jpg" target="_blank" class="map-download">Download site map for RBH</a>
+    <a href="static/docs/site-map-bgh.pdf" target="_blank" class="map-download">Download site map for BGH</a>
+</div>
+
+</div>
+
+
 {% endblock content %}
