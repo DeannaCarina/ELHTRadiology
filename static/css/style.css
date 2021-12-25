@@ -1131,6 +1131,11 @@ button[type="submit"]{
     background-color: #f2faff;
 }
 
+.map-download > i {
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+
 
 @media screen and (max-width: 1000px) {
     .center-form{
