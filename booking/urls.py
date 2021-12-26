@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, AdminTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
+from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, AdminTemplateView, BookXrayTemplateView, BookCtTemplateView, BookMriTemplateView, BookDexaTemplateView, BookMammoTemplateView, BookNmTemplateView, BookAngioTemplateView, BookUltrasoundTemplateView, BookFluoroTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
@@ -8,8 +8,15 @@ urlpatterns = [
     path('contact', ContactTemplateView.as_view(), name='contact'),
     path('admin/login/?next=/admin/', AdminTemplateView.as_view(), name='admin'),
 
-
-    
+    path('book/xray', BookXrayTemplateView.as_view(), name='book_xray'),
+    path('book/ct', BookCtTemplateView.as_view(), name='book_ct'),
+    path('book/mri', BookMriTemplateView.as_view(), name='book_mri'),
+    path('book/ultrasound', BookUltrasoundTemplateView.as_view(), name='book_ultrasound'),
+    path('book/nm', BookNmTemplateView.as_view(), name='book_nm'),
+    path('book/dexa', BookDexaTemplateView.as_view(), name='book_dexa'),
+    path('book/angio', BookAngioTemplateView.as_view(), name='book_angio'),
+    path('book/fluoro', BookFluoroTemplateView.as_view(), name='book_fluoro'),
+    path('book/mammo', BookMammoTemplateView.as_view(), name='book_mammo'),    
 
     path('information', InformationTemplateView.as_view(), name='information'),
     path('information/requests', RequestsTemplateView.as_view(), name='requests'),

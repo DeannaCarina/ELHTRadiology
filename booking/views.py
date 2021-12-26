@@ -15,8 +15,34 @@ class ContactTemplateView(TemplateView):
 class AdminTemplateView(TemplateView):
     template_name = 'admin.html'
 
+# Classes for booking pages
 
+class BookXrayTemplateView(TemplateView):
+    template_name = 'book/xray.html'
 
+class BookCtTemplateView(TemplateView):
+    template_name = 'book/ct.html'
+
+class BookMriTemplateView(TemplateView):
+    template_name = 'book/mri.html'
+
+class BookDexaTemplateView(TemplateView):
+    template_name = 'book/dexa.html'
+
+class BookMammoTemplateView(TemplateView):
+    template_name = 'book/mammo.html'
+
+class BookNmTemplateView(TemplateView):
+    template_name = 'book/nm.html'
+
+class BookAngioTemplateView(TemplateView):
+    template_name = 'book/angio.html'
+
+class BookUltrasoundTemplateView(TemplateView):
+    template_name = 'book/ultrasound.html'
+
+class BookFluoroTemplateView(TemplateView):
+    template_name = 'book/fluoro.html'
 
 # Classes for information pages
 
