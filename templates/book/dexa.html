@@ -3,9 +3,181 @@
 
 {% block content %}
 <div class="book-container">
-<div class="book-hero"></div>
-<h1 class="book-title">Book your Dexa exam</h1>
+    <div class="book-hero"></div>
+    <h1 class="book-title">Book your Dexa exam</h1>
 
-  
+    <!-- DEXA BOOKING FORM -->
+    <div class="center-form">
+        <form class="contact-form" method="POST">
 
+            <!-- REQUEST NUMBER -->
+            <div class="form-group">
+                <label for="request_number" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">This is found on the examination request given to you by your
+                        referrer. </span>
+                </label>
+                <input type="text" name="request_number" id="request_number" class="form-control booking-form-input"
+                    placeholder="Request Number" required />
+            </div>
+
+            <!-- HOSPITAL NUMBER -->
+            <div class="form-group">
+                <label for="hospital_number" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">This is found on the examination request given to you by your
+                        referrer. It is in the top left corner underneath a barcode. It starts with 'RXR' and is
+                        followed by 7 numbers.</span>
+                </label>
+                <input type="text" name="hospital_number" id="hospital_number" class="form-control booking-form-input"
+                    placeholder="Hospital Number" required />
+            </div>
+
+            <!-- FIRST NAME -->
+            <div class="form-group">
+                <label for="first_name" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please provide your first name that you use at your GP surgery.</span>
+                </label>
+                <input type="text" name="first_name" id="first_name" class="form-control booking-form-input"
+                    placeholder="First Name" required />
+            </div>
+
+            <!-- LAST NAME -->
+            <div class="form-group">
+                <label for="last_name" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please provide your last name that you use at your GP surgery.</span>
+                </label>
+                <input type="text" name="last_name" id="last_name" class="form-control booking-form-input"
+                    placeholder="Last Name" required />
+            </div>
+
+            <!-- DATE OF BIRTH -->
+            <div class="form-group">
+                <label for="date_of_birth" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please provide your date of birth.</span>
+                </label>
+                <input type="text" name="date_of_birth" id="date_of_birth" class="form-control booking-form-input"
+                    placeholder="Date of Birth DD/MM/YYYY" required />
+            </div>
+
+            <!-- EXAM LOCATION -->
+            <div class="form-group">
+                <label for="examination_location" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please choose the location you would prefer to attend for your
+                        examination.</span>
+                </label>
+                <select id="examination_location" name="examination_location" class="form-control booking-form-input"
+                    placeholder="Examination Location" required>
+                    <option value="Accrington Victoria Hospital" selected>Accrington Victoria Hospital</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
+            </div>
+
+            <!-- EXAM DATE -->
+            <div class="form-group">
+                <label for="date_of_exam" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please choose the date you would like to attend for your
+                        examination.</span>
+                </label>
+                <input type="text" name="date_of_exam" id="date_of_exam" class="form-control booking-form-input"
+                    placeholder="Date of Examination DD/MM/YYYY" required />
+            </div>
+
+            <!-- EXAM TIME -->
+            <div class="form-group">
+                <label for="time_of_exam" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please choose the time you would like to attend for your
+                        examination.</span>
+                </label>
+                <input type="text" name="time_of_exam" id="time_of_exam" class="form-control booking-form-input"
+                    placeholder="Time of Examination HH:MM" required />
+            </div>
+
+            <!-- PREGNANCY QUESTION -->
+            <div class="form-radio-question-group">
+                <p class="form-question">Is there any chance you could be pregnant?</p>
+                <div class="form-question-container">
+                    <div class="form-radio-answer">
+                        <label for="preg_status_yes">
+                            <span>Yes</span>
+                        </label>
+                        <input type="radio" name="preg_status" id="preg_status_yes" value="Yes" checked>
+                    </div>
+                    <div class="form-radio-answer">
+                        <label for="preg_status_no">
+                            <span>No</span>
+                        </label>
+                        <input type="radio" name="preg_status" id="preg_status_no" value="No">
+                    </div>
+                </div>
+            </div>
+
+            <!-- WEIGHT QUESTION -->
+            <div class="form-radio-question-group">
+                <p class="form-question">Do you weigh in excess of 22 stone (140kg)?</p>
+                <div class="form-question-container">
+                    <div class="form-radio-answer">
+                        <label for="weight_status_yes">
+                            <span>Yes</span>
+                        </label>
+                        <input type="radio" name="weight_status" id="weight_status_yes" value="Yes" checked>
+                    </div>
+                    <div class="form-radio-answer">
+                        <label for="weight_status_no">
+                            <span>No</span>
+                        </label>
+                        <input type="radio" name="weight_status" id="weight_status_no" value="No">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SURGERY QUESTION -->
+            <div class="form-radio-question-group">
+                <p class="form-question">Have you had any surgery on your hip(s), spine or wrist(s)?</p>
+                <div class="form-question-container">
+                    <div class="form-radio-answer">
+                        <label for="surgery_status_yes">
+                            <span>Yes</span>
+                        </label>
+                        <input type="radio" name="surgery_status" id="surgery_status_yes" value="Yes" checked>
+                    </div>
+                    <div class="form-radio-answer">
+                        <label for="surgery_status_no">
+                            <span>No</span>
+                        </label>
+                        <input type="radio" name="surgery_status" id="surgery_status_no" value="No">
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMMUNICATION & MOBILITY REQUIREMENTS -->
+            <div class="form-group">
+                <label for="comms_problems" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please let us know if you have any special requirements for your
+                        examination that would help with any mobility or communication requirements you may have.</span>
+                </label>
+                <textarea rows="5" name="comms_problems" id="comms_problems" class="form-control booking-form-input"
+                    placeholder="Do you have any mobility or communication requirements?"></textarea>
+            </div>
+
+            <!-- CONTACT NUMBER -->
+            <div class="form-group">
+                <label for="contact_number" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">For us to confirm your appointment, please provide the best number to
+                        contact you on.</span>
+                </label>
+                <input type="text" name="contact_number" id="contact_number" class="form-control booking-form-input"
+                    placeholder="Contact Number" required />
+            </div>
+
+            <!-- FORM SUBMIT BUTTON -->
+            <div class="form-row text-center">
+                <div class="col">
+                    <a href="#"><button type="submit" class="btn btn-secondary" id="contact-button">Book <i
+                                class="fas fa-calendar-alt"></i></button></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END OF DEXA BOOKING FORM -->
+
+</div>
 {% endblock content %}

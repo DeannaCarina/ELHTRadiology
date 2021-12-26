@@ -771,6 +771,10 @@ input[placeholder],
         visibility: hidden;
         width: 270px;
     }
+    .book-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -840,6 +844,8 @@ input[placeholder],
     .information-title {
         min-width: 90%;
         font-size: x-large;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .accordion-container {
@@ -1063,6 +1069,8 @@ input[placeholder],
     .examination-title {
         min-width: 90%;
         font-size: x-large;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -1371,6 +1379,8 @@ button[type="submit"] {
     .contact-title {
         min-width: 90%;
         font-size: x-large;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
