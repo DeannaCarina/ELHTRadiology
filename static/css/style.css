@@ -652,6 +652,57 @@ footer {
     box-shadow: 10px 10px 8px #3d3d3d;
 }
 
+.form-group {
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center
+}
+
+.fa-info-circle {
+    margin-right: 10px;
+}
+
+.info-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.info-hover .info-hover-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.info-hover:hover .info-hover-text {
+    visibility: visible;
+}
+
+.form-radio-question-group {
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-question {
+    margin-bottom: 5px;
+}
+
+.form-question-container {
+    display: flex;
+}
+
+.form-radio-answer {
+    margin-right: 20px;
+}
+
+
 @media screen and (max-width: 640px) {
     .book-title {
         min-width: 90%;
