@@ -25,19 +25,19 @@
         </div>  
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_xray' %}">
                     <p>Book an</p>
                     <h2>X-RAY</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_ct' %}">
                     <p>Book a</p>
                     <h2>CT Scan</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_mri' %}">
                     <p>Book an</p>
                     <h2>MRI Scan</h2>
                 </a>
@@ -45,19 +45,19 @@
         </div>
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_ultrasound' %}">
                     <p>Book an</p>
                     <h2>Ultrasound</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_mammo' %}">
                     <p>Book a</p>
                     <h2>Mammogram</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_dexa' %}">
                     <p>Book a</p>
                     <h2>Dexa Scan</h2>
                 </a>
@@ -65,19 +65,19 @@
         </div>
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_nm' %}">
                     <p>Book a</p>
-                    <h2>Nuclear Medicine Scan</h2>
+                    <h2 id="nm-booking-header">Nuclear Medicine Scan</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_angio' %}">
                     <p>Book an</p>
                     <h2>Angiogram</h2>
                 </a>
             </div>
             <div class="col col-12 col-sm-12 col-md-2 booking-link">
-                <a href="#">
+                <a href="{% url 'book_fluoro' %}">
                     <p>Book a</p>
                     <h2>Fluoroscope</h2>
                 </a>
@@ -127,4 +127,5 @@
     </div>
 </section>
 <!-- -----END OF ADVERT SECTION----- -->
+
 {% endblock content %}
