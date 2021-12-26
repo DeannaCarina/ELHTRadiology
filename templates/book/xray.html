@@ -6,7 +6,7 @@
     <div class="book-hero"></div>
     <h1 class="book-title">Book your X-Ray exam</h1>
 
-<!-- XRAY BOOKING FORM -->
+    <!-- XRAY BOOKING FORM -->
     <div class="center-form">
         <form class="contact-form" method="POST">
 
@@ -58,24 +58,41 @@
                     placeholder="Date of Birth DD/MM/YYYY" required />
             </div>
 
-            <!-- EXAM TYPE -->
+            <!-- SPECIFIC EXAMINATION -->
             <div class="form-group">
                 <label for="examination_type" class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please choose the examination you would like to book an appointment
-                        for if different than the one selected.</span>
+                    <span class="info-hover-text">If you know the specific examination you need to have done, please select it here.</span>
                 </label>
                 <select id="examination_type" name="examination_type" class="form-control booking-form-input"
-                    placeholder="Examination type" required>
-                    <option value="X-Ray" selected>X-Ray</option>
-                    <option value="CT">CT</option>
-                    <option value="MRI">MRI</option>
-                    <option value="Mammography">Mammography</option>
-                    <option value="Dexa">Dexa</option>
-                    <option value="Ultrasound">Ultrasound</option>
-                    <option value="Nuclear Medicine">Nuclear Medicine</option>
-                    <option value="Angiography">Angiography</option>
-                    <option value="Fluoroscopy">Fluoroscopy</option>
+                    placeholder="Examination type">
+                    <option value="Chest - including lungs and heart">Chest</option>
+                    <option value="Abdomen - including kidneys and bladder">Abdomen - including kidneys and bladder</option>
+
+                    <option value="Hand(s) - including finger(s)">Hand(s) - including finger(s)</option>
+                    <option value="Wrist(s) - including scaphoid">Wrist(s) - including scaphoid</option>
+                    <option value="Forearm(s)">Forearm(s)</option>
+                    <option value="Elbow(s)">Elbow(s)</option>
+                    <option value="Humerus(s)">Humerus(s)</option>
+                    <option value="Shoulder(s) - including scaplua and clavicle">Shoulder(s) - including scaplua and clavicle</option>
+
+                    <option value="Foot/Feet - including toe(s)">Foot/Feet</option>
+                    <option value="Ankle(s) - including calcaneum">Ankle(s) - including calcaneum</option>
+                    <option value="Tibia & Fibula(s)">Tibia & Fibula(s)</option>
+                    <option value="Knee(s)">Knee(s)</option>
+                    <option value="Femur(s)">Femur(s)</option>
+                    <option value="Leg Length Measurement(s)">Leg Length Measurement(s)</option>
+
+                    <option value="Pelvis - Including hip(s)">Pelvis - Including hip(s)</option>
+                    <option value="Lumbar Spine - Including Sacrum">Lumbar Spine - Including Sacrum</option>
+                    <option value="Thoracic Spine">Thoracic Spine</option>
+                    <option value="Cervical Spine">Cervical Spine</option>
+                    <option value="Whole Spine - for scoliosis">Whole Spine - for scoliosis</option>
+                    <option value="Skull">Skull</option>
+                    <option value="Skeletal Survey - for Multiple Myeloma">Skeletal Survey - for Multiple Myeloma</option>
+                    
                 </select>
+                <i class="fas fa-caret-down"></i>
+                <button><i class="fas fa-plus"></i></button>
             </div>
 
             <!-- EXAM LOCATION -->
@@ -94,6 +111,7 @@
                     <option value="Clitheroe Community Hospital">Clitheroe Community Hospital</option>
                     <option value="Pendle Community Hospital">Pendle Community Hospital</option>
                 </select>
+                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- EXAM DATE -->

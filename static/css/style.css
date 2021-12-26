@@ -22,7 +22,12 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -60,8 +65,10 @@ nav {
     margin: auto;
 }
 
-.nav-link:hover, .nav-link:active, .nav-link:focus {
-    color:rgb(128, 189, 230)
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+    color: rgb(128, 189, 230)
 }
 
 .logo {
@@ -121,19 +128,24 @@ nav {
     .ELHT-radiology {
         font-size: 0.8em;
     }
+
     .booking-service {
         font-size: 0.5em;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .nhs-logo-container, .separater {
+
+    .nhs-logo-container,
+    .separater {
         display: none;
     }
+
     .nav-link {
         margin-left: 5px;
     }
 }
+
 /* -----END OF HEADER----- */
 
 /* -----FOOTER----- */
@@ -189,7 +201,7 @@ footer {
     margin: 5px;
     width: 70px;
     margin-right: 15px;
-    
+
 }
 
 .lower-nav-container {
@@ -222,23 +234,27 @@ footer {
     }
 }
 
-@media screen and (max-width: 445px){
+@media screen and (max-width: 445px) {
     .lower-nav {
         display: grid;
         text-align: center;
     }
+
     .bottom-nav-item {
         height: 20px;
     }
+
     .lower-footer {
         height: 75px;
     }
+
     .nhs-bottom-container {
         display: flex;
         align-items: center;
-        
+
     }
 }
+
 /* -----END OF FOOTER----- */
 
 /* ---------------INDEX.HTML--------------- */
@@ -268,11 +284,11 @@ footer {
     font-weight: 700;
 }
 
-.hero-text > h1 {
+.hero-text>h1 {
     font-weight: 900;
 }
 
-.hero-text > p {
+.hero-text>p {
     margin-bottom: 0px;
 }
 
@@ -280,10 +296,12 @@ footer {
     .hero-text {
         padding: 20px 70px;
     }
+
     .hero-container {
         height: 30vh;
     }
 }
+
 /* -----END OF HERO IMAGE AND TEXT----- */
 
 /* -----BOOKING SECTION----- */
@@ -356,70 +374,86 @@ footer {
         margin-left: 200px;
     }
 }
+
 @media screen and (max-width: 1400px) {
     .booking-image {
         margin-left: 100px;
     }
 }
+
 @media screen and (max-width: 1300px) {
     .booking-image {
         margin-left: 20px;
     }
 }
+
 @media screen and (max-width: 1210px) {
     .booking-image {
         display: none;
     }
+
     .booking-link {
         margin: auto;
         margin-bottom: 20px;
 
     }
 }
+
 @media screen and (max-width: 780px) {
     .booking-link {
         width: 180px;
         height: 180px;
     }
+
     .booking-link h2 {
         font-size: 1.3em;
         font-weight: 600;
         padding-bottom: 77px;
     }
+
     #nm-booking-header {
         padding-bottom: 53px;
     }
+
     .please-note {
         text-align: center;
     }
 }
+
 @media screen and (max-width: 640px) {
     .booking-link h2 {
         padding-bottom: 84px;
     }
+
     #nm-booking-header {
         padding-bottom: 63px;
     }
 }
+
 @media screen and (max-width: 560px) {
     .booking-link {
         width: 290px;
         height: 70px;
         margin-bottom: 5px;
     }
+
     .booking-link p {
         padding-top: 5px;
     }
+
     .please-choose {
         text-align: center;
     }
+
     .booking-link h2 {
         padding-bottom: 20px;
     }
+
     #nm-booking-header {
         padding-bottom: 20px;
     }
 }
+
 @media screen and (max-width: 300px) {
     .booking-link {
         width: 220px;
@@ -427,21 +461,26 @@ footer {
         margin: auto;
         margin-bottom: 5px;
     }
+
     .booking-link p {
         padding-top: 10px;
     }
+
     .booking-link h2 {
         padding-bottom: 25px;
     }
+
     #nm-booking-header {
         padding-bottom: 25px;
     }
 }
+
 @media screen and (max-width: 187px) {
     #nm-booking-header {
         padding-bottom: 3px;
     }
 }
+
 /* -----END OF BOOKING SECTION----- */
 
 /* -----IMAGE SECTION----- */
@@ -454,6 +493,7 @@ footer {
     background-size: cover;
     position: relative;
 }
+
 /* -----END OF IMAGE SECTION----- */
 
 /* -----OTHER LINKS SECTION----- */
@@ -505,6 +545,7 @@ footer {
     .other-links-container {
         background-size: 500px;
     }
+
     .otherlinks-text-container {
         width: 90%;
         margin: auto;
@@ -524,10 +565,12 @@ footer {
         background-size: 400px;
         background-position-x: left;
     }
+
     .otherlinks-text-container {
         padding-bottom: 230px;
     }
 }
+
 /* -----END OF OTHER LINKS SECTION----- */
 
 /* -----ADVERT SECTION----- */
@@ -582,6 +625,7 @@ footer {
     .advert-text-container h2 {
         font-size: 1.3em;
     }
+
     .advert-text-container div {
         font-size: 0.8em;
     }
@@ -591,6 +635,7 @@ footer {
     .advert-text-container h2 {
         font-size: 1.3em;
     }
+
     .advert-container {
         padding-right: 30px;
         padding-left: 30px;
@@ -601,6 +646,7 @@ footer {
     .advert-text-container h2 {
         font-size: 1.3em;
     }
+
     .advert-container {
         padding-top: 20px;
     }
@@ -617,7 +663,8 @@ footer {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 145px; /* height of the footer */
+    padding-bottom: 145px;
+    /* height of the footer */
 }
 
 .book-hero {
@@ -628,11 +675,11 @@ footer {
     top: 0;
     left: 0;
     background-color: #ffffff;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/book-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/book-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/book-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -653,9 +700,9 @@ footer {
 }
 
 .form-group {
-    display:flex; 
-    flex-direction: row; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center
 }
 
@@ -670,7 +717,7 @@ footer {
 
 .info-hover .info-hover-text {
     visibility: hidden;
-    width: 220px;
+    width: 300px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -702,13 +749,44 @@ footer {
     margin-right: 20px;
 }
 
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    color: rgb(0, 68, 255) !important;
+}
+
+.fa-caret-down {
+    font-size: x-large;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 @media screen and (max-width: 640px) {
     .book-title {
         min-width: 90%;
         font-size: x-large;
-        }
     }
+
+    .info-hover .info-hover-text {
+        visibility: hidden;
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .fa-caret-down {
+        font-size: large;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+
+    .info-hover .info-hover-text {
+        visibility: hidden;
+        width: 220px;
+    }
+}
+
+
 
 /* ---------------END OFF BOOK.HTML--------------- */
 
@@ -719,7 +797,8 @@ footer {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 145px; /* height of the footer */
+    padding-bottom: 145px;
+    /* height of the footer */
 }
 
 .information-hero {
@@ -762,6 +841,7 @@ footer {
         min-width: 90%;
         font-size: x-large;
     }
+
     .accordion-container {
         max-width: 90%;
         margin-bottom: 40px;
@@ -778,11 +858,11 @@ footer {
 /* -----GENERAL INFORMATION BOARD----- */
 
 .info-board-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/info-board-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/info-board-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/info-board-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -794,11 +874,11 @@ footer {
 /* -----DEPARTMENT INFORMATION----- */
 
 .dept-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/dept-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/dept-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/dept-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -810,11 +890,11 @@ footer {
 /* -----LOCATION INFORMATION----- */
 
 .locations-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/locations-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/locations-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/locations-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -839,11 +919,11 @@ footer {
 /* -----RADIATION INFORMATION----- */
 
 .radiation-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/radiation-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/radiation-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/radiation-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -855,11 +935,11 @@ footer {
 /* -----REQUEST INFORMATION----- */
 
 .request-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/requests-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/requests-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/requests-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -871,11 +951,11 @@ footer {
 /* -----RESULTS INFORMATION----- */
 
 .results-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/results-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/results-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/results-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -894,7 +974,8 @@ footer {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 145px; /* height of the footer */
+    padding-bottom: 145px;
+    /* height of the footer */
 }
 
 .examination-hero {
@@ -930,7 +1011,7 @@ footer {
     padding: 30px;
 }
 
-.book-here > a {
+.book-here>a {
     text-decoration: none;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
@@ -942,7 +1023,7 @@ footer {
     color: black;
 }
 
-.book-here > a:hover {
+.book-here>a:hover {
     background-color: rgb(238, 238, 238);
 }
 
@@ -954,7 +1035,10 @@ footer {
     gap: 2em;
 }
 
-.grid-div-2, .grid-div-3, .grid-div-4, .grid-div-5 {
+.grid-div-2,
+.grid-div-3,
+.grid-div-4,
+.grid-div-5 {
     background-color: rgba(255, 255, 255, 0.788);
     padding: 10px;
     border-radius: 15px;
@@ -991,11 +1075,11 @@ footer {
 /* -----EXAMINATION BOARD----- */
 
 .exam-board-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/exam-board-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/exam-board-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/exam-board-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1007,11 +1091,11 @@ footer {
 /* -----ANGIOGRAPHY----- */
 
 .angio-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/angio-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/angio-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/angio-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1023,11 +1107,11 @@ footer {
 /* -----COMPUTED TOMOGRAPHY----- */
 
 .ct-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/ct-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/ct-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/ct-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1039,11 +1123,11 @@ footer {
 /* -----FLUOROSCOPY----- */
 
 .fluoro-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/fluoro-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/fluoro-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/fluoro-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1055,11 +1139,11 @@ footer {
 /* -----MAGNETIC RESONANCE----- */
 
 .mri-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/mri-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/mri-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/mri-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1070,11 +1154,11 @@ footer {
 /* -----MAMMOGRAPHY----- */
 
 .mammo-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/mammo-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/mammo-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/mammo-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1086,11 +1170,11 @@ footer {
 /* -----NUCLEAR MEDICINE----- */
 
 .nm-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/nm-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/nm-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/nm-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1102,11 +1186,11 @@ footer {
 /* -----ULTRASOUND----- */
 
 .us-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/us-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/us-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/us-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1118,11 +1202,11 @@ footer {
 /* -----XRAY----- */
 
 .xray-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/xray-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/xray-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/xray-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1134,11 +1218,11 @@ footer {
 /* -----DEXA----- */
 
 .dexa-hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/dexa-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/dexa-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/dexa-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1159,7 +1243,8 @@ footer {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 145px; /* height of the footer */
+    padding-bottom: 145px;
+    /* height of the footer */
 }
 
 .contact-hero {
@@ -1170,11 +1255,11 @@ footer {
     top: 0;
     left: 0;
     background-color: #ffffff;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/contact-hero.jpg");
-    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)), 
+    background: -o-linear-gradient(left bottom, left top, from(#ffffff), to(transparent)),
         url("../images/contact-hero.jpg");
-    background: linear-gradient(to top, #ffffff, transparent), 
+    background: linear-gradient(to top, #ffffff, transparent),
         url("../images/contact-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1194,13 +1279,13 @@ footer {
     box-shadow: 10px 10px 8px #3d3d3d;
 }
 
-.center-form{
+.center-form {
     padding-top: 10px;
     margin: 0 auto;
     max-width: 50%;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     margin-top: 15px;
     margin-bottom: 30px;
     width: 250px;
@@ -1210,7 +1295,7 @@ button[type="submit"]{
     color: rgb(34, 76, 138);
 }
 
-.form-control{
+.form-control {
     margin-top: 10px;
     margin-bottom: 10px;
     transition: all 0.5s ease-in-out;
@@ -1218,7 +1303,8 @@ button[type="submit"]{
     -webkit-transition: all 0.5s ease-in-out;
 }
 
-.contact-form, .form-information{
+.contact-form,
+.form-information {
     background-color: rgb(245, 245, 245);
     padding-left: 10px;
     padding-right: 10px;
@@ -1227,11 +1313,12 @@ button[type="submit"]{
     border-radius: 15px;
     border: 2px solid #0069b4;
     box-shadow: 0px 3px 3px 3px #202020c9;
-    
+
 }
+
 .form-control:hover,
 .form-control:active,
-.form-control:focus{
+.form-control:focus {
     background-color: #d7eaf8;
 }
 
@@ -1248,7 +1335,7 @@ button[type="submit"]{
     color: #0069b4;
 }
 
-.center-form > h2 {
+.center-form>h2 {
     margin-top: 20px;
     font-size: 1.5em;
 }
@@ -1268,34 +1355,34 @@ button[type="submit"]{
     background-color: #f2faff;
 }
 
-.map-download > i {
+.map-download>i {
     margin-left: 15px;
     font-size: 1.5em;
 }
 
 
 @media screen and (max-width: 1000px) {
-    .center-form{
+    .center-form {
         max-width: 70%;
     }
-  }
+}
 
 @media screen and (max-width: 640px) {
-.contact-title {
-    min-width: 90%;
-    font-size: x-large;
+    .contact-title {
+        min-width: 90%;
+        font-size: x-large;
     }
 }
 
 @media screen and (max-width: 600px) {
-.center-form{
-    max-width: 90%;
+    .center-form {
+        max-width: 90%;
     }
 }
 
 @media screen and (max-width: 340px) {
-button[type="submit"]{
-    width: 90%;
+    button[type="submit"] {
+        width: 90%;
     }
 }
 
