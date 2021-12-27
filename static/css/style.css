@@ -1397,3 +1397,40 @@ button[type="submit"] {
 }
 
 /* ---------------END OF CONTACT.HTML--------------- */
+
+
+/* ---------------PRIVACY.HTML--------------- */
+
+.privacy-container {
+    padding-bottom: 200px;
+}
+
+#privacy-inner-container {
+    margin-left: 150px;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+    #privacy-inner-container {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #privacy-inner-container {
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #privacy-inner-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* ---------------END OF PRIVACY.HTML--------------- */
