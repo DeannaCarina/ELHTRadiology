@@ -1,11 +1,12 @@
 
 from django.urls import path
-from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, AdminTemplateView, BookXrayTemplateView, BookCtTemplateView, BookMriTemplateView, BookDexaTemplateView, BookMammoTemplateView, BookNmTemplateView, BookAngioTemplateView, BookUltrasoundTemplateView, BookFluoroTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
+from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, ThanksTemplateView, AdminTemplateView, BookXrayTemplateView, BookCtTemplateView, BookMriTemplateView, BookDexaTemplateView, BookMammoTemplateView, BookNmTemplateView, BookAngioTemplateView, BookUltrasoundTemplateView, BookFluoroTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
     path('privacy', PrivacyTemplateView.as_view(), name='privacy'),
     path('contact', ContactTemplateView.as_view(), name='contact'),
+    path('thanks', ThanksTemplateView.as_view(), name='thanks'),
     path('admin/login/?next=/admin/', AdminTemplateView.as_view(), name='admin'),
 
     path('book/xray', BookXrayTemplateView.as_view(), name='book_xray'),
