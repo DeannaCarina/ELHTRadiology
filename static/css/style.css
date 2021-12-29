@@ -261,44 +261,84 @@ footer {
 
 /* -----HERO IMAGE AND TEXT----- */
 .hero-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(../images/hero.jpg);
     background-attachment: fixed;
-    height: 50vh;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 300px;
+    min-height: 700px;
 }
 
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    color: black;
-    background-color: rgba(255, 255, 255, 0.521);
+    color: white;
     border-radius: 30px;
     padding: 50px 70px;
     font-weight: 700;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
+    box-shadow: 10px 10px 8px #1b1b1b;
+    margin-left: 100px;
 }
 
 .hero-text>h1 {
     font-weight: 900;
+    font-size: 6rem;
 }
 
-.hero-text>p {
+.hero-p1 {
     margin-bottom: 0px;
+    font-size: 3rem;
+}
+
+.hero-p2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.hero-text p a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 1.5em;
+}
+
+.hero-text a:hover {
+    background-color: rgb(241, 241, 241);
+    color: #0069B4
 }
 
 @media screen and (max-width: 812px) {
     .hero-text {
         padding: 20px 70px;
     }
-
-    .hero-container {
-        height: 30vh;
+}
+@media screen and (max-width: 700px) {
+    .hero-text>h1 {
+        font-size: 4.3rem;
+    }
+    
+    .hero-p1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-p2 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .hero-text {
+        left: 50%;
+        margin-left: 0px;
+        padding: 70px 20px;
     }
 }
 
@@ -314,6 +354,7 @@ footer {
     padding-bottom: 50px;
     padding-top: 50px;
     display: flex;
+    scroll-margin-top: 100px;
 }
 
 .booking-image {
