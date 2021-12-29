@@ -10,17 +10,19 @@ class HomeTemplateView(TemplateView):
 class PrivacyTemplateView(TemplateView):
     template_name = 'privacy.html'
 
-class ContactTemplateView(TemplateView, POST):
+class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
     
     def contact(request):
-        if request.method == 'POST':
-            name = request.POST.get("name")
-            email = request.POST.get("email")
-            message = request.POST.get("message")
-            send_mail(name, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
-            return render(request, 'thanks.html', {"email":email})
-        return render(request, 'contact.html', {})
+        email = EmailMessage(
+            subject= f"{name} sent a message from ELHT Radiology Booking Service",
+            body=message,
+            from_email=settings.EMAIL_HOST_USER,
+            to=[settings.EMAIL_HOST_USER],
+            reply_to=[email]
+        )
+        email.send()
+        return HttpResponse("Email sent successfully")
 
 class ThanksTemplateView(TemplateView):
     template_name = 'thanks.html'
