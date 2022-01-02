@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic.base import TemplateView
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
-from django.views.decorators.csrf import csrf_protect
+# from django.views.decorators.csrf import csrf_protect
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
@@ -15,8 +15,13 @@ class PrivacyTemplateView(TemplateView):
 class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
     
-    def contact(request):
-        email = send_mail(
+    def post(self, request):
+
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+
+        email = EmailMessage(
             subject= f"{name} sent a message from ELHT Radiology Booking Service",
             body=message,
             from_email=settings.EMAIL_HOST_USER,
@@ -25,6 +30,8 @@ class ContactTemplateView(TemplateView):
         )
         email.send()
         return HttpResponse("Email sent successfully")
+
+
 
 class ThanksTemplateView(TemplateView):
     template_name = 'thanks.html'

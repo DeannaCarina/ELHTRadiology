@@ -8,7 +8,8 @@
 
 <div class="center-form">
     <form class="contact-form" method="POST">
-    <!-- onsubmit="return sendMail(this);" -->
+        <!-- onsubmit="return sendMail(this);" -->
+    
         {% csrf_token %}
         <input type="text" name="name" id="name" class="form-control" placeholder="Name" required/>
         <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" required/>

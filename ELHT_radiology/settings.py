@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io','https://*.herokuapp.com/']
+# CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io','https://*.herokuapp.com/']
 
 MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
