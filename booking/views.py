@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.core.mail import send_mail
 from django.conf import settings
+from django.views.decorators.csrf import csrf_protect
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
@@ -10,19 +11,20 @@ class HomeTemplateView(TemplateView):
 class PrivacyTemplateView(TemplateView):
     template_name = 'privacy.html'
 
+
 class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
     
-    # def contact(request):
-    #     email = EmailMessage(
-    #         subject= f"{name} sent a message from ELHT Radiology Booking Service",
-    #         body=message,
-    #         from_email=settings.EMAIL_HOST_USER,
-    #         to=[settings.EMAIL_HOST_USER],
-    #         reply_to=[email]
-    #     )
-    #     email.send()
-    #     return HttpResponse("Email sent successfully")
+    def contact(request):
+        email = send_mail(
+            subject= f"{name} sent a message from ELHT Radiology Booking Service",
+            body=message,
+            from_email=settings.EMAIL_HOST_USER,
+            to=[settings.EMAIL_HOST_USER],
+            reply_to=[email]
+        )
+        email.send()
+        return HttpResponse("Email sent successfully")
 
 class ThanksTemplateView(TemplateView):
     template_name = 'thanks.html'

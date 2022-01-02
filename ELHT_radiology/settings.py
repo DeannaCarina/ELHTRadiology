@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-peach-chipmunk-0pddjlic.ws-eu25.gitpod.io','https://elht-rbs.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io','https://*.herokuapp.com/']
 
 MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -159,9 +159,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Sending emails
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = os.environ.get('EADDRESS')
-# EMAIL_HOST_PASSWORD = os.environ.get('EPASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EADDRESS')
+EMAIL_HOST_PASSWORD = os.environ.get('EPASSWORD')
