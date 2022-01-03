@@ -3,9 +3,20 @@
 
 {% block content %}
 <div class="thanks-container">
-<div class="thanks-hero"></div>
-<h1 class="thanks-title">Thanks</h1>
+    <div class="thanks-hero"></div>
+    <div class="thanks-title">
 
+        Thank you.<br><br>
+        
+        Your message has been sent to the Radiology Booking team.<br><br>
 
+        We aim to respond within 24 hours.<br>
+
+        <div class="thanks-links">
+            <a href="{% url 'home' %}">Return to home</a>
+
+            <a href="{% url 'contact' %}">Send another message</a>
+        </div>
+    </div>
 </div>
 {% endblock content %}
