@@ -23,12 +23,17 @@ class ContactTemplateView(TemplateView):
     #     message = request.POST.get("message")
 
     def post(self, request):
-        name = request.POST.get('name', '')
-        email = request.POST.get('email', '')
-        message = request.POST.get('message', '')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
         if name and email and message:
             try:
-                send_mail(name, email, message, [settings.EMAIL_HOST_USER])
+                send_mail(
+                    subject=f"New message from {name} via ELHT RBS",
+                    message=f"Subject: {subject}\n\nMessage: {message}.\n\nPlease contact {name} on {email}",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect('thanks')

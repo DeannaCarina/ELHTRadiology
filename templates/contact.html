@@ -7,13 +7,11 @@
 <h1 class="contact-title">Contact</h1>
 
 <div class="center-form">
-    <form class="contact-form" method="POST">
-        <!-- onsubmit="return sendMail(this);" -->
-    
+    <form class="contact-form" method="POST"> 
         {% csrf_token %}
         <input type="text" name="name" id="name" class="form-control" placeholder="Name" required/>
         <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" required/>
-        <!-- <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required/> -->
+        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required/>
         <textarea rows="10" name="message" id="message" class="form-control" placeholder="Your message" required></textarea>
         <div class="form-row text-center">
             <div class="col">
