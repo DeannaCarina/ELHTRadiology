@@ -16,6 +16,7 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+
 development = os.environ.get('DEVELOPMENT', False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -166,4 +167,4 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "elhtrbs@gmail.com"
-EMAIL_HOST_PASSWORD = "PortfolioProject4"
+EMAIL_HOST_PASSWORD = "gachcskrhhqqfvgx"
