@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import TemplateView
-from django.core.mail import EmailMessage
+from django.core import mail
+from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
 # from django.views.decorators.csrf import csrf_protect
 
@@ -15,21 +16,24 @@ class PrivacyTemplateView(TemplateView):
 class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
     
+    # def post(self, request):
+
+    #     name = request.POST.get("name")
+    #     email = request.POST.get("email")
+    #     message = request.POST.get("message")
+
     def post(self, request):
-
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        message = request.POST.get("message")
-
-        email = EmailMessage(
-            subject= f"{name} sent a message from ELHT Radiology Booking Service",
-            body=message,
-            from_email=settings.EMAIL_HOST_USER,
-            to=[settings.EMAIL_HOST_USER],
-            reply_to=[email]
-        )
-        email.send()
-        return HttpResponse("Email sent successfully")
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        if name and email and message:
+            try:
+                send_mail(name, email, message, [settings.EMAIL_HOST_USER])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect('thanks')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
 
 
