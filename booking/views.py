@@ -28,6 +28,11 @@ class ContactTemplateView(TemplateView):
                     message=f"Subject: {subject}\n\nMessage: {message}\n\nPlease contact {name} on {email}",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
+                send_mail(
+                    subject=f"New message from ELHT RBS",
+                    message=f"You sent a message to ELHT Radiology Booking service, we aim to respond within 24 hours. Here is what you sent:\n\nMessage: {message}",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect('thanks')
