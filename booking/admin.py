@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment
+from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment
 
 
 
@@ -18,3 +18,5 @@ admin.site.register(AngioAppointment)
 admin.site.register(DexaAppointment)
 
 admin.site.register(MammoAppointment)
+
+admin.site.register(NmAppointment)
