@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="thanks-container">
+
+    <div class="thanks-title" style="box-shadow: none;">
+        <img src="https://res.cloudinary.com/deannacarina/image/upload/v1641468036/static/500_uowrbz.png" class="error-image" alt="500 numbers" style="width: 200px"><br><br>
+        
+        Looks like there has been a server error.<br><br>
+
+        <div class="thanks-links">
+            <a href="{% url 'home' %}">Return to home</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

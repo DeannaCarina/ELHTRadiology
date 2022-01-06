@@ -1,6 +1,19 @@
 
 from django.urls import path
-from .views import HomeTemplateView, PrivacyTemplateView, ContactTemplateView, ThanksTemplateView, AdminTemplateView, BookXrayTemplateView, BookCtTemplateView, BookMriTemplateView, BookDexaTemplateView, BookMammoTemplateView, BookNmTemplateView, BookAngioTemplateView, BookUltrasoundTemplateView, BookFluoroTemplateView, InformationTemplateView, RequestsTemplateView, LocationsTemplateView, RequestsTemplateView, RadiationTemplateView, ResultsTemplateView, DepartmentTemplateView, ExamboardTemplateView, XrayTemplateView, CtTemplateView, MriTemplateView, UsTemplateView, NmTemplateView, MammoTemplateView, FluoroTemplateView, AngioTemplateView, DexaTemplateView
+from .views import (HomeTemplateView, PrivacyTemplateView, ContactTemplateView,
+                    ThanksTemplateView, AdminTemplateView,
+                    BookXrayTemplateView, BookCtTemplateView,
+                    BookMriTemplateView, BookDexaTemplateView,
+                    BookMammoTemplateView, BookNmTemplateView,
+                    BookAngioTemplateView, BookUltrasoundTemplateView,
+                    BookFluoroTemplateView, InformationTemplateView,
+                    RequestsTemplateView, LocationsTemplateView,
+                    RequestsTemplateView, RadiationTemplateView,
+                    ResultsTemplateView, DepartmentTemplateView,
+                    ExamboardTemplateView, XrayTemplateView, CtTemplateView,
+                    MriTemplateView, UsTemplateView, NmTemplateView,
+                    MammoTemplateView, FluoroTemplateView, AngioTemplateView,
+                    DexaTemplateView, Page500, Page404, Page403)
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
@@ -36,4 +49,8 @@ urlpatterns = [
     path('examinations/fluoroscopy', FluoroTemplateView.as_view(), name='fluoroscopy'),
     path('examinations/angiography', AngioTemplateView.as_view(), name='angiography'),
     path('examinations/dexa', DexaTemplateView.as_view(), name='dexa'),
+
+    path('403', Page403.as_view(), name='403'),
+    path('404', Page404.as_view(), name='404'),
+    path('500', Page500.as_view(), name='500'),
 ]

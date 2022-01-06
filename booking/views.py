@@ -4,7 +4,7 @@ from django.views.generic.base import TemplateView
 from django.core import mail
 from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
-# from django.views.decorators.csrf import csrf_protect
+
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
@@ -51,6 +51,8 @@ class AdminTemplateView(TemplateView):
 
 class BookXrayTemplateView(TemplateView):
     template_name = 'book/xray.html'
+
+    
 
 class BookCtTemplateView(TemplateView):
     template_name = 'book/ct.html'
@@ -127,3 +129,14 @@ class FluoroTemplateView(TemplateView):
 
 class DexaTemplateView(TemplateView):
     template_name = 'examinations/dexa.html'
+
+# Classes for error pages
+
+class Page404(TemplateView):
+    template_name = '404.html'
+
+class Page500(TemplateView):
+    template_name = '500.html'
+
+class Page403(TemplateView):
+    template_name = '403.html'
