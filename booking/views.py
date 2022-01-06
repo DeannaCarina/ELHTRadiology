@@ -5,7 +5,7 @@ from django.core import mail
 from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
 from django.contrib import messages
-from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment
+from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
@@ -180,6 +180,40 @@ class BookMriTemplateView(TemplateView):
 
 class BookDexaTemplateView(TemplateView):
     template_name = 'book/dexa.html'
+
+    def post(self, request):
+        request_number = request.POST.get('request_number')
+        hospital_number = request.POST.get('hospital_number')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        date_of_birth = request.POST.get('date_of_birth')
+        date_of_exam = request.POST.get('date_of_exam')
+        time_of_exam = request.POST.get('time_of_exam')
+        preg_status = request.POST.get('preg_status')
+        weight_status = request.POST.get('weight_status')
+        surgery_status = request.POST.get('surgery_status')
+        comms_problems = request.POST.get('comms_problems')
+        contact_number = request.POST.get('contact_number')
+
+        dexa_appointment = DexaAppointment.objects.create(
+            request_number=request_number,
+            hospital_number=hospital_number,
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            date_of_exam=date_of_exam,
+            time_of_exam=time_of_exam,
+            preg_status=preg_status,
+            weight_status=weight_status,
+            surgery_status=surgery_status,
+            comms_problems=comms_problems,
+            contact_number=contact_number
+        )
+
+        dexa_appointment.save()
+
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Accrington Victoria Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
+        return HttpResponseRedirect(request.path)
 
 class BookMammoTemplateView(TemplateView):
     template_name = 'book/mammo.html'
