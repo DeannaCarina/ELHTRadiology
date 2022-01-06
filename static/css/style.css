@@ -724,6 +724,7 @@ footer {
     display: block;
     position: relative;
     padding-bottom: 145px;
+    padding-top: 50px;
     /* height of the footer */
 }
 
@@ -747,21 +748,26 @@ footer {
 }
 
 .book-title {
-    background-color: rgba(255, 255, 255, 0.685);
-    font-size: xx-large;
     margin: auto auto;
-    max-width: 40%;
-    padding: 30px;
-    border-radius: 30px;
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    box-shadow: 10px 10px 8px #3d3d3d;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    background-color: rgb(245, 245, 245);
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border: 2px solid #0069b4;
+    box-shadow: 0px 3px 3px 3px #202020c9;
 }
 
 .card {
-    max-width: 50%;
+    max-width: 90%;
     margin: auto auto;
+    margin-bottom: 20px;
 }
 .form-group {
     display: flex;
@@ -772,6 +778,7 @@ footer {
 
 .fa-info-circle {
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 .info-hover {
@@ -839,6 +846,10 @@ input[placeholder],
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    .booking-form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -851,6 +862,13 @@ input[placeholder],
     .info-hover .info-hover-text {
         visibility: hidden;
         width: 220px;
+    }
+    .booking-form {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .book-container {
+        padding-top: 15px;
     }
 }
 
@@ -1434,7 +1452,7 @@ button[type="submit"] {
 
 
 @media screen and (max-width: 1000px) {
-    .center-form, .card {
+    .center-form {
         max-width: 70%;
     }
 }
@@ -1449,7 +1467,7 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 600px) {
-    .center-form, .card {
+    .center-form {
         max-width: 90%;
     }
 }
@@ -1608,3 +1626,25 @@ button[type="submit"] {
 
 
 /* ---------------END OF ERROR PAGES--------------- */
+
+
+
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+}
