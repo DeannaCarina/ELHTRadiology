@@ -5,7 +5,7 @@ from django.core import mail
 from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
 from django.contrib import messages
-from .models import XrayAppointment
+from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
@@ -91,8 +91,92 @@ class BookXrayTemplateView(TemplateView):
 class BookCtTemplateView(TemplateView):
     template_name = 'book/ct.html'
 
+    def post(self, request):
+        request_number = request.POST.get('request_number')
+        hospital_number = request.POST.get('hospital_number')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        date_of_birth = request.POST.get('date_of_birth')
+        examination_type = request.POST.get('examination_type')
+        exam_location = request.POST.get('examination_location')
+        date_of_exam = request.POST.get('date_of_exam')
+        time_of_exam = request.POST.get('time_of_exam')
+        preg_status = request.POST.get('preg_status')
+        weight_status = request.POST.get('weight_status')
+        kidney_status = request.POST.get('kidney_status')
+        comms_problems = request.POST.get('comms_problems')
+        contact_number = request.POST.get('contact_number')
+
+        ct_appointment = CtAppointment.objects.create(
+            request_number=request_number,
+            hospital_number=hospital_number,
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            examination_type=examination_type,
+            exam_location=exam_location,
+            date_of_exam=date_of_exam,
+            time_of_exam=time_of_exam,
+            preg_status=preg_status,
+            weight_status=weight_status,
+            kidney_status=kidney_status,
+            comms_problems=comms_problems,
+            contact_number=contact_number
+        )
+
+        ct_appointment.save()
+
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
+        return HttpResponseRedirect(request.path)
+
 class BookMriTemplateView(TemplateView):
     template_name = 'book/mri.html'
+
+    def post(self, request):
+        request_number = request.POST.get('request_number')
+        hospital_number = request.POST.get('hospital_number')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        date_of_birth = request.POST.get('date_of_birth')
+        examination_type = request.POST.get('examination_type')
+        exam_location = request.POST.get('examination_location')
+        date_of_exam = request.POST.get('date_of_exam')
+        time_of_exam = request.POST.get('time_of_exam')
+        preg_status = request.POST.get('preg_status')
+        weight_status = request.POST.get('weight_status')
+        kidney_status = request.POST.get('kidney_status')
+        metal_status = request.POST.get('metal_status')
+        pacemaker_status = request.POST.get('pacemaker_status')
+        eyes_status = request.POST.get('eyes_status')
+        claustrophobia_status = request.POST.get('claustrophobia_status')
+        comms_problems = request.POST.get('comms_problems')
+        contact_number = request.POST.get('contact_number')
+
+        mri_appointment = MriAppointment.objects.create(
+            request_number=request_number,
+            hospital_number=hospital_number,
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            examination_type=examination_type,
+            exam_location=exam_location,
+            date_of_exam=date_of_exam,
+            time_of_exam=time_of_exam,
+            preg_status=preg_status,
+            weight_status=weight_status,
+            kidney_status=kidney_status,
+            metal_status=metal_status,
+            pacemaker_status=pacemaker_status,
+            eyes_status=eyes_status,
+            claustrophobia_status=claustrophobia_status,
+            comms_problems=comms_problems,
+            contact_number=contact_number
+        )
+
+        mri_appointment.save()
+
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
+        return HttpResponseRedirect(request.path)
 
 class BookDexaTemplateView(TemplateView):
     template_name = 'book/dexa.html'
@@ -106,11 +190,87 @@ class BookNmTemplateView(TemplateView):
 class BookAngioTemplateView(TemplateView):
     template_name = 'book/angio.html'
 
+    def post(self, request):
+        request_number = request.POST.get('request_number')
+        hospital_number = request.POST.get('hospital_number')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        date_of_birth = request.POST.get('date_of_birth')
+        examination_type = request.POST.get('examination_type')
+
+        date_of_exam = request.POST.get('date_of_exam')
+        time_of_exam = request.POST.get('time_of_exam')
+        preg_status = request.POST.get('preg_status')
+        weight_status = request.POST.get('weight_status')
+        kidney_status = request.POST.get('kidney_status')
+        comms_problems = request.POST.get('comms_problems')
+        contact_number = request.POST.get('contact_number')
+
+        angio_appointment = AngioAppointment.objects.create(
+            request_number=request_number,
+            hospital_number=hospital_number,
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            examination_type=examination_type,
+
+            date_of_exam=date_of_exam,
+            time_of_exam=time_of_exam,
+            preg_status=preg_status,
+            weight_status=weight_status,
+            kidney_status=kidney_status,
+            comms_problems=comms_problems,
+            contact_number=contact_number
+        )
+
+        angio_appointment.save()
+
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Royal Blackburn Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
+        return HttpResponseRedirect(request.path)
+
 class BookUltrasoundTemplateView(TemplateView):
     template_name = 'book/ultrasound.html'
 
 class BookFluoroTemplateView(TemplateView):
     template_name = 'book/fluoro.html'
+
+    def post(self, request):
+        request_number = request.POST.get('request_number')
+        hospital_number = request.POST.get('hospital_number')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        date_of_birth = request.POST.get('date_of_birth')
+        examination_type = request.POST.get('examination_type')
+        exam_location = request.POST.get('examination_location')
+        date_of_exam = request.POST.get('date_of_exam')
+        time_of_exam = request.POST.get('time_of_exam')
+        preg_status = request.POST.get('preg_status')
+        weight_status = request.POST.get('weight_status')
+        kidney_status = request.POST.get('kidney_status')
+        comms_problems = request.POST.get('comms_problems')
+        contact_number = request.POST.get('contact_number')
+
+        fluoro_appointment = FluoroAppointment.objects.create(
+            request_number=request_number,
+            hospital_number=hospital_number,
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            examination_type=examination_type,
+            exam_location=exam_location,
+            date_of_exam=date_of_exam,
+            time_of_exam=time_of_exam,
+            preg_status=preg_status,
+            weight_status=weight_status,
+            kidney_status=kidney_status,
+            comms_problems=comms_problems,
+            contact_number=contact_number
+        )
+
+        fluoro_appointment.save()
+
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
+        return HttpResponseRedirect(request.path)
 
 # Classes for information pages
 
