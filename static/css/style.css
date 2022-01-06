@@ -10,6 +10,25 @@ body {
     margin-top: 90px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.skip-nav {
+    position: absolute;
+    z-index: 20;
+    transform: translateY(-120%);
+    background-color: white;
+    padding: 5px 15px;
+    left: 20px;
+    border-radius: 0 0 15px 15px;
+    transition: transform 300ms;
+}
+
+.skip-nav:focus {
+    transform: translateY(0%);
+}
+
 @media screen and (max-width: 640px) {
     body {
         font-size: 0.85em;

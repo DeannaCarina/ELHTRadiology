@@ -23,6 +23,7 @@
 <body>
     <header>
         <!-- -----NAVBAR----- -->
+        <a href="#main-content" class="skip-nav">Skip Navigation</a>
         <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -88,7 +89,7 @@
         </nav>
     </header>
         <!-- -----END OF NAVBAR----- -->    
-
+    <span id="main-content"></span>
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
