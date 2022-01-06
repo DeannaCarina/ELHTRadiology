@@ -4,23 +4,37 @@
 {% block content %}
 <div class="book-container">
     <div class="book-hero"></div>
-    <h1 class="book-title">Book your Dexa exam</h1>
-
+    
     <!-- DEXA BOOKING FORM -->
-    <div class="center-form">
-        <form class="contact-form" method="POST">
+        
+            <div class="center-form">
+                <form class="booking-form" method="POST">
+                    <h1 class="book-title">Book your Dexa exam</h1>
 
+                    {% if messages %}
+                    <div class="card notification-card notification-invitation">
+                        <div class="card-body">
+                            {% for message in messages %}
+                            <div class="card-title">{{message}}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+            {% csrf_token %}
             <!-- REQUEST NUMBER -->
+            <label for="request_number">Request Number</label>
             <div class="form-group">
                 <label for="request_number" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
                         referrer. </span>
                 </label>
                 <input type="text" name="request_number" id="request_number" class="form-control booking-form-input"
-                    placeholder="Request Number" required />
+                    placeholder="12345678" required />
             </div>
 
             <!-- HOSPITAL NUMBER -->
+            <label for="hospital_number">Hospital Number</label>
             <div class="form-group">
                 <label for="hospital_number" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
@@ -28,127 +42,106 @@
                         followed by 7 numbers.</span>
                 </label>
                 <input type="text" name="hospital_number" id="hospital_number" class="form-control booking-form-input"
-                    placeholder="Hospital Number" required />
+                    placeholder="RXR1234567" required />
             </div>
 
             <!-- FIRST NAME -->
+            <label for="first_name">First Name</label>
             <div class="form-group">
                 <label for="first_name" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please provide your first name that you use at your GP surgery.</span>
                 </label>
                 <input type="text" name="first_name" id="first_name" class="form-control booking-form-input"
-                    placeholder="First Name" required />
+                    placeholder="Joseph" required />
             </div>
 
             <!-- LAST NAME -->
+            <label for="last_name">Last Name</label>
             <div class="form-group">
                 <label for="last_name" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please provide your last name that you use at your GP surgery.</span>
                 </label>
                 <input type="text" name="last_name" id="last_name" class="form-control booking-form-input"
-                    placeholder="Last Name" required />
+                    placeholder="Bloggs" required />
             </div>
 
             <!-- DATE OF BIRTH -->
+            <label for="date_of_birth">Date of Birth</label>
             <div class="form-group">
                 <label for="date_of_birth" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please provide your date of birth.</span>
                 </label>
-                <input type="text" name="date_of_birth" id="date_of_birth" class="form-control booking-form-input"
-                    placeholder="Date of Birth DD/MM/YYYY" required />
-            </div>
-
-            <!-- EXAM LOCATION -->
-            <div class="form-group">
-                <label for="examination_location" class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please choose the location you would prefer to attend for your
-                        examination.</span>
-                </label>
-                <select id="examination_location" name="examination_location" class="form-control booking-form-input"
-                    placeholder="Examination Location" required>
-                    <option value="Accrington Victoria Hospital" selected>Accrington Victoria Hospital</option>
-                </select>
-                <i class="fas fa-caret-down"></i>
+                <input type="date" name="date_of_birth" id="date_of_birth" class="form-control booking-form-input" required>
             </div>
 
             <!-- EXAM DATE -->
+            <label for="date_of_exam">Date of Examination</label>
             <div class="form-group">
                 <label for="date_of_exam" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please choose the date you would like to attend for your
                         examination.</span>
                 </label>
-                <input type="text" name="date_of_exam" id="date_of_exam" class="form-control booking-form-input"
-                    placeholder="Date of Examination DD/MM/YYYY" required />
+                <input type="date" name="date_of_exam" id="date_of_exam" class="form-control booking-form-input" required>
             </div>
 
             <!-- EXAM TIME -->
+            <label for="time_of_exam">Time of Examination</label>
             <div class="form-group">
                 <label for="time_of_exam" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please choose the time you would like to attend for your
                         examination.</span>
                 </label>
-                <input type="text" name="time_of_exam" id="time_of_exam" class="form-control booking-form-input"
+                <input type="time" name="time_of_exam" id="time_of_exam" class="form-control booking-form-input"
                     placeholder="Time of Examination HH:MM" required />
             </div>
 
             <!-- PREGNANCY QUESTION -->
-            <div class="form-radio-question-group">
-                <p class="form-question">Is there any chance you could be pregnant?</p>
-                <div class="form-question-container">
-                    <div class="form-radio-answer">
-                        <label for="preg_status_yes">
-                            <span>Yes</span>
-                        </label>
-                        <input type="radio" name="preg_status" id="preg_status_yes" value="Yes" checked>
-                    </div>
-                    <div class="form-radio-answer">
-                        <label for="preg_status_no">
-                            <span>No</span>
-                        </label>
-                        <input type="radio" name="preg_status" id="preg_status_no" value="No">
-                    </div>
-                </div>
+            <label for="preg_status">Is there any chance you could be pregnant?</label>
+            <div class="form-group">
+                <label for="preg_status" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please let us know if there is any chance you might be pregnant, this will affect how we carry out your examination.</span>
+                </label>
+                <select id="preg_status" name="preg_status" class="form-control booking-form-input"
+                    placeholder="Pregnancy Status" required>
+                    <option value="I am pregnant" selected>I am pregnant</option>
+                    <option value="I am not pregnant">I am not pregnant</option>
+                    <option value="I might be pregnant">I might be pregnant</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- WEIGHT QUESTION -->
-            <div class="form-radio-question-group">
-                <p class="form-question">Do you weigh in excess of 22 stone (140kg)?</p>
-                <div class="form-question-container">
-                    <div class="form-radio-answer">
-                        <label for="weight_status_yes">
-                            <span>Yes</span>
-                        </label>
-                        <input type="radio" name="weight_status" id="weight_status_yes" value="Yes" checked>
-                    </div>
-                    <div class="form-radio-answer">
-                        <label for="weight_status_no">
-                            <span>No</span>
-                        </label>
-                        <input type="radio" name="weight_status" id="weight_status_no" value="No">
-                    </div>
-                </div>
+            <label for="weight_status">Do you weigh in excess of 22kg (140kg)?</label>
+            <div class="form-group">
+                <label for="weight_status" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please let us know if there is any chance you might weigh in excess of 22kg, this will affect how we carry out your examination.</span>
+                </label>
+                <select id="weight_status" name="weight_status" class="form-control booking-form-input"
+                    placeholder="Weight Status" required>
+                    <option value="I weigh equal to or less than 22kg" selected>I weigh equal to or less than 22kg</option>
+                    <option value="I weigh more than 22kg">I weigh more than 22kg</option>
+                    <option value="I'm not sure how much I weigh">I'm not sure how much I weigh</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- SURGERY QUESTION -->
-            <div class="form-radio-question-group">
-                <p class="form-question">Have you had any surgery on your hip(s), spine or wrist(s)?</p>
-                <div class="form-question-container">
-                    <div class="form-radio-answer">
-                        <label for="surgery_status_yes">
-                            <span>Yes</span>
-                        </label>
-                        <input type="radio" name="surgery_status" id="surgery_status_yes" value="Yes" checked>
-                    </div>
-                    <div class="form-radio-answer">
-                        <label for="surgery_status_no">
-                            <span>No</span>
-                        </label>
-                        <input type="radio" name="surgery_status" id="surgery_status_no" value="No">
-                    </div>
-                </div>
-            </div>
+            <label for="surgery_status">Have you had any surgery on your hip(s), spine or wrist(s)?</label>
+            <div class="form-group">
+                <label for="surgery_status" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please let us know if you have had any surgery on the above mentioned areas of your body, this will affect how we carry out your examination.</span>
+                </label>
+                <select id="surgery_status" name="surgery_status" class="form-control booking-form-input"
+                    placeholder="Surgery Status" required>
+                    <option value="I have had surgery on one or more of these areas" selected>I have had surgery on one or more of these areas</option>
+                    <option value="I have not had surgery on any of these areas">I have not had surgery on any of these areas</option>
+                    <option value="I'm not sure if I have had surgery on any of these areas">I'm not sure if I have had surgery on any of these areas</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
+            </div>           
 
             <!-- COMMUNICATION & MOBILITY REQUIREMENTS -->
+            <label for="comms_problems">Do you have any communication or mobility requirements?</label>
             <div class="form-group">
                 <label for="comms_problems" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if you have any special requirements for your
@@ -159,6 +152,7 @@
             </div>
 
             <!-- CONTACT NUMBER -->
+            <label for="contact_number">Please provide a contact number to confirm your appointment.</label>
             <div class="form-group">
                 <label for="contact_number" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">For us to confirm your appointment, please provide the best number to
@@ -180,4 +174,6 @@
     <!-- END OF DEXA BOOKING FORM -->
 
 </div>
+
+
 {% endblock content %}
