@@ -759,6 +759,10 @@ footer {
     box-shadow: 10px 10px 8px #3d3d3d;
 }
 
+.card {
+    max-width: 50%;
+    margin: auto auto;
+}
 .form-group {
     display: flex;
     flex-direction: row;
@@ -1430,7 +1434,7 @@ button[type="submit"] {
 
 
 @media screen and (max-width: 1000px) {
-    .center-form {
+    .center-form, .card {
         max-width: 70%;
     }
 }
@@ -1445,7 +1449,7 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 600px) {
-    .center-form {
+    .center-form, .card {
         max-width: 90%;
     }
 }

@@ -6,10 +6,20 @@
     <div class="book-hero"></div>
     <h1 class="book-title">Book your X-Ray exam</h1>
 
+    {% if messages %}
+    <div class="card notification-card notification-invitation">
+        <div class="card-body">
+            {% for message in messages %}
+            <div class="card-title">{{message}}</div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
     <!-- XRAY BOOKING FORM -->
     <div class="center-form">
         <form class="contact-form" method="POST">
-
+            {% csrf_token %}
             <!-- REQUEST NUMBER -->
             <div class="form-group">
                 <label for="request_number" class="info-hover"><i class="fas fa-info-circle"></i>
@@ -135,22 +145,17 @@
             </div>
 
             <!-- PREGNANCY QUESTION -->
-            <div class="form-radio-question-group">
-                <p class="form-question">Is there any chance you could be pregnant?</p>
-                <div class="form-question-container">
-                    <div class="form-radio-answer">
-                        <label for="preg_status_yes">
-                            <span>Yes</span>
-                        </label>
-                        <input type="radio" name="preg_status" id="preg_status_yes" value="Yes" checked>
-                    </div>
-                    <div class="form-radio-answer">
-                        <label for="preg_status_no">
-                            <span>No</span>
-                        </label>
-                        <input type="radio" name="preg_status" id="preg_status_no" value="No">
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="preg_status" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please let us know if there is any chance you might be pregnant.</span>
+                </label>
+                <select id="preg_status" name="preg_status" class="form-control booking-form-input"
+                    placeholder="Pregnancy Status" required>
+                    <option value="I am pregnant" selected>I am pregnant</option>
+                    <option value="I am not pregnant">I am not pregnant</option>
+                    <option value="I might be pregnant">I might be pregnant</option>
+                </select>
+                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- COMMUNICATION & MOBILITY REQUIREMENTS -->

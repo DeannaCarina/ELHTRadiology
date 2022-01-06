@@ -30,7 +30,7 @@ urlpatterns = [
     path('book/dexa', BookDexaTemplateView.as_view(), name='book_dexa'),
     path('book/angio', BookAngioTemplateView.as_view(), name='book_angio'),
     path('book/fluoro', BookFluoroTemplateView.as_view(), name='book_fluoro'),
-    path('book/mammo', BookMammoTemplateView.as_view(), name='book_mammo'),    
+    path('book/mammo', BookMammoTemplateView.as_view(), name='book_mammo'),
 
     path('information', InformationTemplateView.as_view(), name='information'),
     path('information/requests', RequestsTemplateView.as_view(), name='requests'),
