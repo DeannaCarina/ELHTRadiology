@@ -5,7 +5,7 @@ from django.db import models
 
 class XrayAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -14,7 +14,7 @@ class XrayAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.IntegerField()
@@ -32,7 +32,7 @@ class XrayAppointment(models.Model):
 
 class CtAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -41,7 +41,7 @@ class CtAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
     kidney_status = models.CharField(max_length=100)
 
@@ -61,7 +61,7 @@ class CtAppointment(models.Model):
 
 class MriAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -70,7 +70,7 @@ class MriAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
     kidney_status = models.CharField(max_length=100)
     metal_status = models.CharField(max_length=100)
@@ -94,7 +94,7 @@ class MriAppointment(models.Model):
 
 class FluoroAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -103,7 +103,7 @@ class FluoroAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
     kidney_status = models.CharField(max_length=100)
 
@@ -123,7 +123,7 @@ class FluoroAppointment(models.Model):
 
 class AngioAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -132,7 +132,7 @@ class AngioAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
     kidney_status = models.CharField(max_length=100)
 
@@ -152,7 +152,7 @@ class AngioAppointment(models.Model):
 
 class DexaAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -160,7 +160,7 @@ class DexaAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
     surgery_status = models.CharField(max_length=100)
 
@@ -180,7 +180,7 @@ class DexaAppointment(models.Model):
 
 class MammoAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -188,7 +188,7 @@ class MammoAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     implants_status = models.CharField(max_length=100)
     screening_status = models.CharField(max_length=100)
 
@@ -208,7 +208,7 @@ class MammoAppointment(models.Model):
 
 class NmAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -217,7 +217,7 @@ class NmAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     breastfeeding_status = models.CharField(max_length=100)
     weight_status = models.CharField(max_length=100)
     kidney_status = models.CharField(max_length=100)
@@ -238,7 +238,7 @@ class NmAppointment(models.Model):
 
 class UsAppointment(models.Model):
     request_number = models.CharField(max_length=10)
-    hospital_number = models.CharField(max_length=8)
+    hospital_number = models.CharField(max_length=10)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
@@ -247,7 +247,7 @@ class UsAppointment(models.Model):
     date_of_exam = models.DateField()
     time_of_exam = models.TimeField()
 
-    preg_status = models.CharField(max_length=20)
+    preg_status = models.CharField(max_length=25)
     weight_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
