@@ -17,7 +17,7 @@ class XrayAppointment(models.Model):
     preg_status = models.CharField(max_length=25)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -46,7 +46,7 @@ class CtAppointment(models.Model):
     kidney_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -79,7 +79,7 @@ class MriAppointment(models.Model):
     claustrophobia_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -108,7 +108,7 @@ class FluoroAppointment(models.Model):
     kidney_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -137,7 +137,7 @@ class AngioAppointment(models.Model):
     kidney_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -165,7 +165,7 @@ class DexaAppointment(models.Model):
     surgery_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -193,7 +193,7 @@ class MammoAppointment(models.Model):
     screening_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -223,7 +223,7 @@ class NmAppointment(models.Model):
     kidney_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -251,7 +251,7 @@ class UsAppointment(models.Model):
     weight_status = models.CharField(max_length=100)
 
     comms_problems = models.TextField(max_length=1000)
-    contact_number = models.IntegerField()
+    contact_number = models.CharField(max_length=20)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
