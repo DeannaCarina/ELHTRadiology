@@ -1178,6 +1178,11 @@ input[placeholder],
 
 /* -----END OF EXAMINATION BOARD----- */
 
+.exam-prerequisite {
+    font-size: small;
+    font-style: italic;
+}
+
 /* -----ANGIOGRAPHY----- */
 
 .angio-hero {
