@@ -2,6 +2,62 @@
 
 
 {% block content %}
-<div class="examination-hero exam-board-hero"></div>
-<h1 class="examination-title">Examination Board</h1>
+<div class="exam-board-hero">
+    <h1 class="examination-title">Examination Board</h1>
+    <div class="exam-link-container container-fluid">
+        
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'xray' %}">
+                    <h2>X-RAY</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'computed_tomography' %}">
+                    <h2>CT Scan</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'magnetic_resonance' %}">
+                    <h2>MRI Scan</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'ultrasound' %}">
+                    <h2>Ultrasound</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'mammography' %}">
+                    <h2>Mammogram</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'dexa' %}">
+                    <h2>Dexa Scan</h2>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'nuclear_medicine' %}">
+                    <h2 id="nm-booking-header">Nuclear Medicine Scan</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'angiography' %}">
+                    <h2>Angiogram</h2>
+                </a>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-2 exam-link">
+                <a href="{% url 'fluoroscopy' %}">
+                    <h2>Fluoroscope</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}

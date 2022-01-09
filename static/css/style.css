@@ -878,15 +878,6 @@ input[placeholder],
 
 /* -----GENERAL INFORMATION PAGES----- */
 
-.information-container {
-    min-height: 100vh;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    padding-bottom: 145px;
-    /* height of the footer */
-}
-
 .information-hero {
     min-width: 100%;
     height: 100%;
@@ -895,6 +886,7 @@ input[placeholder],
     top: 0;
     left: 0;
     background-color: #ffffff;
+    padding-top: 100px;
 }
 
 .information-title {
@@ -955,6 +947,18 @@ input[placeholder],
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 145px;
+    /* height of the footer */
+}
+
+@media screen and (max-width: 445px) {
+    .info-board-hero {
+        padding-bottom: 200px;
+    }
 }
 
 /* -----END OF GENERAL INFORMATION BOARD----- */
@@ -1074,6 +1078,7 @@ input[placeholder],
     top: 0;
     left: 0;
     background-color: #ffffff;
+    padding-top: 100px;
 }
 
 .examination-title {
@@ -1174,7 +1179,127 @@ input[placeholder],
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 145px;
+    /* height of the footer */
 }
+
+.exam-link-container {
+    max-width: 1200px;
+}
+
+.exam-link {
+    text-align: center;
+    border: 2px solid rgb(140, 168, 179);
+    background-color: white;
+    box-shadow: 10px 10px 8px #888888;
+    height: 200px;
+    width: 250px;
+    padding: 0;
+    border-radius: 25px;
+    margin: auto;
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+.exam-link:hover {
+    box-shadow: 10px 10px 8px #3d3d3d;
+    border: 2px solid rgb(83, 106, 141);
+}
+
+.exam-link h2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.exam-link a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1210px) {
+
+    .exam-link {
+        margin: auto;
+        margin-bottom: 20px;
+
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .exam-link {
+        width: 180px;
+        height: 180px;
+    }
+
+    .exam-link h2 {
+        font-size: 1.3em;
+        font-weight: 600;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    #nm-booking-header {
+        padding-bottom: 53px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .exam-link h2 {
+        padding-bottom: 80px;
+    }
+
+    #nm-booking-header {
+        padding-bottom: 63px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .exam-link {
+        width: 290px;
+        height: 70px;
+        margin-bottom: 5px;
+    }
+
+    .exam-link h2 {
+        padding-bottom: 25px;
+        padding-top: 20px;
+    }
+
+    #nm-booking-header {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .exam-board-hero {
+        padding-bottom: 200px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .exam-link {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    .exam-link h2 {
+        padding-bottom: 25px;
+    }
+
+    #nm-booking-header {
+        padding-bottom: 25px;
+    }
+}
+
+
+
+
+
 
 /* -----END OF EXAMINATION BOARD----- */
 
@@ -1182,6 +1307,8 @@ input[placeholder],
     font-size: small;
     font-style: italic;
 }
+
+
 
 /* -----ANGIOGRAPHY----- */
 
