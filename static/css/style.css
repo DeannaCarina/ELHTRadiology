@@ -878,19 +878,18 @@ input[placeholder],
 
 /* -----GENERAL INFORMATION PAGES----- */
 
-.information-hero {
-    min-width: 100%;
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
+.information-container {
     min-height: 100vh;
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 145px;
-    /* height of the footer */
+    padding-bottom: 145px; /* height of the footer */
+}
+
+.information-hero {
+    min-width: 100%;
+    height: 100%;
+    padding-top: 50px;
 }
 
 .information-title {
