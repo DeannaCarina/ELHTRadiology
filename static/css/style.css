@@ -992,6 +992,22 @@ input[placeholder],
     background-position: center center;
 }
 
+.location-table {
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.location-tr {
+    border: 1px solid black;
+}
+
+.location-tr td {
+    border: 1px solid black;
+    padding: 2px 25px 2px 25px;
+    text-align: center;
+}
+
 #map {
     height: 350px;
     max-width: 70%;
@@ -999,9 +1015,41 @@ input[placeholder],
     margin-bottom: 100px;
 }
 
+.table-green {
+    background-color: #a5ebc5;
+}
+
+@media screen and (max-width: 1175px) {
+    .location-tr td {
+        padding: 2px 15px 2px 15px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .location-tr td {
+        padding: 2px 5px 2px 5px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .location-tr td {
+        font-size: small;
+    }
+}
+
 @media screen and (max-width: 640px) {
     #map {
         max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .location-tr td {
+        font-size: x-small;
+        padding: 2px;
+    }
+    .location-table {
+        margin-left: 0px;
     }
 }
 
