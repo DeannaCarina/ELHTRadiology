@@ -238,7 +238,7 @@ class BookDexaTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
-        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+        if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
@@ -289,7 +289,7 @@ class BookMammoTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
-        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+        if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
@@ -345,7 +345,7 @@ class BookNmTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
-        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+        if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
@@ -401,7 +401,7 @@ class BookAngioTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
-        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+        if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
