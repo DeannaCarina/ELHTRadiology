@@ -242,7 +242,7 @@ class BookDexaTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked a Dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Accrington Victoria Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
             except BadHeaderError:
@@ -293,7 +293,7 @@ class BookMammoTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Burnley General Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
             except BadHeaderError:
@@ -349,7 +349,7 @@ class BookNmTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
             except BadHeaderError:
@@ -405,7 +405,7 @@ class BookAngioTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
             except BadHeaderError:
