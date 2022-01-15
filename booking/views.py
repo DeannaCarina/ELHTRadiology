@@ -66,6 +66,19 @@ class BookXrayTemplateView(TemplateView):
         preg_status = request.POST.get('preg_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         xray_appointment = XrayAppointment.objects.create(
             request_number=request_number,
@@ -79,7 +92,8 @@ class BookXrayTemplateView(TemplateView):
             time_of_exam=time_of_exam,
             preg_status=preg_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         xray_appointment.save()
@@ -106,6 +120,19 @@ class BookCtTemplateView(TemplateView):
         kidney_status = request.POST.get('kidney_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked a CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         ct_appointment = CtAppointment.objects.create(
             request_number=request_number,
@@ -121,7 +148,8 @@ class BookCtTemplateView(TemplateView):
             weight_status=weight_status,
             kidney_status=kidney_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         ct_appointment.save()
@@ -151,6 +179,19 @@ class BookMriTemplateView(TemplateView):
         claustrophobia_status = request.POST.get('claustrophobia_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         mri_appointment = MriAppointment.objects.create(
             request_number=request_number,
@@ -170,7 +211,8 @@ class BookMriTemplateView(TemplateView):
             eyes_status=eyes_status,
             claustrophobia_status=claustrophobia_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         mri_appointment.save()
@@ -194,6 +236,19 @@ class BookDexaTemplateView(TemplateView):
         surgery_status = request.POST.get('surgery_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked a Dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         dexa_appointment = DexaAppointment.objects.create(
             request_number=request_number,
@@ -207,7 +262,8 @@ class BookDexaTemplateView(TemplateView):
             weight_status=weight_status,
             surgery_status=surgery_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         dexa_appointment.save()
@@ -231,6 +287,19 @@ class BookMammoTemplateView(TemplateView):
         screening_status = request.POST.get('screening_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         mammo_appointment = MammoAppointment.objects.create(
             request_number=request_number,
@@ -244,7 +313,8 @@ class BookMammoTemplateView(TemplateView):
             implants_status=implants_status,
             screening_status=screening_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         mammo_appointment.save()
@@ -273,6 +343,19 @@ class BookNmTemplateView(TemplateView):
 
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         nm_appointment = NmAppointment.objects.create(
             request_number=request_number,
@@ -289,7 +372,8 @@ class BookNmTemplateView(TemplateView):
             weight_status=weight_status,
             kidney_status=kidney_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         nm_appointment.save()
@@ -315,6 +399,19 @@ class BookAngioTemplateView(TemplateView):
         kidney_status = request.POST.get('kidney_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         angio_appointment = AngioAppointment.objects.create(
             request_number=request_number,
@@ -330,7 +427,8 @@ class BookAngioTemplateView(TemplateView):
             weight_status=weight_status,
             kidney_status=kidney_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         angio_appointment.save()
@@ -355,6 +453,19 @@ class BookUltrasoundTemplateView(TemplateView):
         weight_status = request.POST.get('weight_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         us_appointment = UsAppointment.objects.create(
             request_number=request_number,
@@ -369,7 +480,8 @@ class BookUltrasoundTemplateView(TemplateView):
             preg_status=preg_status,
             weight_status=weight_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         us_appointment.save()
@@ -395,6 +507,19 @@ class BookFluoroTemplateView(TemplateView):
         kidney_status = request.POST.get('kidney_status')
         comms_problems = request.POST.get('comms_problems')
         contact_number = request.POST.get('contact_number')
+        email_address = request.POST.get('email_address')
+
+        if first_name and last_name and exam_location and date_of_exam and time_of_exam:
+            try:
+                send_mail(
+                    subject=f"Your radiology appointment",
+                    message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[email_address])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
 
         fluoro_appointment = FluoroAppointment.objects.create(
             request_number=request_number,
@@ -410,7 +535,8 @@ class BookFluoroTemplateView(TemplateView):
             weight_status=weight_status,
             kidney_status=kidney_status,
             comms_problems=comms_problems,
-            contact_number=contact_number
+            contact_number=contact_number,
+            email_address=email_address
         )
 
         fluoro_appointment.save()

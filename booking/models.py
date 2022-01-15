@@ -18,6 +18,7 @@ class XrayAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -47,6 +48,7 @@ class CtAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -80,6 +82,7 @@ class MriAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -109,6 +112,7 @@ class FluoroAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -138,6 +142,7 @@ class AngioAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -166,6 +171,7 @@ class DexaAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -194,6 +200,7 @@ class MammoAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -224,6 +231,7 @@ class NmAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
@@ -252,6 +260,7 @@ class UsAppointment(models.Model):
 
     comms_problems = models.TextField(max_length=1000)
     contact_number = models.CharField(max_length=20)
+    email_address = models.TextField(max_length=50)
 
     sent_date = models.DateField(auto_now_add=True)
     accepted = models.BooleanField(default=False)

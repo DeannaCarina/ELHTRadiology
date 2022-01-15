@@ -27,10 +27,10 @@
             <div class="form-group">
                 <label for="request_number" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
-                        referrer. </span>
+                        referrer and is 8 numbers long. If you haven't been given a paper request and don't know the request number, please leave this blank.</span>
                 </label>
                 <input type="text" name="request_number" id="request_number" class="form-control booking-form-input"
-                    placeholder="12345678" required />
+                    placeholder="12345678" />
             </div>
 
             <!-- HOSPITAL NUMBER -->
@@ -38,11 +38,12 @@
             <div class="form-group">
                 <label for="hospital_number" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
-                        referrer. It is in the top left corner underneath a barcode. It starts with 'RXR' and is
-                        followed by 7 numbers.</span>
+                        referrer. It is in the top left corner underneath a barcode. It either starts with 'RXR' and is
+                        followed by 7 numbers, or starts with 'ICE' followed by 6 numbers. If you don't know your 
+                        hospital number, please leave this blank.</span>
                 </label>
                 <input type="text" name="hospital_number" id="hospital_number" class="form-control booking-form-input"
-                    placeholder="RXR1234567" required />
+                    placeholder="RXR1234567" />
             </div>
 
             <!-- FIRST NAME -->
@@ -78,7 +79,8 @@
             <label for="examination_type">Choose your examination</label>
             <div class="form-group">
                 <label for="examination_type" class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please select the examination on your request here. If you have more than one body part on your exam request, you will need to submit another form.</span>
+                    <span class="info-hover-text">Please select the examination on your request here. If you have more than one body part on your exam request, you will need to submit another form. If your 
+                        examination isn't listed, please write in the 'communication and mobility requirements' box the examination you think you are having.</span>
                 </label>
                 <select id="examination_type" name="examination_type" class="form-control booking-form-input"
                     placeholder="Examination type">
@@ -177,7 +179,7 @@
             <div class="form-group">
                 <label for="comms_problems" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if you have any special requirements for your
-                        examination that would help with any mobility or communication requirements you may have.</span>
+                        examination that would help with any mobility or communication requirements you may have. Please put any other comments you may have here.</span>
                 </label>
                 <textarea rows="5" name="comms_problems" id="comms_problems" class="form-control booking-form-input"
                     placeholder="Do you have any mobility or communication requirements?"></textarea>
@@ -187,11 +189,21 @@
             <label for="contact_number">Please provide a contact number to confirm your appointment.</label>
             <div class="form-group">
                 <label for="contact_number" class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">For us to confirm your appointment, please provide the best number to
+                    <span class="info-hover-text">In case we need to contact you about your appointment, please provide the best number to
                         contact you on.</span>
                 </label>
                 <input type="text" name="contact_number" id="contact_number" class="form-control booking-form-input"
                     placeholder="Contact Number" required />
+            </div>
+
+            <!-- EMAIL ADDRESS -->
+            <label for="email_address">Please provide an email address to receive your booking confirmation.</label>
+            <div class="form-group">
+                <label for="email_address" class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">To receive your booking confirmation, please provide the best email address to contact you on.</span>
+                </label>
+                <input type="text" name="email_address" id="email_address" class="form-control booking-form-input"
+                    placeholder="Email Address" required />
             </div>
 
             <!-- FORM SUBMIT BUTTON -->
