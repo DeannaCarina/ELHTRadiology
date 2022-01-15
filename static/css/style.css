@@ -178,14 +178,27 @@ footer {
 .upper-footer {
     background-color: #A2C4C9;
     height: 87px;
+    line-height: 87px;
+    display: inline-flexbox;
 }
 
 .slogan-container {
     display: grid;
+    line-height: 20px;
     justify-items: left;
     padding: 5px;
     font-size: 1.5em;
     font-weight: 700;
+    width: 110px;
+}
+
+.footer-image {
+    max-height: 70px;
+}
+
+.align-right {
+    text-align: right;
+    padding-right: 30px;
 }
 
 .spe-text {
@@ -203,6 +216,7 @@ footer {
 .effective-text {
     color: #4E419A;
 }
+
 
 .lower-footer {
     background-color: #0069B4;
@@ -247,11 +261,13 @@ footer {
     padding-right: 2px;
 }
 
-@media screen and (max-width: 300px) {
-    .bottom-nav-item {
-        font-size: 0.7em;
+@media screen and (max-width: 640px) {
+    .footer-image {
+        max-height: 40px;
     }
 }
+
+
 
 @media screen and (max-width: 445px) {
     .lower-nav {
@@ -271,6 +287,22 @@ footer {
         display: flex;
         align-items: center;
 
+    }
+
+    .small-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .x-small-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .bottom-nav-item {
+        font-size: 0.7em;
     }
 }
 
@@ -552,6 +584,52 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    padding: 40px;
+}
+
+.review-container {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.review {
+    color: white;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.review-name {
+    color: white;
+    font-size: medium;
+    margin-left: 20px;
+    text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+    .review {
+        font-size: large;
+    }
+    .review-name {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .image-container {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .image-container {
+        padding: 10px;
+    }
+    .review-container {
+        padding: 20px;
+    }
 }
 
 /* -----END OF IMAGE SECTION----- */
