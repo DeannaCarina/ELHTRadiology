@@ -75,6 +75,11 @@ class BookXrayTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -129,6 +134,11 @@ class BookCtTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked a CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -188,6 +198,11 @@ class BookMriTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -245,6 +260,11 @@ class BookDexaTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked a Dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Accrington Victoria Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -296,6 +316,11 @@ class BookMammoTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Burnley General Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -352,6 +377,11 @@ class BookNmTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -408,6 +438,11 @@ class BookAngioTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -462,6 +497,11 @@ class BookUltrasoundTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
@@ -516,6 +556,11 @@ class BookFluoroTemplateView(TemplateView):
                     message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
+                send_mail(
+                    subject=f"New booking via ELHT RBS",
+                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
         else:
