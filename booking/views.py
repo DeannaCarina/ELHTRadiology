@@ -77,7 +77,7 @@ class BookXrayTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for x-ray via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -136,7 +136,7 @@ class BookCtTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for CT via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -200,7 +200,7 @@ class BookMriTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for MRI via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -262,7 +262,7 @@ class BookDexaTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for dexa via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -318,7 +318,7 @@ class BookMammoTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for Mammography via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -379,7 +379,7 @@ class BookNmTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for Nuclear Medicine via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -440,7 +440,7 @@ class BookAngioTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for Angiography via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -499,7 +499,7 @@ class BookUltrasoundTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for Ultrasound via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
@@ -558,7 +558,7 @@ class BookFluoroTemplateView(TemplateView):
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
-                    message=f"{first_name} {last_name} just made a booking via ELHT RBS. Log in to admin page to confirm this booking.",
+                    message=f"{first_name} {last_name} just made a booking for Fluoroscopy via ELHT RBS. Log in to admin page to confirm this booking.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER])
             except BadHeaderError:
