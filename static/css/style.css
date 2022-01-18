@@ -1632,6 +1632,10 @@ input[placeholder],
     max-width: 50%;
 }
 
+.hide {
+    display: none;
+}
+
 button[type="submit"] {
     margin-top: 15px;
     margin-bottom: 30px;
