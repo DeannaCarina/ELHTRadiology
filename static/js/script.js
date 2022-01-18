@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function validateForm() {
     
     let formvalid = true
-    
+
     // REQUEST NUMBER
     let reqnum = document.forms["xrayForm"]["request_number"].value;
     if (reqnum.length >= 1 && reqnum.length <= 7 || reqnum.length >= 9) {
@@ -62,19 +62,9 @@ function validateForm() {
 
     // HOSPITAL NUMBER
     let hospnum = document.forms["xrayForm"]["hospital_number"].value;
-    if ((hospnum.length >= 1 && hospnum.length <= 9 || hospnum.length >=11) && (hospnum.startsWith("RXR") || hospnum.startsWith("rxr"))) {
+    if (!/^ICE[0-9]{6}$|^RXR[0-9]{7}$|^$/i.test(hospnum)) {
         formvalid = false;
-        alert("Your hospital (RXR) number should be in the format: 'RXR1234567'. If you don't know your hospital number, please leave this blank");
-        return false;
-    };
-    if ((hospnum.length >= 1 && hospnum.length <= 8 || hospnum.length >=10) && (hospnum.startsWith("ICE") || hospnum.startsWith("ice"))) {
-        formvalid = false;
-        alert("Your hospital (ICE) number should be in the format: 'ICE123456'. If you don't know your hospital number, please leave this blank");
-        return false;
-    };
-    if ((hospnum.length >=1 && hospnum.length <=8 || hospnum >= 11) || (hospnum.slice(0,3) != '' && hospnum.slice(0,3) != 'RXR' && hospnum.slice(0,3) != 'rxr' && hospnum.slice(0,3) != 'ICE' && hospnum.slice(0,3) != 'ice')) {
-        formvalid = false;
-        alert("Your hospital number should start with 'RXR' followed by 7 numbers or 'ICE' followed by 6 numbers. If you don't know your hospital number, please leave this blank");
+        alert("Your hospital number should take the format 'RXR' followed by 7 numbers or 'ICE' followed by 6 numbers."); 
     };
 
     // FIRST NAME & LAST NAME
