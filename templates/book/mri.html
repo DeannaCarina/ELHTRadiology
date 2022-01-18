@@ -8,7 +8,7 @@
     <!-- MRI BOOKING FORM -->
         
             <div class="center-form">
-                <form class="booking-form" method="POST">
+                <form class="booking-form" method="POST" onsubmit="return validateForm()">
                     <h1 class="book-title">Book your MRI exam</h1>
 
                     {% if messages %}
@@ -166,7 +166,7 @@
             </div>
 
             <!-- WEIGHT QUESTION -->
-            <label for="weight_status">Do you weigh in excess of 22kg (140kg)?</label>
+            <label for="weight_status">Do you weigh in excess of 22st (140kg)?</label>
             <div class="form-group">
                 <label for="weight_status" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if there is any chance you might weigh in excess of 22kg, this will affect how we carry out your examination.</span>
