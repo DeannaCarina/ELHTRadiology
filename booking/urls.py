@@ -20,7 +20,7 @@ urlpatterns = [
     path('privacy', PrivacyTemplateView.as_view(), name='privacy'),
     path('contact', ContactTemplateView.as_view(), name='contact'),
     path('thanks', ThanksTemplateView.as_view(), name='thanks'),
-    path('admin/login/?next=/admin/', AdminTemplateView.as_view(), name='admin'),
+    path('/admin', AdminTemplateView.as_view(), name='admin'),
 
     path('book/xray', BookXrayTemplateView.as_view(), name='book_xray'),
     path('book/ct', BookCtTemplateView.as_view(), name='book_ct'),
