@@ -6,8 +6,8 @@ from django.db import models
 class XrayAppointment(models.Model):
     request_number = models.CharField(max_length=10)
     hospital_number = models.CharField(max_length=10)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     date_of_birth = models.DateField()
     examination_type = models.CharField(max_length=100)
     exam_location = models.CharField(max_length=100)

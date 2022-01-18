@@ -8,7 +8,7 @@
     <!-- XRAY BOOKING FORM -->
         
             <div class="center-form">
-                <form name="xrayForm" class="booking-form" method="POST" onsubmit="return xrayValidateForm()">
+                <form name="xrayForm" class="booking-form" method="POST" onsubmit="return validateForm()">
                     <h1 class="book-title">Book your X-Ray exam</h1>
 
                     {% if messages %}
@@ -198,7 +198,7 @@
                 <label for="email_address" class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">To receive your booking confirmation, please provide the best email address to contact you on.</span>
                 </label>
-                <input type="text" name="email_address" id="email_address" class="form-control booking-form-input"
+                <input type="email" name="email_address" id="email_address" class="form-control booking-form-input"
                     placeholder="Email Address" required />
             </div>
 
