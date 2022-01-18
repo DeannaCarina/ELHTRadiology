@@ -41,4 +41,49 @@ document.addEventListener('DOMContentLoaded', function() {
   $(document).ready(function(){
     $('.datepicker').datepicker();
   });
-        
+
+
+// X-RAY FORM VALIDATION
+
+function xrayValidateForm() {
+    
+    let xrayformvalid = true
+    // REQUEST NUMBER
+    
+    let xrayreqnum = document.forms["xrayForm"]["request_number"].value;
+    if (xrayreqnum.length >= 1 && xrayreqnum.length <= 7 || xrayreqnum.length >= 9) {
+        xrayformvalid = false;
+        alert("Your request number should be 8 numbers long. If you don't know your request number, please leave this blank."); 
+    };
+
+    if (!/^[0-9]+$/.test(xrayreqnum) && (xrayreqnum != '')) {
+        xrayformvalid = false;
+        alert("Your request number should only contain the characters 0-9 and be in the format 12345678. If you don't know your request number, please leave this blank."); 
+    };
+
+
+    // HOSPITAL NUMBER
+    let xrayhospnum = document.forms["xrayForm"]["hospital_number"].value;
+
+    if ((xrayhospnum.length >= 1 && xrayhospnum.length <= 9 || xrayhospnum.length >=11) && (xrayhospnum.startsWith("RXR") || xrayhospnum.startsWith("rxr"))) {
+        xrayformvalid = false;
+        alert("Your hospital (RXR) number should be in the format: 'RXR1234567'. If you don't know your hospital number, please leave this blank");
+        return false
+    }
+
+    if ((xrayhospnum.length >= 1 && xrayhospnum.length <= 8 || xrayhospnum.length >=10) && (xrayhospnum.startsWith("ICE") || xrayhospnum.startsWith("ice"))) {
+        xrayformvalid = false;
+        alert("Your hospital (ICE) number should be in the format: 'ICE123456'. If you don't know your hospital number, please leave this blank");
+        return false
+    }
+
+    if ((xrayhospnum.length >=1 && xrayhospnum.length <=8 || xrayhospnum >= 11) || (xrayhospnum.slice(0,3) != '' && xrayhospnum.slice(0,3) != 'RXR' && xrayhospnum.slice(0,3) != 'rxr' && xrayhospnum.slice(0,3) != 'ICE' && xrayhospnum.slice(0,3) != 'ice')){
+        xrayformvalid = false;
+        alert("Your hospital number should start with 'RXR' followed by 7 numbers or 'ICE' followed by 6 numbers. If you don't know your hospital number, please leave this blank");
+    }
+    
+
+
+    return xrayformvalid
+    
+  } 

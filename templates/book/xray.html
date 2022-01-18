@@ -8,7 +8,7 @@
     <!-- XRAY BOOKING FORM -->
         
             <div class="center-form">
-                <form class="booking-form" method="POST">
+                <form name="xrayForm" class="booking-form" method="POST" onsubmit="return xrayValidateForm()">
                     <h1 class="book-title">Book your X-Ray exam</h1>
 
                     {% if messages %}
