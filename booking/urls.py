@@ -13,14 +13,16 @@ from .views import (HomeTemplateView, PrivacyTemplateView, ContactTemplateView,
                     ExamboardTemplateView, XrayTemplateView, CtTemplateView,
                     MriTemplateView, UsTemplateView, NmTemplateView,
                     MammoTemplateView, FluoroTemplateView, AngioTemplateView,
-                    DexaTemplateView, Page500, Page404, Page403)
+                    DexaTemplateView, Page500, Page404, Page403,
+                    Patientbooking, AdminManage)
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
     path('privacy', PrivacyTemplateView.as_view(), name='privacy'),
     path('contact', ContactTemplateView.as_view(), name='contact'),
     path('thanks', ThanksTemplateView.as_view(), name='thanks'),
-    path('/admin', AdminTemplateView.as_view(), name='admin'),
+    path('management/patient', Patientbooking.as_view(), name='managepatient'),
+    path('management/admin', AdminManage.as_view(), name='manageadmin'),
 
     path('book/xray', BookXrayTemplateView.as_view(), name='book_xray'),
     path('book/ct', BookCtTemplateView.as_view(), name='book_ct'),

@@ -651,3 +651,11 @@ class Page500(TemplateView):
 
 class Page403(TemplateView):
     template_name = '403.html'
+
+# Booking management pages
+
+class AdminManage(TemplateView):
+    template_name = 'management/patient.html'
+
+class Patientbooking(TemplateView):
+    template_name = 'management/admin.html'

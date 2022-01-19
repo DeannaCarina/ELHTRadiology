@@ -70,6 +70,28 @@ nav {
     color: white;
 }
 
+.disabled-login {
+    pointer-events: none;
+    cursor: default;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#login-button {
+    width: 50%;
+    height: 30px;
+    line-height: 15px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+}
+
+.login-form-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-size: 0.7rem;
+}
+
 .navbar-toggler {
     color: white;
     font-size: 1.3em;
