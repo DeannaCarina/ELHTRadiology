@@ -108,13 +108,11 @@
             <div class="modal-text">                   
                 <div class="login-form-container">
                     <h6 class="modalHeader">Patient Login</h3>
-                        <div class="modal-info">You would have received your login credentials via email when you booked your appointment.</div>
+                        <div class="modal-info">You would have received your booking reference number via email when you booked your appointment.</div>
                     <form id="patient-form" class="login-form" method="POST">
                         {% csrf_token %}
-                        <label for="username">Username: </label>
+                        <label for="username">Booking Reference: </label>
                         <input id="username" name="username" type="text"><br><br>
-                        <label for="password">Password: </label>
-                        <input id="password" name="password" type="text">
                         <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
                             class="fas fa-sign-in-alt"></i></button></a>
                         
