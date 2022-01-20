@@ -415,6 +415,16 @@ footer {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .hero-text>h1 {
+        font-size: 3rem;
+    }
+    
+    .booking-hero-link {
+        font-size: x-small;
+    }
+}
+
 /* -----END OF HERO IMAGE AND TEXT----- */
 
 /* -----BOOKING SECTION----- */

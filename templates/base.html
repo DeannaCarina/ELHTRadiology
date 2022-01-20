@@ -84,12 +84,6 @@
                         <li class="nav-item">
                             <a class="nav-link" id="loginLink" href="#">Login</a>
                         </li>
-                            
-                                    
-                                   
-                                    
-                                
-                         
                     </ul>
                 </div>
             </div>
@@ -105,36 +99,33 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div class="modal-text">
-                
-                    
-                                    <div class="login-form-container">
-                                        <h6 class="modalHeader">Patient Login</h3>
-                                        <form id="patient-form" class="login-form" method="POST">
-                                            {% csrf_token %}
-                                            <label for="username">Username: </label>
-                                            <input id="username" name="username" type="text"><br><br>
-                                            <label for="password">Password: </label>
-                                            <input id="password" name="password" type="text">
-                                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                                                class="fas fa-sign-in-alt"></i></button></a>
-                                           
-                                        </form>
-                                    </div>
-                                    <hr>
-                
-                    <div class="login-form-container">
-                        <h6 class="modalHeader">Admin Login</h3>
-                        <form id="admin-form" class="login-form" method="POST">
-                            {% csrf_token %}
-                            <label for="username">Username: </label>
-                            <input id="username" name="username" type="text"><br><br>
-                            <label for="password">Password: </label>
-                            <input id="password" name="password" type="text">
-                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                                class="fas fa-sign-in-alt"></i></button></a>
-                        </form>
-                    </div>
+            <div class="modal-text">                   
+                <div class="login-form-container">
+                    <h6 class="modalHeader">Patient Login</h3>
+                    <form id="patient-form" class="login-form" method="POST">
+                        {% csrf_token %}
+                        <label for="username">Username: </label>
+                        <input id="username" name="username" type="text"><br><br>
+                        <label for="password">Password: </label>
+                        <input id="password" name="password" type="text">
+                        <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
+                            class="fas fa-sign-in-alt"></i></button></a>
+                        
+                    </form>
+                </div>
+                <hr>
+                <div class="login-form-container">
+                    <h6 class="modalHeader">Admin Login</h3>
+                    <form id="admin-form" class="login-form" method="POST">
+                        {% csrf_token %}
+                        <label for="username">Username: </label>
+                        <input id="username" name="username" type="text"><br><br>
+                        <label for="password">Password: </label>
+                        <input id="password" name="password" type="text">
+                        <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
+                            class="fas fa-sign-in-alt"></i></button></a>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
