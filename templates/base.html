@@ -81,41 +81,15 @@
                         <li class="nav-item separater">
                             <a class="nav-link disabled" href="#">|</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Login
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item disabled-login">Patient Login</a></li>
-                                    <div class="login-form-container">
-                                        <form id="patient-form" class="login-form" method="POST">
-                                            {% csrf_token %}
-                                            <label for="username">Username</label>
-                                            <input id="username" name="username" type="text">
-                                            <label for="password">Password</label>
-                                            <input id="pawword" name="password" type="text">
-                                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                                                class="fas fa-sign-in-alt"></i></button></a>
-                                           
-                                        </form>
-                                    </div>
-                                    <hr>
-                                <li><a class="dropdown-item disabled-login">Admin Login</a></li>
-                                    <div class="login-form-container">
-                                        <form id="admin-form" class="login-form" method="POST">
-                                            {% csrf_token %}
-                                            <label for="username">Username</label>
-                                            <input id="username" name="username" type="text">
-                                            <label for="password">Password</label>
-                                            <input id="pawword" name="password" type="text">
-                                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                                                class="fas fa-sign-in-alt"></i></button></a>
-                                        </form>
-                                    </div>
-                                
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" id="loginLink" href="#">Login</a>
                         </li>
+                            
+                                    
+                                   
+                                    
+                                
+                         
                     </ul>
                 </div>
             </div>
@@ -128,6 +102,42 @@
     </header>
         <!-- -----END OF NAVBAR----- -->    
     <span id="main-content"></span>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-text">
+                
+                    
+                                    <div class="login-form-container">
+                                        <h6 class="modalHeader">Patient Login</h3>
+                                        <form id="patient-form" class="login-form" method="POST">
+                                            {% csrf_token %}
+                                            <label for="username">Username: </label>
+                                            <input id="username" name="username" type="text"><br><br>
+                                            <label for="password">Password: </label>
+                                            <input id="password" name="password" type="text">
+                                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
+                                                class="fas fa-sign-in-alt"></i></button></a>
+                                           
+                                        </form>
+                                    </div>
+                                    <hr>
+                
+                    <div class="login-form-container">
+                        <h6 class="modalHeader">Admin Login</h3>
+                        <form id="admin-form" class="login-form" method="POST">
+                            {% csrf_token %}
+                            <label for="username">Username: </label>
+                            <input id="username" name="username" type="text"><br><br>
+                            <label for="password">Password: </label>
+                            <input id="password" name="password" type="text">
+                            <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
+                                class="fas fa-sign-in-alt"></i></button></a>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
@@ -179,6 +189,30 @@
         </div>
     </footer>                 
     <!-- -----END OF FOOTER----- --> 
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("loginLink");
+        var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            };
+
+            // When the user clicks on cross button, close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+    </script>
     
 </body>
 
