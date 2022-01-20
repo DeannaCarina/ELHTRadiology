@@ -22,8 +22,12 @@
 
 <body>
     <header>
+        
         <!-- -----NAVBAR----- -->
         <a href="#main-content" class="skip-nav">Skip Navigation</a>
+        <div id="warning">This website is for <span class="warning-dec">educational purposes</span> only. 
+            Please do not use this website to book appointments at ELHT. Please do not contact with the intention 
+            of selling your products. Thank you. <span id="warning-close">x</span></div>
         <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -203,6 +207,16 @@
                     modal.style.display = "none";
                 }
             };
+
+
+            var warning = document.getElementById("warning");
+            var warningClose = document.getElementById("warning-close");
+
+            // When the user clicks on cross button, close the modal
+            warningClose.onclick = function () {
+                warning.style.display = "none";
+            };
+
     </script>
     
 </body>

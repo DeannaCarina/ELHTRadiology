@@ -60,6 +60,29 @@ header {
     box-shadow: 0px 3px 3px 3px #202020c9;
 }
 
+#warning {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    font-size: small;
+    padding: 5px;
+}
+
+.warning-dec {
+    text-decoration: underline;
+}
+
+#warning-close {
+    font-weight: 800;
+    float: right;
+    margin-right: 10px;
+}
+
+#warning-close:hover {
+    color: grey;
+    cursor: pointer;
+}
+
 nav {
     background-color: #0069b4;
     display: inline-flex;
