@@ -51,13 +51,9 @@ function validateForm() {
 
     // REQUEST NUMBER
     let reqnum = document.forms["xrayForm"]["request_number"].value;
-    if (reqnum.length >= 1 && reqnum.length <= 7 || reqnum.length >= 9) {
+    if (!/^[0-9]{8}$|^$/.test(reqnum)) {
         formvalid = false;
-        alert("Your request number should be 8 numbers long. If you don't know your request number, please leave this blank."); 
-    };
-    if (!/^[0-9]+$/.test(reqnum) && (reqnum != '')) {
-        formvalid = false;
-        alert("Your request number should only contain the characters 0-9 and be in the format 12345678. If you don't know your request number, please leave this blank."); 
+        alert("Your request number should only contain the characters 0-9 and be 8 numbers long. If you don't know your request number, please leave this blank."); 
     };
 
     // HOSPITAL NUMBER
@@ -70,13 +66,9 @@ function validateForm() {
     // FIRST NAME & LAST NAME
     let firstname = document.forms["xrayForm"]["first_name"].value;
     let lastname = document.forms["xrayForm"]["last_name"].value;
-    if (firstname.length >= 50 || lastname.length >= 50) {
+    if (!/^[a-z_-]{1,50}$/i.test(firstname) || !/^[a-z_-]{1,50}$/i.test(lastname)) {
         formvalid = false;
-        alert("Oh no! Your name is too long for our system, please contact us directly to book your appointment."); 
-    };
-    if (!/^[a-z_A-Z_-]+$/.test(firstname || !/^[a-z_A-Z_-]+$/.test(lastname))) {
-        formvalid = false;
-        alert("Your name should only contain A-Z, a-z or the '-' character. If your name contains other characters or symbols, please contact the department directly to book your appointment."); 
+        alert("Your name should only contain A-Z, a-z or the '-' character and be a maximum of 50 characters long. If your name contains other characters or symbols, please contact the department directly to book your appointment."); 
     };
 
     
@@ -106,9 +98,9 @@ function validateForm() {
 
     // CONTACT NUMBER 
     let contnum = document.forms["xrayForm"]["contact_number"].value;
-    if ((contnum.length <= 5 || contnum.length >= 21) || (!/^[0-9]+$/.test(contnum))) {
+    if (!/^0[0-9]{1,20}$/.test(contnum)) {
         formvalid = false;
-        alert("Please provide a valid phone number between 5 and 20 numbers long using characters 0-9."); 
+        alert("Please provide a valid phone number between 5 and 20 numbers long using characters 0-9 (Please do not put spaces in your contact number)."); 
     };
 
     return formvalid;
