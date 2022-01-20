@@ -69,7 +69,13 @@ header {
 }
 
 .warning-dec {
+    color: white;
     text-decoration: underline;
+    font-weight: 900;
+}
+
+.warning-dec:hover {
+    color: rgb(128, 189, 230);
 }
 
 #warning-close {
@@ -79,7 +85,7 @@ header {
 }
 
 #warning-close:hover {
-    color: grey;
+    color: rgb(128, 189, 230);
     cursor: pointer;
 }
 
@@ -132,7 +138,7 @@ nav {
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus {
-    color: rgb(128, 189, 230)
+    color: rgb(128, 189, 230);
 }
 
 .logo {
