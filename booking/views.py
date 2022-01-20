@@ -5,6 +5,7 @@ from django.core import mail
 from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
 from django.contrib import messages
+import time
 from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment, UsAppointment
 
 class HomeTemplateView(TemplateView):
@@ -68,11 +69,17 @@ class BookXrayTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"XR{last_name}{epoch}"
+
         if first_name and last_name and exam_location and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -98,7 +105,8 @@ class BookXrayTemplateView(TemplateView):
             preg_status=preg_status,
             comms_problems=comms_problems,
             contact_number=contact_number,
-            email_address=email_address
+            email_address=email_address,
+            ref_number=ref_number,
         )
 
         xray_appointment.save()
@@ -127,12 +135,17 @@ class BookCtTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"CT{last_name}{epoch}"
+
         if first_name and last_name and exam_location and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked an CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -191,12 +204,17 @@ class BookMriTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"MR{last_name}{epoch}"
+
         if first_name and last_name and exam_location and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -253,11 +271,17 @@ class BookDexaTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"DX{last_name}{epoch}"
+
         if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Accrington Victoria Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
+                    message=f"{first_name} {last_name},\n\nYou booked a dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -309,12 +333,17 @@ class BookMammoTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"MA{last_name}{epoch}"
+
         if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Burnley General Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -370,12 +399,17 @@ class BookNmTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"NM{last_name}{epoch}"
+
         if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -431,12 +465,17 @@ class BookAngioTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"AN{last_name}{epoch}"
+
         if first_name and last_name and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -490,12 +529,17 @@ class BookUltrasoundTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"US{last_name}{epoch}"
+
         if first_name and last_name and exam_location and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
@@ -549,12 +593,17 @@ class BookFluoroTemplateView(TemplateView):
         contact_number = request.POST.get('contact_number')
         email_address = request.POST.get('email_address')
 
+        date_time = f"{date_of_exam} {time_of_exam}"
+        pattern = '%Y-%m-%d %H:%M'
+        epoch = int(time.mktime(time.strptime(date_time, pattern)))
+
+        ref_number = f"FL{last_name}{epoch}"
+
         if first_name and last_name and exam_location and date_of_exam and time_of_exam:
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.",
-                    from_email=settings.EMAIL_HOST_USER,
+                    message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
                     subject=f"New booking via ELHT RBS",
