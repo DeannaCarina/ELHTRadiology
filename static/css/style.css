@@ -106,6 +106,22 @@ nav {
     text-transform: uppercase;
 }
 
+#loginLink {
+    background-color: white;
+    color:#0069b4;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 9px;
+    padding-bottom: 3px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#loginLink:hover {
+    /* background-color: white; */
+    color:rgb(128, 189, 230);
+}
+
 #login-button {
     width: 50%;
     height: 30px;
@@ -259,6 +275,18 @@ nav {
 
     .nav-link {
         margin-left: 5px;
+    }
+
+    #loginLink {
+        border-radius: 3px;
+        box-shadow: 1px black;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #loginLink {
+        padding-top: 3px;
     }
 }
 
