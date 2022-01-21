@@ -1,6 +1,10 @@
 
 from django.urls import path
-from .views import (HomeTemplateView, PrivacyTemplateView, ContactTemplateView,
+
+from django.contrib.auth import views as auth_view
+
+from .views import (HomeTemplateView,
+                    PrivacyTemplateView, ContactTemplateView,
                     ThanksTemplateView, AdminTemplateView,
                     BookXrayTemplateView, BookCtTemplateView,
                     BookMriTemplateView, BookDexaTemplateView,

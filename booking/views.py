@@ -14,7 +14,6 @@ class HomeTemplateView(TemplateView):
 class PrivacyTemplateView(TemplateView):
     template_name = 'privacy.html'
 
-
 class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
 

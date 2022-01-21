@@ -84,12 +84,6 @@
                                 <li><a class="dropdown-item" href="{% url 'dexa' %}">Dexa</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item separater">
-                            <a class="nav-link disabled" href="#">|</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="loginLink" href="#">Login</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -103,40 +97,6 @@
         <!-- -----END OF NAVBAR----- -->    
     <span id="main-content"></span>
 
-    <!-- -----MODAL FOR LOG ON FORMS----- -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-text">                   
-                <div class="login-form-container">
-                    <h6 class="modalHeader">Patient Login</h3>
-                        <div class="modal-info">You would have received your booking reference number via email when you booked your appointment.</div>
-                    <form name="patient-login-form" id="patient-login-form" class="login-form" method="POST">
-                        {% csrf_token %}
-                        <label for="booking-reference">Booking Reference: </label>
-                        <input id="booking-reference" name="booking-reference" type="text"><br><br>
-                        <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                            class="fas fa-sign-in-alt"></i></button></a>
-                        
-                    </form>
-                </div>
-                <hr>
-                <div class="login-form-container">
-                    <h6 class="modalHeader">Admin Login</h3>
-                    <form name="admin-login-form" id="admin-login-form" class="login-form" method="POST">
-                        {% csrf_token %}
-                        <label for="username">Username: </label>
-                        <input id="username" name="username" type="text"><br><br>
-                        <label for="password">Password: </label>
-                        <input id="password" name="password" type="text">
-                        <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
-                            class="fas fa-sign-in-alt"></i></button></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- -----END OF MODAL FOR LOG ON FORMS----- -->
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
