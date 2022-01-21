@@ -78,7 +78,7 @@ class BookXrayTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",
+                    message=f"{first_name} {last_name},\n\nYou booked an x-ray appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -144,7 +144,7 @@ class BookCtTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked an CT appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -215,7 +215,7 @@ class BookMriTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked an MRI appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -284,7 +284,7 @@ class BookDexaTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Accrington Victoria Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",
+                    message=f"{first_name} {last_name},\n\nYou booked a dexa appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Accrington Victoria Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -347,7 +347,7 @@ class BookMammoTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Burnley General Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked a Mammography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Burnley General Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -415,7 +415,7 @@ class BookNmTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked a Nuclear Medicine appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -483,7 +483,7 @@ class BookAngioTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked an Angiography appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: Royal Blackburn Hospital. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -549,7 +549,7 @@ class BookUltrasoundTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked an Ultrasound appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(
@@ -615,7 +615,7 @@ class BookFluoroTemplateView(TemplateView):
             try:
                 send_mail(
                     subject=f"Your radiology appointment",
-                    message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible.\n\nOr you can log in and cancel/edit your appointment by logging into the ELHT RBS using your booking reference number: {ref_number}.",                    
+                    message=f"{first_name} {last_name},\n\nYou booked a Fluoroscopy appointment via ELHT Radiology Booking service.\n\nAppointment date: {date_of_exam}\nAppointment time: {time_of_exam}\nLocation: {exam_location}. \n\nIf you are unable to make your appointment please let us know as soon as possible quoting your reference number: {ref_number}.",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[email_address])
                 send_mail(

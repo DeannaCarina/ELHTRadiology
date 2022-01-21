@@ -213,7 +213,7 @@ The features in the table below have been taken from the user stories above. Gen
     </tr>
 </table>
 
-As we can see from the table above, the viability is higher than the importance, which is good because that means most of the features are able to be implemented, however I must be careful not to implemnt features that would be unneccessary for the web application and result in time that could have been better spent on more important features. I must also be careful to stay within the scope of my own coding limitations - implementing features that I have little experience of could cause a high liklihood of bugs and errors in the web application which would in turn reduce the potential of a positive user experience. The main purpose of the web application is for patients to be able to book appointments - therefore all of the booking features I have put as fairly high importance; however my knowledge and confidence of using the back-end frameworks needed to be able to implement these features is lacking, and as such I have but the viability as fairly low. I am hoping that during the process of developing this project that my confidence in using frameworks such as Django will improve and I will be able to implement the more difficult booking forms with more ease.
+As we can see from the table above, the viability is higher than the importance, which is good because that means most of the features are able to be implemented, however I must be careful not to implement features that would be unnecessary for the web application and result in time that could have been better spent on more important features. I must also be careful to stay within the scope of my own coding limitations - implementing features that I have little experience of could cause a high likelihood of bugs and errors in the web application which would in turn reduce the potential of a positive user experience. The main purpose of the web application is for patients to be able to book appointments - therefore all of the booking features I have put as fairly high importance; however my knowledge and confidence of using the back-end frameworks needed to be able to implement these features is lacking, and as such I have but the viability as fairly low. I am hoping that during the process of developing this project that my confidence in using frameworks such as Django will improve and I will be able to implement the more difficult booking forms with more ease.
 
 The table above has been plotted into a graph (below) to easily visualise the features that will be implemented into the web application and which ones won't be:
 <ul>
@@ -227,7 +227,7 @@ The table above has been plotted into a graph (below) to easily visualise the fe
 
 ### Scope
 
-Due to the pitfalls of developing a website based on the MVP (Minimum Viable Product) model such as lack of user experience and enjoyment due to a lack of content, it is sometimes more beneficial to develop a website based on MMP (Minimum Marketable Product). However due to the more advanced coding that I'll be using in this project and the possible time constraints I might find myself in, I am going to create the website based on MVP. This will allow the basic functions of the website to be implemented and have the website be usable but not neccessarily complete with all of the discussed features in place. One of the main advantages of creating an MVP is we can gauge the reaction of users before implementing more features, to ensure that the overall necessity for the web application is there, meaning less time is potentially wasted on a product that isn't going to be used by our target audience.
+Due to the pitfalls of developing a website based on the MVP (Minimum Viable Product) model such as lack of user experience and enjoyment due to a lack of content, it is sometimes more beneficial to develop a website based on MMP (Minimum Marketable Product). However due to the more advanced coding that I'll be using in this project and the possible time constraints I might find myself in, I am going to create the website based on MVP. This will allow the basic functions of the website to be implemented and have the website be usable but not necessarily complete with all of the discussed features in place. One of the main advantages of creating an MVP is we can gauge the reaction of users before implementing more features, to ensure that the overall necessity for the web application is there, meaning less time is potentially wasted on a product that isn't going to be used by our target audience.
 
 By using the MVP model we will:
 <ul>
@@ -238,7 +238,7 @@ By using the MVP model we will:
 While following the MVP model, to meet the user and business goals, our website will include:
 <ul>
     <li>A nav-bar on all pages to be able to navigate to separate pages on the website</li>
-    <li>Links to associalted social media on all pages within the footer</li>
+    <li>Links to associated social media on all pages within the footer</li>
     <li>A contact form for site users to be able to contact the radiology department</li>
     <li>Booking forms for a range of modalities for patients to be able to arrange their own radiology examinations (not necessarily all of them)</li>
     <li>Educational pages for the user to be able to learn more about their examination and the steps around it</li>
@@ -249,7 +249,7 @@ While following the MVP model, to meet the user and business goals, our website 
 
 I have chosen to carry out a linear method of design for this website application as there should be a logical way for the user to view certain things. By having multiple pages we can separate information into logical sections to make it easier for the user to find what they are looking for particularly for the users that may find it more difficult to navigate websites. The navigation bar at the top of all of the pages allows the user to easily navigate to the page of the website they are most interested in. There are also certain pages (such as on the home page) that have their own internal navigation sections - for example on the home page there is a navigation section for the user to be able to navigate to particular booking forms. 
 
-<strong>On ALL PAGES</strong>: There will be a nav bar stretching across the full width of the users device - this will be fully responsive and collapse down to a togggleable icon at smaller screen sizes. There will also be a 2-part footer consisting of useful links for the site user such as a contact page, contact numbers, the ELHT Trust slogan (in logo form), a staff list, opening times, a complaints link, the privacy policy, admin login and links to social media.<br>
+<strong>On ALL PAGES</strong>: There will be a nav bar stretching across the full width of the users device - this will be fully responsive and collapse down to a togggle-able icon at smaller screen sizes. There will also be a 2-part footer consisting of useful links for the site user such as a contact page, contact numbers, the ELHT Trust slogan (in logo form), a staff list, opening times, a complaints link, the privacy policy, admin login and links to social media.<br>
 
 <strong>On home.html</strong>: This will consist of a large full width hero-image with overlying text to give the user an instant idea as to the function of the website. Below the hero image will be the links to the booking pages, there will be separate links for each examination type as each examination needs different questions answered. Below this there will be another section with links to the other two main areas of the website - patient information and examination information. The last section on this page will consist of an invitation to external companies to partner with ELHT radiology, but will also include reassurance to patients that the department has high-end and reliable equipment.<br>
 
@@ -268,7 +268,7 @@ I have chosen to carry out a linear method of design for this website applicatio
 
 ### Skeleton
 
-The wireframes for ELHT-RBS website application were made with Balsamiq, they can be found by viewing the images below. As the trend for mobile browser usage has been on an upwards trend for the last 10 years in Europe culminating in a crossover of hardware usage in the recent year, it could be assumed that these trends will continue and result in users opting more and more for a mobile browser instead of a desktop. Due to this assumed continuing trend I have chosen to take a mobile-first approch to the design process. A Mobile-First Approach refers to the practice of designing and/or developing an online experience for mobile before designing for desktop web or any other device. Taking a Mobile First approach aims to reverse the workflow of designing for desktop and scaling down the design for mobile afterwards. Wireframes were made for mobile and desktop devices to ensure user friendly UX was employed throughout, I also included a tablet wireframe for the home page as this is the page that will be most visited and must look great on all screen sizes otherwise this will risk users navigating away due to un-responsiveness.
+The wireframes for ELHT-RBS website application were made with Balsamiq, they can be found by viewing the images below. As the trend for mobile browser usage has been on an upwards trend for the last 10 years in Europe culminating in a crossover of hardware usage in the recent year, it could be assumed that these trends will continue and result in users opting more and more for a mobile browser instead of a desktop. Due to this assumed continuing trend I have chosen to take a mobile-first approach to the design process. A Mobile-First Approach refers to the practice of designing and/or developing an online experience for mobile before designing for desktop web or any other device. Taking a Mobile First approach aims to reverse the workflow of designing for desktop and scaling down the design for mobile afterwards. Wireframes were made for mobile and desktop devices to ensure user friendly UX was employed throughout, I also included a tablet wireframe for the home page as this is the page that will be most visited and must look great on all screen sizes otherwise this will risk users navigating away due to un-responsiveness.
 
 #### home.html
 <img src="readmeassets/wire1-index.png">
@@ -297,7 +297,7 @@ The wireframes for ELHT-RBS website application were made with Balsamiq, they ca
 #### On contact.html
 <img src="readmeassets/wire9-contact.png">
 
-The wireframes were created during the website application's initial desgin process, as such there are changes between the layout of the wireframes and the final layout/design of the finished website. Wireframes were not made for the privacy policy or the 404 page as these will be very basic layouts with very little styling.
+The wireframes were created during the website application's initial design process, as such there are changes between the layout of the wireframes and the final layout/design of the finished website. Wireframes were not made for the privacy policy or the 404 page as these will be very basic layouts with very little styling.
 
 ### Surface
 #### Typography
@@ -321,7 +321,20 @@ The favicon was handmade by myself using the ELHT theme colours of blue, green p
 
 
 #### Images & Videos
-All images throughout the site were taken from either Pexels, Pixabay or Shutterstock royalty free websites.
+All images throughout the site were taken from either Pexels, Pixabay or Shutterstock - royalty free websites. I have tried to make all the images used as relevant to the page they are on as possible, as well as keeping them simple and 'clean'. 
+
+<img src="static/images/hero.jpg" height="300px"> <img src="static/images/extra.jpg" height="300px">
+<img src="readmeassets/white2.jpg" height="300px"> <img src="static/images/advert.jpg" height="300px">
+<img src="static/images/radiographer.png" height="300px"> <img src="static/images/info-board-hero.jpg" height="300px">
+<img src="static/images/exam-board-hero.jpg" height="300px"> <img src="static/images/contact-hero.jpg" height="300px">
+<img src="static/images/book-hero.jpg" height="300px"> <img src="static/images/xray-hero.jpg" height="300px">
+<img src="static/images/ct-hero.jpg" height="300px"> <img src="static/images/mri-hero.jpg" height="300px">
+<img src="static/images/nm-hero.jpg" height="300px"> <img src="static/images/us-hero.jpg" height="300px">
+<img src="static/images/dexa-hero.jpg" height="300px"> <img src="static/images/angio-hero.jpg" height="300px">
+<img src="static/images/fluoro-hero.jpg" height="300px"> <img src="static/images/mammo-hero.jpg" height="300px">
+<img src="static/images/dept-hero.jpg" height="300px"> <img src="static/images/locations-hero.jpg" height="300px">
+<img src="static/images/radiation-hero.jpg" height="300px"> <img src="static/images/requests-hero.jpg" height="300px">
+<img src="static/images/results-hero.jpg" height="300px"> 
 
 ## Technologies
 <img src="https://img.shields.io/badge/HTML-5-red">  <img src="https://img.shields.io/badge/CSS-3-blue">  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow">  <img src="https://img.shields.io/badge/Python-3-9cf">  <img src="https://img.shields.io/badge/Django-3-green"><br>
@@ -332,8 +345,24 @@ All images throughout the site were taken from either Pexels, Pixabay or Shutter
 <img src="https://img.shields.io/badge/PEP8-online-blue">  <img src="https://img.shields.io/badge/WAVE-WebAccessTool-pink">  <img src="https://img.shields.io/badge/Heroku-Deployment-purple">
 
 ## Features
+
+### Deciding what to implement
+Using the table from the Strategy Plane of the UX section, I was able to determine what could be implemented and what would be better being left out by using a viability/importance chart. Those features that were plotted in the graph in the pink area were those that were determined to be both important AND viable enough to be implemented.<br>
+
 ### Implemented Features
-### Features Left to Implement
+From the table, I was able to recognise which features were more likely to have a positive impact on the website and implement the following:
+<ul>
+    <li><em>A Contact form for site users to be able to get in contact with site admins/management</em> - </li>
+    <li><em>Booking forms for all radiology modalities to enable site users to be able to arrange radiology appointments</em> - </li>
+    <li><em>Educational pages on the different radiology modalities</em> - </li>
+    <li><em>Educational pages on other aspects of the radiology department/booking process</em> - </li>
+</ul>   
+
+### Features left to implement
+<ul>
+    <li><em>An instant messaging service for patient to be able to contact the radiology department in real-time</em> - </li>
+    <li><em>The ability for patients to self-manage their radiology bookings</em> - </li>
+</ul>
 
 ## Testing
 ### Functionality
@@ -357,7 +386,7 @@ This project was created on GitHub and Edited in GitPod by carrying out the foll
         <ul>
             <li>git add . <strong>OR</strong> git add "file name" - to stage the changes and get them ready for being committed to the local repo.</li> 
             <li>git commit -m "Description of the update" - to save the change and commit the change to the local repo</li>
-            <li>git push - to push all committed shanges to the GitHub repo associated with the GitPod workspace</li>
+            <li>git push - to push all committed changes to the GitHub repo associated with the GitPod workspace</li>
         </ul>
     </li>
 
@@ -374,7 +403,7 @@ This project was deployed via Heroku by carrying out the following:
 </ol>
 
 ### Local Deployment
-There are many ways to deploy the project locally on your own device. The ways I will explain here are: Forking, Cloning, GitHub Desktop and Zip Exctraction, the steps in these processes are outlined below:
+There are many ways to deploy the project locally on your own device. The ways I will explain here are: Forking, Cloning, GitHub Desktop and Zip Extraction, the steps in these processes are outlined below:
 
 #### Forking the GitHub repo
 If you want to make changes to the repo without affecting it, you can make a copy of it by 'Forking' it. This will make sure that the original repo remains unchanged.
@@ -417,57 +446,66 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>Navigate to the Repository <a href="#"><strong>HERE</strong></a></li>
     <li>Select the 'Code' button above the file list on the right had side</li>
     <li>Select 'Download Zip'</li>
-    <li>Once you have the Zip downloaded, open it with your prefered file decompression software</li>
+    <li>Once you have the Zip downloaded, open it with your preferred file decompression software</li>
     <li>You can then drag and drop the files from the folder into your chosen IDE or view/edit them on your local machine</li>
     <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
 </ol>
-
   
 ## Credits
 ### Code
-### Content
-### Images
+All code used in this project was taken from the Code Institute lessons, as well as Django's documentation.
 
+### Content
+As I have worked in the radiology field for nearly 7 years, all content in the website has been taken from my own knowledge and experience.
+
+### Images
 <ul>
-    <li>index hero image: https://www.istockphoto.com/photo/medical-technology-concept-remote-medicine-electronic-medical-record-gm1300745916-392975316</li>
-    <li>radiographer image in booking section of index page: https://www.pexels.com/photo/photo-of-doctor-holding-x-ray-result-4225880/</li>
-    <li>collaboration section background of index page: https://www.istockphoto.com/photo/modern-operating-room-in-a-hospital-generated-digitally-gm1281627829-379609702</li>
-    <li>background of extra links section in index page: https://www.istockphoto.com/photo/portrait-of-a-beautiful-medical-specialist-working-as-an-orthopedist-gm1312204391-401081571</li>
-    <li>extra: https://www.istockphoto.com/photo/doctor-sees-virtual-images-of-the-patient-gm928162118-254586367</li>
-    <li>angio hero: https://www.istockphoto.com/photo/x-ray-monitoring-of-surgical-procedure-in-the-hospital-cathlab-gm1139755594-304750515?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_noresults&referrer_url=http%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fangiography%2F&utm_term=angiography</li>
-    <li>xray hero: https://www.istockphoto.com/photo/ct-scan-device-in-modern-hospital-gm1255307625-367203639</li>
-    <li>mammo hero: https://www.istockphoto.com/photo/operating-room-with-mammography-x-ray-system-machine-in-hospital-laboratory-cancer-gm1132664249-300370098</li>
-    <li>nuclear medicine hero: https://www.istockphoto.com/photo/gamma-camera-gm186831409-17106701</li>
-    <li>ct hero: https://www.istockphoto.com/photo/medical-ct-or-mri-or-pet-scan-standing-in-the-modern-hospital-laboratory-gm1074166156-287587561</li>
-    <li>mri hero: https://www.istockphoto.com/photo/mri-scan-device-gm906612074-249859283</li>
-    <li>ultrasound hero: https://www.istockphoto.com/photo/doctor-prepare-an-ultrasound-machine-for-the-diagnosis-of-a-patient-doctor-puts-gm1184471397-333441192</li>
-    <li>fluoroscopy hero: https://www.istockphoto.com/photo/barium-enema-or-be-is-image-of-large-bowel-after-injection-of-barium-contrast-fill-gm1326802025-411372792</li>
-    <li>dexa hero: https://www.istockphoto.com/photo/medical-scan-gm185093593-19277599</li>
-    <li>opg hero: https://www.istockphoto.com/photo/young-woman-making-panoramic-shot-of-the-jaw-holding-her-face-at-the-x-ray-machine-gm1334632201-416679313</li>
-    <li>exam-board-hero: https://www.istockphoto.com/photo/healthcare-and-medicine-covid-19-doctor-holding-and-diagnose-virtual-human-lungs-gm1220059276-357092137</li>
-    <li>info-board-hero: https://www.istockphoto.com/photo/medical-technology-concept-gm1127069581-296928242</li>
-    <li>department-hero: https://www.istockphoto.com/photo/waiting-area-in-hospital-gm1053085842-281347392</li>
-    <li>locatons-hero: https://www.istockphoto.com/photo/a-white-3d-rendered-image-of-the-united-kingom-gm93293761-9241291</li>
-    <li>radiation-hero: https://www.istockphoto.com/photo/hospital-ai-gm1057025412-282493246</li>
-    <li>request-hero: https://www.istockphoto.com/photo/cropped-close-up-shot-of-doctor-giving-prescriptions-medications-to-female-patient-gm1352061644-427596207</li>
-    <li>results-hero: https://www.istockphoto.com/photo/medical-diagnosis-in-the-digital-age-gm1127376129-297113241</li>
-    <li>contact-hero: https://www.istockphoto.com/photo/social-network-gm1142791580-306657206</li>
-    <li>book-hero: https://www.istockphoto.com/photo/stethoscope-on-book-gm155099359-18178003</li>
+    <li>Index/Home page:</li>
+        <ul>
+            <li>The hero image for index.html can be found <a href="https://www.istockphoto.com/photo/medical-technology-concept-remote-medicine-electronic-medical-record-gm1300745916-392975316"><strong>HERE</strong></a></li>
+            <li>The image of the radiographer in the booking links section on index.html can be found <a href="https://www.pexels.com/photo/photo-of-doctor-holding-x-ray-result-4225880/"><strong>HERE</strong></a></li>
+            <li>The background image for the review section on index.html can be found <a href="https://www.istockphoto.com/photo/doctor-sees-virtual-images-of-the-patient-gm928162118-254586367"><strong>HERE</strong></a></li>
+            <li>The background image for other links section on index.html can be found <a href="https://www.istockphoto.com/photo/portrait-of-a-beautiful-medical-specialist-working-as-an-orthopedist-gm1312204391-401081571"><strong>HERE</strong></a></li>
+            <li>The background image for the collaboration/advertisement section on index.html can be found <a href="https://www.istockphoto.com/photo/modern-operating-room-in-a-hospital-generated-digitally-gm1281627829-379609702"><strong>HERE</strong></a></li>
+        </ul>   
+    <li>Information Pages:</li>
+        <ul>
+            <li>The background image for the patient information board can be found <a href="https://www.istockphoto.com/photo/medical-technology-concept-gm1127069581-296928242"><strong>HERE</strong></a></li>
+            <li>The background image for the department information page can be found <a href="https://www.istockphoto.com/photo/waiting-area-in-hospital-gm1053085842-281347392"><strong>HERE</strong></a></li>
+            <li>The background image for the locations information page can be found <a href="https://www.istockphoto.com/photo/a-white-3d-rendered-image-of-the-united-kingom-gm93293761-9241291"><strong>HERE</strong></a></li>
+            <li>The background image for the radiation information page can be found <a href="https://www.istockphoto.com/photo/hospital-ai-gm1057025412-282493246"><strong>HERE</strong></a></li>
+            <li>The background image for the request information page can be found <a href="https://www.istockphoto.com/photo/cropped-close-up-shot-of-doctor-giving-prescriptions-medications-to-female-patient-gm1352061644-427596207"><strong>HERE</strong></a></li>
+            <li>The background image for the results information page can be found <a href="https://www.istockphoto.com/photo/medical-diagnosis-in-the-digital-age-gm1127376129-297113241"><strong>HERE</strong></a></li>
+        </ul>  
+    <li>Examination Information Pages:</li>
+        <ul>
+            <li>The background image for the patient examination information board can be found <a href="https://www.istockphoto.com/photo/healthcare-and-medicine-covid-19-doctor-holding-and-diagnose-virtual-human-lungs-gm1220059276-357092137"><strong>HERE</strong></a></li>
+            <li>The background image for the x-ray information page can be found <a href="https://www.istockphoto.com/photo/ct-scan-device-in-modern-hospital-gm1255307625-367203639"><strong>HERE</strong></a></li>
+            <li>The background image for the CT information page can be found <a href="https://www.istockphoto.com/photo/medical-ct-or-mri-or-pet-scan-standing-in-the-modern-hospital-laboratory-gm1074166156-287587561"><strong>HERE</strong></a></li>
+            <li>The background image for the MRI information page can be found <a href="https://www.istockphoto.com/photo/mri-scan-device-gm906612074-249859283"><strong>HERE</strong></a></li>
+            <li>The background image for the Ultrasound information page can be found <a href="https://www.istockphoto.com/photo/doctor-prepare-an-ultrasound-machine-for-the-diagnosis-of-a-patient-doctor-puts-gm1184471397-333441192"><strong>HERE</strong></a></li>
+            <li>The background image for the Nuclear Medicine information page can be found <a href="https://www.istockphoto.com/photo/gamma-camera-gm186831409-17106701"><strong>HERE</strong></a></li>
+            <li>The background image for the Mammography information page can be found <a href="https://www.istockphoto.com/photo/operating-room-with-mammography-x-ray-system-machine-in-hospital-laboratory-cancer-gm1132664249-300370098"><strong>HERE</strong></a></li>
+            <li>The background image for the Dexa information page can be found <a href="https://www.istockphoto.com/photo/medical-scan-gm185093593-19277599"><strong>HERE</strong></a></li>
+            <li>The background image for the Angiography Medicine information page can be found <a href="https://www.istockphoto.com/photo/x-ray-monitoring-of-surgical-procedure-in-the-hospital-cathlab-gm1139755594-304750515?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_noresults&referrer_url=http%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fangiography%2F&utm_term=angiography"><strong>HERE</strong></a></li>
+            <li>The background image for the Fluoroscopy information page can be found <a href="https://www.istockphoto.com/photo/barium-enema-or-be-is-image-of-large-bowel-after-injection-of-barium-contrast-fill-gm1326802025-411372792"><strong>HERE</strong></a></li>
+        </ul> 
+    <li>Other Pages:</li>
+        <ul>
+            <li>The background image for the contact page and thank you page can be found <a href="https://www.istockphoto.com/photo/social-network-gm1142791580-306657206"><strong>HERE</strong></a></li>
+            <li>The background image for the booking pages can be found <a href="https://www.istockphoto.com/photo/stethoscope-on-book-gm155099359-18178003"><strong>HERE</strong></a></li>
+        </ul>     
 </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-### Video
 ### Acknowledgements
+<ul>
+    <li>
+        To my amazing husband-to-be. Without you, I would have had far more mental-breakdowns. You keep me sane and focused and help me look at things in a logical way.
+    </li>
+    <li>
+        To my mentor Nishant Kumar. Your guidance, support and encouragement have been everything.
+    </li>
+</ul>
 
 ## Screenshots
 

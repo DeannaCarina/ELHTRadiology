@@ -159,7 +159,7 @@ class AngioAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -190,7 +190,7 @@ class DexaAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -221,7 +221,7 @@ class MammoAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -254,7 +254,7 @@ class NmAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -285,7 +285,7 @@ class UsAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
