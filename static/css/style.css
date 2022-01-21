@@ -79,9 +79,11 @@ header {
 }
 
 #warning-close {
-    font-weight: 800;
-    float: right;
-    margin-right: 10px;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: underline;
 }
 
 #warning-close:hover {
@@ -119,7 +121,9 @@ nav {
 
 #loginLink:hover {
     /* background-color: white; */
-    color:rgb(128, 189, 230);
+    color:rgb(32, 65, 87);
+    box-shadow: 3px 3px 2px #3d3d3d;
+    background-color: rgb(236, 236, 236);
 }
 
 #login-button {

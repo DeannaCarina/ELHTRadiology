@@ -29,7 +29,7 @@
         <a href="#main-content" class="skip-nav">Skip Navigation</a>
         <div id="warning">This website is for <a class="warning-dec" href="https://github.com/DeannaCarina/ELHTRadiology">educational purposes</a> only. 
             Please do not use this website to book appointments at ELHT. Please do not contact with the intention 
-            of selling your products. Thank you. <span id="warning-close">x</span></div>
+            of selling your products. Thank you. <span id="warning-close">close</span></div>
         <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -102,6 +102,8 @@
     </header>
         <!-- -----END OF NAVBAR----- -->    
     <span id="main-content"></span>
+
+    <!-- -----MODAL FOR LOG ON FORMS----- -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -109,10 +111,10 @@
                 <div class="login-form-container">
                     <h6 class="modalHeader">Patient Login</h3>
                         <div class="modal-info">You would have received your booking reference number via email when you booked your appointment.</div>
-                    <form id="patient-form" class="login-form" method="POST">
+                    <form name="patient-login-form" id="patient-login-form" class="login-form" method="POST">
                         {% csrf_token %}
-                        <label for="username">Booking Reference: </label>
-                        <input id="username" name="username" type="text"><br><br>
+                        <label for="booking-reference">Booking Reference: </label>
+                        <input id="booking-reference" name="booking-reference" type="text"><br><br>
                         <a href="#"><button type="submit" class="btn btn-secondary" id="login-button">Login <i
                             class="fas fa-sign-in-alt"></i></button></a>
                         
@@ -121,7 +123,7 @@
                 <hr>
                 <div class="login-form-container">
                     <h6 class="modalHeader">Admin Login</h3>
-                    <form id="admin-form" class="login-form" method="POST">
+                    <form name="admin-login-form" id="admin-login-form" class="login-form" method="POST">
                         {% csrf_token %}
                         <label for="username">Username: </label>
                         <input id="username" name="username" type="text"><br><br>
@@ -134,6 +136,7 @@
             </div>
         </div>
     </div>
+    <!-- -----END OF MODAL FOR LOG ON FORMS----- -->
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
