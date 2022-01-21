@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'booking',
-    'crispy_forms',
 ]
 
 SITE_ID = 1
