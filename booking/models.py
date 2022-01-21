@@ -27,7 +27,7 @@ class XrayAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -59,7 +59,7 @@ class CtAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -95,7 +95,7 @@ class MriAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
@@ -127,7 +127,7 @@ class FluoroAppointment(models.Model):
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return self.ref_number
 
     class Meta:
         ordering = ['-sent_date']
