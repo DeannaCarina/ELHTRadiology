@@ -323,18 +323,18 @@ The favicon was handmade by myself using the ELHT theme colours of blue, green p
 #### Images & Videos
 All images throughout the site were taken from either Pexels, Pixabay or Shutterstock - royalty free websites. I have tried to make all the images used as relevant to the page they are on as possible, as well as keeping them simple and 'clean'. Below are all the images used - clicking them will open them in a new widow at a larger size.
 
-<img src="static/images/hero.jpg" height="300px"> <img src="static/images/extra.jpg" height="200px">
-<img src="readmeassets/white2.jpg" height="300px"> <img src="static/images/advert.jpg" height="200px">
-<img src="static/images/radiographer.png" height="300px"> <img src="static/images/info-board-hero.jpg" height="200px">
-<img src="static/images/exam-board-hero.jpg" height="300px"> <img src="static/images/contact-hero.jpg" height="200px">
-<img src="static/images/book-hero.jpg" height="300px"> <img src="static/images/xray-hero.jpg" height="200px">
-<img src="static/images/ct-hero.jpg" height="300px"> <img src="static/images/mri-hero.jpg" height="200px">
-<img src="static/images/nm-hero.jpg" height="300px"> <img src="static/images/us-hero.jpg" height="200px">
-<img src="static/images/dexa-hero.jpg" height="300px"> <img src="static/images/angio-hero.jpg" height="200px">
-<img src="static/images/fluoro-hero.jpg" height="300px"> <img src="static/images/mammo-hero.jpg" height="200px">
-<img src="static/images/dept-hero.jpg" height="300px"> <img src="static/images/locations-hero.jpg" height="200px">
-<img src="static/images/radiation-hero.jpg" height="300px"> <img src="static/images/requests-hero.jpg" height="200px">
-<img src="static/images/results-hero.jpg" height="300px"> 
+<img src="static/images/hero.jpg" height="200px"> <img src="static/images/extra.jpg" height="200px">
+<img src="readmeassets/white2.jpg" height="200px"> <img src="static/images/advert.jpg" height="200px">
+<img src="static/images/radiographer.png" height="200px"> <img src="static/images/info-board-hero.jpg" height="200px">
+<img src="static/images/exam-board-hero.jpg" height="200px"> <img src="static/images/contact-hero.jpg" height="200px">
+<img src="static/images/book-hero.jpg" height="200px"> <img src="static/images/xray-hero.jpg" height="200px">
+<img src="static/images/ct-hero.jpg" height="200px"> <img src="static/images/mri-hero.jpg" height="200px">
+<img src="static/images/nm-hero.jpg" height="200px"> <img src="static/images/us-hero.jpg" height="200px">
+<img src="static/images/dexa-hero.jpg" height="200px"> <img src="static/images/angio-hero.jpg" height="200px">
+<img src="static/images/fluoro-hero.jpg" height="200px"> <img src="static/images/mammo-hero.jpg" height="200px">
+<img src="static/images/dept-hero.jpg" height="200px"> <img src="static/images/locations-hero.jpg" height="200px">
+<img src="static/images/radiation-hero.jpg" height="200px"> <img src="static/images/requests-hero.jpg" height="200px">
+<img src="static/images/results-hero.jpg" height="200px"> 
 
 ## Technologies
 <img src="https://img.shields.io/badge/HTML-5-red">  <img src="https://img.shields.io/badge/CSS-3-blue">  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow">  <img src="https://img.shields.io/badge/Python-3-9cf">  <img src="https://img.shields.io/badge/Django-3-green"><br>
@@ -373,35 +373,16 @@ From the table, I was able to recognise which features were more likely to have 
 
 Below are screenshots of all the code validation results from all pages within the website. Clicking on an image will open it in a new page as a larger image.
 
-<img src="readmeassets/val-css.png" width="200px">
-<img src="readmeassets/val-index.png" width="200px">
-<img src="readmeassets/val-contact.png" width="200px">
-<img src="readmeassets/val-privacy.png" width="200px">
-<img src="readmeassets/val-exam.png" width="200px">
-<img src="readmeassets/val-info.png" width="200px">
-<img src="readmeassets/val-infoxray.png" width="200px">
-<img src="readmeassets/val-infoct.png" width="200px">
-<img src="readmeassets/val-infomri.png" width="200px">
-<img src="readmeassets/val-infous.png" width="200px">
-<img src="readmeassets/val-infomammo.png" width="200px">
-<img src="readmeassets/val-infonm.png" width="200px">
-<img src="readmeassets/val-infodexa.png" width="200px">
-<img src="readmeassets/val-infoangio.png" width="200px">
-<img src="readmeassets/val-infofluoro.png" width="200px">
-<img src="readmeassets/val-infodept.png" width="200px">
-<img src="readmeassets/val-inforadiation.png" width="200px">
-<img src="readmeassets/val-inforequests.png" width="200px">
-<img src="readmeassets/val-infolocations.png" width="200px">
-<img src="readmeassets/val-inforesults.png" width="200px">
-<img src="readmeassets/val-bookxray.png" width="200px">
-<img src="readmeassets/val-bookct.png" width="200px">
-<img src="readmeassets/val-bookmri.png" width="200px">
-<img src="readmeassets/val-bookus.png" width="200px">
-<img src="readmeassets/val-bookmammo.png" width="200px">
-<img src="readmeassets/val-booknm.png" width="200px">
-<img src="readmeassets/val-bookdexa.png" width="200px">
-<img src="readmeassets/val-bookangio.png" width="200px">
-<img src="readmeassets/val-bookfluoro.png" width="200px">
+<img src="readmeassets/val-css.png" width="200px"> <img src="readmeassets/val-index.png" width="200px">
+<img src="readmeassets/val-contact.png" width="200px"> <img src="readmeassets/val-privacy.png" width="200px"> <img src="readmeassets/val-exam.png" width="200px">
+<img src="readmeassets/val-info.png" width="200px"> <img src="readmeassets/val-infoxray.png" width="200px"> <img src="readmeassets/val-infoct.png" width="200px">
+<img src="readmeassets/val-infomri.png" width="200px"> <img src="readmeassets/val-infous.png" width="200px"> <img src="readmeassets/val-infomammo.png" width="200px">
+<img src="readmeassets/val-infonm.png" width="200px"> <img src="readmeassets/val-infodexa.png" width="200px"> <img src="readmeassets/val-infoangio.png" width="200px">
+<img src="readmeassets/val-infofluoro.png" width="200px"> <img src="readmeassets/val-infodept.png" width="200px"> <img src="readmeassets/val-inforadiation.png" width="200px">
+<img src="readmeassets/val-inforequests.png" width="200px"> <img src="readmeassets/val-infolocations.png" width="200px"> <img src="readmeassets/val-inforesults.png" width="200px">
+<img src="readmeassets/val-bookxray.png" width="200px"> <img src="readmeassets/val-bookct.png" width="200px"> <img src="readmeassets/val-bookmri.png" width="200px">
+<img src="readmeassets/val-bookus.png" width="200px"> <img src="readmeassets/val-bookmammo.png" width="200px"> <img src="readmeassets/val-booknm.png" width="200px">
+<img src="readmeassets/val-bookdexa.png" width="200px"> <img src="readmeassets/val-bookangio.png" width="200px"> <img src="readmeassets/val-bookfluoro.png" width="200px">
 
 ### Issues Found During Deployment
 ### Accessibility
