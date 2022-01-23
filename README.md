@@ -367,6 +367,11 @@ From the table, I was able to recognise which features were more likely to have 
 
 ## Testing
 ### Functionality
+
+<img src="readmeassets/spam-email1.png" width="300px">
+<img src="readmeassets/spam-email2.png" width="300px">
+
+
 ### Compatibility
 ### User Testing Stories
 ### Code Validation
@@ -390,6 +395,9 @@ Below are screenshots of all the code validation results from all pages within t
 
 
 #### JavaScript
+<img src="readmeassets/val-js1.png" width="300px">
+<img src="readmeassets/val-js2.png" width="300px">
+<img src="readmeassets/val-js3.png" width="300px">
 
 
 #### Python
