@@ -4,30 +4,31 @@
 {% block content %}
 <div class="book-container">
     <div class="book-hero"></div>
-    
-    <!-- MAMMOGRAPHY BOOKING FORM -->
-        
-            <div class="center-form">
-                <form name="bookingForm" class="booking-form" method="POST" onsubmit="return validateForm()">
-                    <h1 class="book-title">Book your Mammography exam</h1>
 
-                    {% if messages %}
-                    <div class="card notification-card notification-invitation">
-                        <div class="card-body">
-                            {% for message in messages %}
-                            <div class="card-title">{{message}}</div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    {% endif %}
-                    
+    <!-- MAMMOGRAPHY BOOKING FORM -->
+
+    <div class="center-form">
+        <form name="bookingForm" class="booking-form" method="POST" onsubmit="return validateForm()">
+            <h1 class="book-title">Book your Mammography exam</h1>
+
+            {% if messages %}
+            <div class="card notification-card notification-invitation">
+                <div class="card-body">
+                    {% for message in messages %}
+                    <div class="card-title">{{message}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
             {% csrf_token %}
             <!-- REQUEST NUMBER -->
             <label for="request_number">Request Number</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
-                        referrer and is 8 numbers long. If you haven't been given a paper request and don't know the request number, please leave this blank.</span>
+                        referrer and is 8 numbers long. If you haven't been given a paper request and don't know the
+                        request number, please leave this blank.</span>
                 </span>
                 <input type="text" name="request_number" id="request_number" class="form-control booking-form-input"
                     placeholder="12345678" />
@@ -39,7 +40,7 @@
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">This is found on the examination request given to you by your
                         referrer. It is in the top left corner underneath a barcode. It either starts with 'RXR' and is
-                        followed by 7 numbers, or starts with 'ICE' followed by 6 numbers. If you don't know your 
+                        followed by 7 numbers, or starts with 'ICE' followed by 6 numbers. If you don't know your
                         hospital number, please leave this blank.</span>
                 </span>
                 <input type="text" name="hospital_number" id="hospital_number" class="form-control booking-form-input"
@@ -72,17 +73,20 @@
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please provide your date of birth.</span>
                 </span>
-                <input type="date" name="date_of_birth" id="date_of_birth" class="form-control booking-form-input" required>
+                <input type="date" name="date_of_birth" id="date_of_birth" class="form-control booking-form-input"
+                    required>
             </div>
 
             <!-- SPECIFIC EXAMINATION -->
             <label for="examination_type">Choose your examination</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please select the examination on your request here. If your 
-                        examination isn't listed, please choose 'other' and write in the 'communication and mobility requirements' box the examination you think you are having.</span>
+                    <span class="info-hover-text">Please select the examination on your request here. If your
+                        examination isn't listed, please choose 'other' and write in the 'communication and mobility
+                        requirements' box the examination you think you are having.</span>
                 </span>
-                <select id="examination_type" name="examination_type" class="form-control booking-form-input multiple" required>
+                <select id="examination_type" name="examination_type" class="form-control booking-form-input multiple"
+                    required>
                     <option value="" label="Choose option"></option>
                     <option value="Mammogram (without breast implants)">Mammogram (without breast implants)</option>
                     <option value="Mammogram (with breast implants)">Mammogram (with breast implants)</option>
@@ -98,7 +102,8 @@
                     <span class="info-hover-text">Please choose the date you would like to attend for your
                         examination.</span>
                 </span>
-                <input type="date" name="date_of_exam" id="date_of_exam" class="form-control booking-form-input" required>
+                <input type="date" name="date_of_exam" id="date_of_exam" class="form-control booking-form-input"
+                    required>
             </div>
 
             <!-- EXAM TIME -->
@@ -108,14 +113,16 @@
                     <span class="info-hover-text">Please choose the time you would like to attend for your
                         examination.</span>
                 </span>
-                <input type="time" name="time_of_exam" id="time_of_exam" class="form-control booking-form-input" required />
+                <input type="time" name="time_of_exam" id="time_of_exam" class="form-control booking-form-input"
+                    required />
             </div>
 
             <!-- PREGNANCY QUESTION -->
             <label for="preg_status">Is there any chance you could be pregnant?</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please let us know if there is any chance you might be pregnant, this will affect how we carry out your examination.</span>
+                    <span class="info-hover-text">Please let us know if there is any chance you might be pregnant, this
+                        will affect how we carry out your examination.</span>
                 </span>
                 <select id="preg_status" name="preg_status" class="form-control booking-form-input multiple" required>
                     <option value="" label="Choose option"></option>
@@ -129,27 +136,35 @@
             <label for="implants_status">Do you currently have breast implants?</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please let us know if you currently have breast implants, this will affect how we carry out your examination.</span>
+                    <span class="info-hover-text">Please let us know if you currently have breast implants, this will
+                        affect how we carry out your examination.</span>
                 </span>
-                <select id="implants_status" name="implants_status" class="form-control booking-form-input multiple" required>
+                <select id="implants_status" name="implants_status" class="form-control booking-form-input multiple"
+                    required>
                     <option value="" label="Choose option"></option>
                     <option value="I have breast implants">I have breast implants</option>
                     <option value="I do not have breast implants">I do not have breast implants</option>
-                    <option value="I do not have implants, but I have had breast surgery">I do not have implants, but I have had breast surgery</option>
+                    <option value="I do not have implants, but I have had breast surgery">I do not have implants, but I
+                        have had breast surgery</option>
                 </select>
             </div>
 
             <!-- SCREENING QUESTION -->
-            <label for="screening_status">Are you having this examination as part of the NHS screening programme?</label>
+            <label for="screening_status">Are you having this examination as part of the NHS screening
+                programme?</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">Please let us know if you are having this examination as part of the NHS screening programme.</span>
+                    <span class="info-hover-text">Please let us know if you are having this examination as part of the
+                        NHS screening programme.</span>
                 </span>
-                <select id="screening_status" name="screening_status" class="form-control booking-form-input multiple" required>
+                <select id="screening_status" name="screening_status" class="form-control booking-form-input multiple"
+                    required>
                     <option value="" label="Choose option"></option>
-                    <option value="I am not part of the screening programme">I am not part of the screening programme</option>
+                    <option value="I am not part of the screening programme">I am not part of the screening programme
+                    </option>
                     <option value="I am part of the screening programme">I am part of the screening programme</option>
-                    <option value="I'm not sure if I'm part of the screening programme">I'm not sure if I'm part of the screening programme</option>
+                    <option value="I'm not sure if I'm part of the screening programme">I'm not sure if I'm part of the
+                        screening programme</option>
                 </select>
             </div>
 
@@ -158,7 +173,8 @@
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if you have any special requirements for your
-                        examination that would help with any mobility or communication requirements you may have. Please put any other comments you may have here.</span>
+                        examination that would help with any mobility or communication requirements you may have. Please
+                        put any other comments you may have here.</span>
                 </span>
                 <textarea rows="5" name="comms_problems" id="comms_problems" class="form-control booking-form-input"
                     placeholder="Do you have any mobility or communication requirements?"></textarea>
@@ -168,7 +184,8 @@
             <label for="contact_number">Please provide a contact number to confirm your appointment.</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">In case we need to contact you about your appointment, please provide the best number to
+                    <span class="info-hover-text">In case we need to contact you about your appointment, please provide
+                        the best number to
                         contact you on.</span>
                 </span>
                 <input type="text" name="contact_number" id="contact_number" class="form-control booking-form-input"
@@ -179,7 +196,8 @@
             <label for="email_address">Please provide an email address to receive your booking confirmation.</label>
             <div class="form-group">
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
-                    <span class="info-hover-text">To receive your booking confirmation, please provide the best email address to contact you on.</span>
+                    <span class="info-hover-text">To receive your booking confirmation, please provide the best email
+                        address to contact you on.</span>
                 </span>
                 <input type="text" name="email_address" id="email_address" class="form-control booking-form-input"
                     placeholder="Email Address" required />
@@ -189,7 +207,7 @@
             <div class="form-row text-center">
                 <div class="col">
                     <button type="submit" class="btn btn-secondary" id="contact-button">Book <i
-                                class="fas fa-calendar-alt"></i></button>
+                            class="fas fa-calendar-alt"></i></button>
                 </div>
             </div>
         </form>

@@ -5,8 +5,10 @@
 
 <head>
     <title>ELHT Radiology Booking Service</title>
-    <meta name="description" content="Radiology appointment booking service for ELHT. (Educational purposes only. Project submission for Code Institute Portfolio Project 4).">
-    <meta name="keywords" content="radiology, booking, appointment, x-ray, computed tomography, magnetic resonanse imaging, ultrasound, nuclear medicine, dexa, angiography, fluoroscopy, mammography, east lancashire">
+    <meta name="description"
+        content="Radiology appointment booking service for ELHT. (Educational purposes only. Project submission for Code Institute Portfolio Project 4).">
+    <meta name="keywords"
+        content="radiology, booking, appointment, x-ray, computed tomography, magnetic resonanse imaging, ultrasound, nuclear medicine, dexa, angiography, fluoroscopy, mammography, east lancashire">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,7 +17,9 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
     <script src="{% static 'js/script.js' %}"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
@@ -23,11 +27,12 @@
 
 <body>
     <header>
-        
+
         <!-- -----NAVBAR----- -->
         <a href="#main-content" class="skip-nav">Skip Navigation</a>
-        <div id="warning">This website is for <a class="warning-dec" href="https://github.com/DeannaCarina/ELHTRadiology">educational purposes</a> only. 
-            Please do not use this website to book appointments at ELHT. Please do not contact with the intention 
+        <div id="warning">This website is for <a class="warning-dec"
+                href="https://github.com/DeannaCarina/ELHTRadiology">educational purposes</a> only.
+            Please do not use this website to book appointments at ELHT. Please do not contact with the intention
             of selling your products. Thank you. <span id="warning-close">close</span></div>
         <nav class="navbar navbar-expand-lg" aria-label="upper navigation">
             <div class="container-fluid">
@@ -93,7 +98,7 @@
             </span>
         </nav>
     </header>
-        <!-- -----END OF NAVBAR----- -->    
+    <!-- -----END OF NAVBAR----- -->
     <span id="main-content"></span>
 
     {% block content %}
@@ -105,14 +110,15 @@
         <div class="upper-footer">
             <div class="row">
                 <div class="col col-md-3">
-                <span class="slogan-container">
-                    <span class="safe-text spe-text">Safe</span>
-                    <span class="personal-text spe-text">Personal</span>
-                    <span class="effective-text spe-text">Effective</span>
-                </span>
+                    <span class="slogan-container">
+                        <span class="safe-text spe-text">Safe</span>
+                        <span class="personal-text spe-text">Personal</span>
+                        <span class="effective-text spe-text">Effective</span>
+                    </span>
                 </div>
                 <div class="col col-md-3 small-hide">
-                    <img src="{% static 'images/logo3.png' %}" class="footer-image" alt="Logo for ELHT health and wellbeing">
+                    <img src="{% static 'images/logo3.png' %}" class="footer-image"
+                        alt="Logo for ELHT health and wellbeing">
                 </div>
                 <div class="col col-md-3 align-right x-small-hide">
                     <img src="{% static 'images/logo4.png' %}" class="footer-image" alt="Logo for ELHT & me">
@@ -120,8 +126,8 @@
                 <div class="col col-md-3 align-right">
                     <img src="{% static 'images/logo5.png' %}" class="footer-image" alt="Logo for doorstep heroes">
                 </div>
-                
-                
+
+
             </div>
         </div>
         <div class="lower-footer">
@@ -142,19 +148,22 @@
                                 src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
                         </li>
                         <li>
-                            <img style="border:0;width:50px;height:25px;padding-left:10px;padding-top:10px;" class="small-hide"
-                                src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                            <img style="border:0;width:50px;height:25px;padding-left:10px;padding-top:10px;"
+                                class="small-hide" src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                                alt="Valid CSS!" />
                         </li>
                     </ul>
                 </nav>
             </div>
             <span class="social-container">
-                <a href="https://www.facebook.com/" target="_blank" aria-label="facebook link"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://www.twitter.com/" target="_blank" aria-label="twitter link"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="facebook link"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://www.twitter.com/" target="_blank" aria-label="twitter link"><i
+                        class="fab fa-twitter-square"></i></a>
             </span>
         </div>
-    </footer>                 
-    <!-- -----END OF FOOTER----- --> 
+    </footer>
+    <!-- -----END OF FOOTER----- -->
 
 
     <script>
@@ -165,9 +174,8 @@
         warningClose.onclick = function () {
             warning.style.display = "none";
         };
-
     </script>
-    
+
 </body>
 
 </html>
