@@ -38,11 +38,6 @@ if development:
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
-
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -160,7 +155,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Sending emails
+# Sending emails
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"

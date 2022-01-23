@@ -8,11 +8,14 @@ from django.contrib import messages
 import time
 from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment, UsAppointment
 
+
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
 
+
 class PrivacyTemplateView(TemplateView):
     template_name = 'privacy.html'
+
 
 class ContactTemplateView(TemplateView):
     template_name = 'contact.html'
@@ -41,14 +44,16 @@ class ContactTemplateView(TemplateView):
             return HttpResponse('Make sure all fields are entered and valid.')
 
 
-
 class ThanksTemplateView(TemplateView):
     template_name = 'thanks.html'
+
 
 class AdminTemplateView(TemplateView):
     template_name = 'admin.html'
 
+
 # Classes for booking pages
+
 
 class BookXrayTemplateView(TemplateView):
     template_name = 'book/xray.html'
@@ -181,6 +186,7 @@ class BookCtTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 class BookMriTemplateView(TemplateView):
     template_name = 'book/mri.html'
 
@@ -256,6 +262,7 @@ class BookMriTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 class BookDexaTemplateView(TemplateView):
     template_name = 'book/dexa.html'
 
@@ -319,6 +326,7 @@ class BookDexaTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Accrington Victoria Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 class BookMammoTemplateView(TemplateView):
     template_name = 'book/mammo.html'
 
@@ -381,6 +389,7 @@ class BookMammoTemplateView(TemplateView):
 
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Burnley General Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
+
 
 class BookNmTemplateView(TemplateView):
     template_name = 'book/nm.html'
@@ -453,6 +462,7 @@ class BookNmTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Royal Blackburn Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 class BookAngioTemplateView(TemplateView):
     template_name = 'book/angio.html'
 
@@ -520,6 +530,7 @@ class BookAngioTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at Royal Blackburn Hospital for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 class BookUltrasoundTemplateView(TemplateView):
     template_name = 'book/ultrasound.html'
 
@@ -584,6 +595,7 @@ class BookUltrasoundTemplateView(TemplateView):
 
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
+
 
 class BookFluoroTemplateView(TemplateView):
     template_name = 'book/fluoro.html'
@@ -652,73 +664,87 @@ class BookFluoroTemplateView(TemplateView):
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. Your examination has been booked at {exam_location} for {date_of_exam} at {time_of_exam}. If you are unable to make your appointment please let us know as soon as possible.")
         return HttpResponseRedirect(request.path)
 
+
 # Classes for information pages
+
 
 class InformationTemplateView(TemplateView):
     template_name = 'information/information.html'
 
+
 class RequestsTemplateView(TemplateView):
     template_name = 'information/requests.html'
+
 
 class LocationsTemplateView(TemplateView):
     template_name = 'information/locations.html'
 
+
 class RadiationTemplateView(TemplateView):
     template_name = 'information/radiation.html'
+
 
 class ResultsTemplateView(TemplateView):
     template_name = 'information/results.html'
 
+
 class DepartmentTemplateView(TemplateView):
     template_name = 'information/department.html'
 
+
 # Classes for examination pages
+
 
 class ExamboardTemplateView(TemplateView):
     template_name = 'examinations/examinations.html'
 
+
 class XrayTemplateView(TemplateView):
     template_name = 'examinations/xray.html'
+
 
 class CtTemplateView(TemplateView):
     template_name = 'examinations/computed_tomography.html'
 
+
 class MriTemplateView(TemplateView):
     template_name = 'examinations/magnetic_resonance.html'
+
 
 class NmTemplateView(TemplateView):
     template_name = 'examinations/nuclear_medicine.html'
 
+
 class MammoTemplateView(TemplateView):
     template_name = 'examinations/mammography.html'
+
 
 class AngioTemplateView(TemplateView):
     template_name = 'examinations/angiography.html'
 
+
 class UsTemplateView(TemplateView):
     template_name = 'examinations/ultrasound.html'
+
 
 class FluoroTemplateView(TemplateView):
     template_name = 'examinations/fluoroscopy.html'
 
+
 class DexaTemplateView(TemplateView):
     template_name = 'examinations/dexa.html'
 
+
 # Classes for error pages
+
 
 class Page404(TemplateView):
     template_name = '404.html'
 
+
 class Page500(TemplateView):
     template_name = '500.html'
 
+
 class Page403(TemplateView):
     template_name = '403.html'
-
-# Booking management pages
-
-class AdminManage(TemplateView):
-    template_name = 'management/patient.html'
-
-class Patientbooking(TemplateView):
-    template_name = 'management/admin.html'

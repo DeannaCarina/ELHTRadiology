@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment, UsAppointment
 
-
-
 # Register your models here.
 
 admin.site.register(XrayAppointment)

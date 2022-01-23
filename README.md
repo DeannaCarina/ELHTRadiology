@@ -377,6 +377,7 @@ From the table, I was able to recognise which features were more likely to have 
 ### Code Validation
 
 Below are screenshots of all the code validation results from all pages within the website. Clicking on an image will open it in a new page as a larger image.
+For all HTML, CSS and JavaScript code, these all passed through validation with no errors.
 
 #### CSS
 <img src="readmeassets/val-css.png" width="200px"> 
@@ -401,6 +402,20 @@ Below are screenshots of all the code validation results from all pages within t
 
 
 #### Python
+For validating the python code within the ELHT RBS project, I used an online Python PEP8 Linter <a href="http://pep8online.com/">PEP8 ONLINE</a>. I tested all python files that contain content (manage.py, settings.py, urls.py[in the booking dir], urls.py[in ELHT_radiology dir], wsgi.py, asgi.py, models.py, views.py, apps.py and admin.py). The majority of the python files passed without any errors, howeve there were three files that had line length errors. As these particular errors don't caue any problems with the function of the website or storage of data in the database, I chose to leave these errors rather than risk having problems with the website.
+
+<img src="readmeassets/val-py-manage.png" width="300px">
+<img src="readmeassets/val-py-models.png" width="300px">
+<img src="readmeassets/val-py-admin.png" width="300px">
+<img src="readmeassets/val-py-apps.png" width="300px">
+<img src="readmeassets/val-py-urls2.png" width="300px">
+<img src="readmeassets/val-py-asgi.png" width="300px">
+<img src="readmeassets/val-py-wsgi.png" width="300px">
+
+<img src="readmeassets/val-py-urls.png" width="300px">
+<img src="readmeassets/val-py-views.png" width="300px">
+<img src="readmeassets/val-py-settings.png" width="300px">
+
 
 ### Issues Found During Deployment
 ### Accessibility
