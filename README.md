@@ -373,7 +373,11 @@ From the table, I was able to recognise which features were more likely to have 
 
 Below are screenshots of all the code validation results from all pages within the website. Clicking on an image will open it in a new page as a larger image.
 
-<img src="readmeassets/val-css.png" width="200px"> <img src="readmeassets/val-index.png" width="200px">
+#### CSS
+<img src="readmeassets/val-css.png" width="200px"> 
+
+#### HTML
+<img src="readmeassets/val-index.png" width="200px">
 <img src="readmeassets/val-contact.png" width="200px"> <img src="readmeassets/val-privacy.png" width="200px"> <img src="readmeassets/val-exam.png" width="200px">
 <img src="readmeassets/val-info.png" width="200px"> <img src="readmeassets/val-infoxray.png" width="200px"> <img src="readmeassets/val-infoct.png" width="200px">
 <img src="readmeassets/val-infomri.png" width="200px"> <img src="readmeassets/val-infous.png" width="200px"> <img src="readmeassets/val-infomammo.png" width="200px">
@@ -383,6 +387,12 @@ Below are screenshots of all the code validation results from all pages within t
 <img src="readmeassets/val-bookxray.png" width="200px"> <img src="readmeassets/val-bookct.png" width="200px"> <img src="readmeassets/val-bookmri.png" width="200px">
 <img src="readmeassets/val-bookus.png" width="200px"> <img src="readmeassets/val-bookmammo.png" width="200px"> <img src="readmeassets/val-booknm.png" width="200px">
 <img src="readmeassets/val-bookdexa.png" width="200px"> <img src="readmeassets/val-bookangio.png" width="200px"> <img src="readmeassets/val-bookfluoro.png" width="200px">
+
+
+#### JavaScript
+
+
+#### Python
 
 ### Issues Found During Deployment
 ### Accessibility
