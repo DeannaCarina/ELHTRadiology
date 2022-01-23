@@ -953,7 +953,7 @@ input {
     padding: 3px 5px;
 }
 
-[type="multiple"] {
+.multiple {
     background: #fff url('../images/caret.png') 97% 50% no-repeat;
     background-size: 30px;
 }
