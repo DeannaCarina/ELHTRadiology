@@ -1680,7 +1680,7 @@ input[placeholder],
 .center-form {
     padding-top: 10px;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 800px;
 }
 
 .hide {
