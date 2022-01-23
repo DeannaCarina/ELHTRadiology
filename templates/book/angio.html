@@ -82,14 +82,14 @@
                     <span class="info-hover-text">Please select the examination on your request here. If you have more than one body part on your exam request, you will need to submit another form. If your 
                         examination isn't listed, please write in the 'communication and mobility requirements' box the examination you think you are having.</span>
                 </span>
-                <select id="examination_type" name="examination_type" class="form-control booking-form-input">
+                <select id="examination_type" name="examination_type" class="form-control booking-form-input" type="multiple" required>
+                    <option value="" label="Choose option"></option>
                     <option value="Heart/Cardiac">Heart/Cardiac</option>
                     <option value="Lungs/Pulmonary">Lungs/Pulmonary</option>
                     <option value="Brain/Cerebral">Brain/Cerebral</option>
                     <option value="Kidney/Renal">Kidney/Renal</option>
                     <option value="Other">Other</option>
                 </select>
-                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- EXAM DATE -->
@@ -118,13 +118,12 @@
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if there is any chance you might be pregnant, this will affect how we carry out your examination.</span>
                 </span>
-                <select id="preg_status" name="preg_status" class="form-control booking-form-input" required>
+                <select id="preg_status" name="preg_status" class="form-control booking-form-input" type="multiple" required>
                     <option value="" label="Choose option"></option>
                     <option value="I am pregnant">I am pregnant</option>
                     <option value="I am not pregnant">I am not pregnant</option>
                     <option value="I might be pregnant">I might be pregnant</option>
                 </select>
-                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- WEIGHT QUESTION -->
@@ -133,13 +132,12 @@
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if there is any chance you might weigh in excess of 22kg, this will affect how we carry out your examination.</span>
                 </span>
-                <select id="weight_status" name="weight_status" class="form-control booking-form-input" required>
+                <select id="weight_status" name="weight_status" class="form-control booking-form-input" type="multiple" required>
                     <option value="" label="Choose option"></option>
                     <option value="I weigh equal to or less than 22st">I weigh equal to or less than 22st</option>
                     <option value="I weigh more than 22st">I weigh more than 22st</option>
                     <option value="I'm not sure how much I weigh">I'm not sure how much I weigh</option>
                 </select>
-                <i class="fas fa-caret-down"></i>
             </div>
 
             <!-- KIDNEY QUESTION -->
@@ -148,13 +146,12 @@
                 <span class="info-hover"><i class="fas fa-info-circle"></i>
                     <span class="info-hover-text">Please let us know if you have any problems with your kidney function, this will affect how we carry out your examination.</span>
                 </span>
-                <select id="kidney_status" name="kidney_status" class="form-control booking-form-input" required>
+                <select id="kidney_status" name="kidney_status" class="form-control booking-form-input" type="multiple" required>
                     <option value="" label="Choose option"></option>
                     <option value="I have kidney problems">I have kidney problems</option>
                     <option value="I do not have kidney problems">I do not have kidney problems</option>
                     <option value="I'm not sure if I have kidney problems">I'm not sure if I have kidney problems</option>
                 </select>
-                <i class="fas fa-caret-down"></i>
             </div>           
 
             <!-- COMMUNICATION & MOBILITY REQUIREMENTS -->

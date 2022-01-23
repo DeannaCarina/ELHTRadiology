@@ -953,6 +953,11 @@ input {
     padding: 3px 5px;
 }
 
+[type="multiple"] {
+    background: #fff url('../images/caret.png') 97% 50% no-repeat;
+    background-size: 30px;
+}
+
 input[placeholder],
 [placeholder],
 *[placeholder] {
