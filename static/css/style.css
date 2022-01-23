@@ -919,7 +919,8 @@ footer {
 }
 
 [type="date"] {
-    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+    background: #fff url('../images/calendar.png') 97% 50% no-repeat;
+    background-size: 15px;
 }
 
 [type="date"]::-webkit-inner-spin-button {
@@ -928,6 +929,21 @@ footer {
 
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
+}
+
+[type="time"] {
+    background: #fff url('../images/clock.png') 97% 50% no-repeat;
+    background-size: 15px;
+}
+
+#contact_number {
+    background: #fff url('../images/phone.png') 97% 50% no-repeat;
+    background-size: 15px;
+}
+
+#email_address {
+    background: #fff url('../images/email.png') 97% 50% no-repeat;
+    background-size: 15px;
 }
 
 input {
