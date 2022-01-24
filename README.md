@@ -590,7 +590,7 @@ The third phase of my testing regime was to ensure that all user stories identif
 ><br><br>
 
 <em>"As a patient I can learn about the necessity and structure of examination requests so that I can complete the online appointment booking more easily"</em><br>
-<img src="readmeassets/user-requests.gif"><br>
+<img src="readmeassets/user-requests.png"><br>
 
 ><br><br>
 
@@ -610,12 +610,12 @@ The third phase of my testing regime was to ensure that all user stories identif
 ><br><br>
 
 <em>"As a patient I can learn about the basic management of the department so that make an informed decision about how my care will be managed when I attend for my examination"</em><br>
-<img src="readmeassets/user-department.png"><br>
+<img src="readmeassets/user-dept.png"><br>
 
 ><br><br>
 
 <em>"As a site administrator I can create, read, edit and delete examination appointments on patient's behalf so that patients who are unable to use the online booking system are still able to book appointments" & "As a radiology member of staff I can manage my day-to-day workload by knowing in advance which patients are coming to the department so that I can manage my time and the patient's care more effectively"</em><br>
-<img src="readmeassets/user-.png"><br>
+<img src="readmeassets/user-admin.png"><br>
 
 ><br><br>
 
