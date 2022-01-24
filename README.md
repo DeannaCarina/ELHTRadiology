@@ -572,6 +572,55 @@ The second phase of my testing regime for the website was to ensure that the web
 <img src="readmeassets/gif-responsive6.gif"><br>
 
 ### User Testing Stories
+The third phase of my testing regime was to ensure that all user stories identified in the Strategy plane have been acknowledged and achieved.<br><br>
+
+<em>"As a Patient I can contact the radiology department so that I can discuss my radiology appointments/examinations" & "As an external company I can contact the radiology department so that there can be a mutually beneficial relationship between my company and the NHS by having my products tested and used by the radiology department"</em><br>
+<img src="readmeassets/user-contact.png"><br>
+
+><br><br>
+
+<em>"As a patient I can use the examination booking form so that I can book an appointment at radiology ELHT"</em><br>
+<img src="readmeassets/user-book.png"><br>
+
+><br><br>
+
+<em>"As a patient I can learn about the different radiology examinations so that I can be more prepared and less anxious for my appointment"</em><br>
+<img src="readmeassets/user-exams.png"><br>
+
+><br><br>
+
+<em>"As a patient I can learn about the necessity and structure of examination requests so that I can complete the online appointment booking more easily"</em><br>
+<img src="readmeassets/user-requests.gif"><br>
+
+><br><br>
+
+<em>"As a patient I can learn about the different radiology locations in ELHT so that I can make an informed decision about which location will be best for my personal needs and care"</em><br>
+<img src="readmeassets/user-locations.png"><br>
+
+><br><br>
+
+<em>"As a patient I can learn the basics of radiation safety so that I can make an informed decision about my care and how the examination may affect me in the future"</em><br>
+<img src="readmeassets/user-radiation.png"><br>
+
+><br><br>
+
+<em>"As a patient I can learn about how and where I will the results of my examination so that my care can be managed quickly and effectively with minimal delays"</em><br>
+<img src="readmeassets/user-results.png"><br>
+
+><br><br>
+
+<em>"As a patient I can learn about the basic management of the department so that make an informed decision about how my care will be managed when I attend for my examination"</em><br>
+<img src="readmeassets/user-department.png"><br>
+
+><br><br>
+
+<em>"As a site administrator I can create, read, edit and delete examination appointments on patient's behalf so that patients who are unable to use the online booking system are still able to book appointments" & "As a radiology member of staff I can manage my day-to-day workload by knowing in advance which patients are coming to the department so that I can manage my time and the patient's care more effectively"</em><br>
+<img src="readmeassets/user-.png"><br>
+
+><br><br>
+
+
+
 ### Code Validation
 
 Below are screenshots of all the code validation results from all pages within the website. Clicking on an image will open it in a new page as a larger image.
@@ -625,7 +674,6 @@ For validating the python code within the ELHT RBS project, I used an online Pyt
 Thankfully, I found no issues during deployment. From the beginning, the project worked really well whether in development mode or in the deployed version. Each time I needed to update a model, things became a bit more complicated - the easiest way I found to overcome these problems was to delete the Heroku Postgres database, and create a new one, then to make migrations, migrate and create a new super user via the Heroku bash console.
 
 ### Accessibility
-
 <em>By making websites accessible, we are ensuring that all of our potential users, including people with disabilities, have a decent user experience and are able to easily access information.  By implementing accessibility best practices, I am also improving the usability of the site for all users.</em>
 
 Due to the importance and necessity of accessibility on websites, I have chosen to run all the web pages associated with the ELHT radiology booking service through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool. I found from carrying out accessibility checks on my previous projects that the Wave Accessibility tool is a very good all-round checker that looks at a range of aspects on a web page and shows which aspects need fixing or altering in line with accessibility best practices. The steps I took from first check to last check are as follows:
@@ -650,6 +698,8 @@ Due to the importance and necessity of accessibility on websites, I have chosen 
 None of the pages had any true errors, however all pages had the same three contrast errors - one in the header and two in the footer. These are on all pages due to the header and footer being placed on all pages via the base template. I have chosen not to address these contrast errors as they are not important to the overall user experience, and changing them would alter the overall look of the logo and make them not be true to the real thing.
 
 ### Performance Testing
+Below is the report generated from lighthouse via Chrome DevTools for the desktop website, I am really happy that the accessibility score is so high, especially as the website provides a healthcare-related service, however would have liked a higher score on performance (even though the score on this still isn't bad).<br>
+<img src="readmeassets/performance.png"><br>
 
 ## Deployment
 A live demo of the website can be found <a href="https://elht-rbs.herokuapp.com/" target="_blank">**HERE**</a><br>
