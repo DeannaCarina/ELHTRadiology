@@ -488,9 +488,86 @@ The first phase of my testing regime for the website was to look at the function
         </ul>     
 </ul><br>
 
-
+I tested the usability and intuitiveness of the website using different focus groups divided by age: <br>
+<table>
+    <tr>
+        <th>Age Group</th>
+        <th>Quantity</th>
+        <th>Comments</th>
+    </tr>
+    <tr>
+        <td><strong>16-25</strong></td>
+        <td>3</td>
+        <td>
+            <ul>
+                <li>All users knew the purpose of the website on first navigation.</li>
+                <li>All users found the website easy to navigate and knew where to go for information and to book an appointment.</li>
+                <li>All users found the website well-styled and pleasant to look at.</li>
+                <li>All users used their phones.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>26-35</strong></td>
+        <td>11</td>
+        <td>
+            <ul>
+                <li>All users knew the purpose of the website on first navigation.</li>
+                <li>All users found the website easy to navigate and knew where to go for information and to book an appointment.</li>
+                <li>All users found the website well-styled and pleasant to look at.</li>
+                <li>8 users used their phones, 3 used their laptops.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>36-45</strong></td>
+        <td>6</td>
+        <td>
+            <ul>
+                <li>All users knew the purpose of the website on first navigation.</li>
+                <li>All users found the website easy to navigate and knew where to go for information and to book an appointment.</li>
+                <li>All users found the website well-styled and pleasant to look at.</li>
+                <li>2 user used their computers, 1 used their MacBook, 3 used their phones.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>46-55</strong></td>
+        <td>3</td>
+        <td>
+            <ul>
+                <li>All users knew the purpose of the website on first navigation.</li>
+                <li>All users found the website easy to navigate and knew where to go for information and to book an appointment.</li>
+                <li>All users found the website well-styled and pleasant to look at.</li>
+                <li>All users used their phones.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>56+</strong></td>
+        <td>7</td>
+        <td>
+            <ul>
+                <li>All users knew the purpose of the website on first navigation.</li>
+                <li>All users found the website easy to navigate and knew where to go for information and to book an appointment.</li>
+                <li>All users found the website well-styled and pleasant to look at.</li>
+                <li>2 users used their iPads, 1 used their laptop and 4 used their phones.</li>
+            </ul>
+        </td>
+    </tr>
+</table><br>
 
 ### Compatibility
+
+The second phase of my testing regime for the website was to ensure that the website is compatible through a range of devices, screen sizes and internet browsers. Throughout the development process, the website was tested on a number of devices: A 17.3 inch windows laptop, a 15.3 inch windows laptop, a 16 inch MacBook Pro, an 8 inch Samsung Galaxy Tab A, a 10.2 inch iPad, A Samsung Galaxy S20 Ultra and A Huawei P30 Pro. It was also tested in Chrome, Firefox, Internet Explorer and Safari as well as Samsung's own internet browser. By also using Chrome Dev Tools, I was able to manually change the screen size to see when elements within the web pages 'break', by using this method, I could pinpoint the exact screen widths and heights to be defined in the CSS media screen queries and alter the stylings to fit accordingly. The videos below shows how I checked the responsiveness of the website at all screensizes.
+
+<img src="readmeassets/gif-responsive.gif"><br>
+<img src="readmeassets/gif-responsive2.gif"><br>
+<img src="readmeassets/gif-responsive3.gif"><br>
+<img src="readmeassets/gif-responsive4.gif"><br>
+<img src="readmeassets/gif-responsive5.gif"><br>
+<img src="readmeassets/gif-responsive6.gif"><br>
+
 ### User Testing Stories
 ### Code Validation
 
