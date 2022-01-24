@@ -582,43 +582,26 @@ The third phase of my testing regime was to ensure that all user stories identif
 <em>"As a patient I can use the examination booking form so that I can book an appointment at radiology ELHT"</em><br>
 <img src="readmeassets/user-book.png"><br>
 
->On the front-end all of the booking forms were designed and styled using Bootstrap with some small changes to this via the CSS. I chose to create these forms the the HTML pages rather than through the forms.py file and generate them via Django. I chose to do this for a number of reasons: To make it easier for styling, to be able to add the information hover feature to give a more in-depth explanation of each form field, to do specific form-validation via JavaScript. There may have been ways to do this with with a forms.py, however my minimal knowledge of python and django meant that I wasn't very comfortable implementing this, and chose to stick with what I know to minimise potential bugs. When the user has completed the form, they will get a message generated via Django messages at the top of the form confirming their name, the exam time, date and location. The user will also receive an email with this information, and a notification will be sent to ELHT RBS email to alert site admins that there has been a new booking in real-time. To make it easier for site admins to find a specific booking, users will also be given a Booking reference number which is generated using the pattern [first two letters of the exam type][patient surname][time and date of exam in Epoch format].<br><br>
+>On the front-end all of the booking forms were designed and styled using Bootstrap with some small changes to this via the CSS. I chose to create these forms the the HTML pages rather than through the forms.py file and generate them via Django. I chose to do this for a number of reasons: To make it easier for styling, to be able to add the information hover feature to give a more in-depth explanation of each form field, to do specific form-validation via JavaScript. There may have been ways to do this with with a forms.py, however my minimal knowledge of python and django meant that I wasn't very comfortable implementing this, and chose to stick with what I know to minimise potential bugs. When the user has completed the form, they will get a message generated via Django messages at the top of the form confirming their name, the exam time, date and location. The user will also receive an email with this information, and a notification will be sent to ELHT RBS email to alert site admins that there has been a new booking in real-time. To make it easier for site admins to find a specific booking, users will also be given a Booking reference number which is generated using the pattern [first two letters of the exam type][patient surname][time and date of exam in Epoch format]. All information the user inputs into the form (as well as the generated reference number) will be sent to the Django admin panel which can be seen, edited and deleted by site administrators. Site admins can also create appointments in the Django admin panel if a user is unable to do this in the main website.<br><br>
 
 <em>"As a patient I can learn about the different radiology examinations so that I can be more prepared and less anxious for my appointment"</em><br>
 <img src="readmeassets/user-exams.png"><br>
 
-><br><br>
+>There are 9 separate examination information pages - one for each modality, that each contain 4 different information boxes: "Why do you need this examination?", "Is it safe?", "What do you need to do during the examination?" and "What will the practitioner do during the examination?". From the nearly 7 years I have worked in radiology, these questions are the ones that keep coming up time and again. By having these questions pre-answered on the website, I hope that it would make users and potential patients less anxious when they attend the radiology department for their examinations.<br><br>
 
-<em>"As a patient I can learn about the necessity and structure of examination requests so that I can complete the online appointment booking more easily"</em><br>
+<em>"As a patient I can learn about the necessity and structure of examination requests so that I can complete the online appointment booking more easily" & "As a patient I can learn about the different radiology locations in ELHT so that I can make an informed decision about which location will be best for my personal needs and care" & "As a patient I can learn the basics of radiation safety so that I can make an informed decision about my care and how the examination may affect me in the future" & "As a patient I can learn about how and where I will the results of my examination so that my care can be managed quickly and effectively with minimal delays" & "As a patient I can learn about the basic management of the department so that make an informed decision about how my care will be managed when I attend for my examination"</em><br>
 <img src="readmeassets/user-requests.png"><br>
-
-><br><br>
-
-<em>"As a patient I can learn about the different radiology locations in ELHT so that I can make an informed decision about which location will be best for my personal needs and care"</em><br>
+<img src="readmeassets/user-radiation.png"><br>
+<img src="readmeassets/user-results.png"><br>
+<img src="readmeassets/user-dept.png"><br>
 <img src="readmeassets/user-locations.png"><br>
 
-><br><br>
-
-<em>"As a patient I can learn the basics of radiation safety so that I can make an informed decision about my care and how the examination may affect me in the future"</em><br>
-<img src="readmeassets/user-radiation.png"><br>
-
-><br><br>
-
-<em>"As a patient I can learn about how and where I will the results of my examination so that my care can be managed quickly and effectively with minimal delays"</em><br>
-<img src="readmeassets/user-results.png"><br>
-
-><br><br>
-
-<em>"As a patient I can learn about the basic management of the department so that make an informed decision about how my care will be managed when I attend for my examination"</em><br>
-<img src="readmeassets/user-dept.png"><br>
-
-><br><br>
+>There are 5 separate pages which give the user/patient more information on the topics that are most likely to be asked/talked about: Radiology requests, radiation safety, examination results, the department and different locations around ELHT. I have included these in the website for the same reason as I included the examination information pages - to educate and inform users/patients about their examination and to make an informed decision about whether they want to have the examination or not.<br><br>
 
 <em>"As a site administrator I can create, read, edit and delete examination appointments on patient's behalf so that patients who are unable to use the online booking system are still able to book appointments" & "As a radiology member of staff I can manage my day-to-day workload by knowing in advance which patients are coming to the department so that I can manage my time and the patient's care more effectively"</em><br>
 <img src="readmeassets/user-admin.png"><br>
 
-><br><br>
-
+>When a site user/patient uses any of the booking forms, all the information the user submits is added to the Django admin panel in sections divided by radiology modality - xray, ct, mri, ultrasound, nuclear medicine, angio, fluoro, dexa & mammo. Site admins can confirm bookings, delete bookings, see bookings that have been requested by patients/users, edit bookings and add bookings. By separating the bookings into modality sections, different departments within radiology will know what bookings they have for a particular day and plan their workload/day accordingly.<br><br>
 
 
 ### Code Validation
