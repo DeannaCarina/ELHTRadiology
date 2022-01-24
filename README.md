@@ -27,6 +27,9 @@
     <li>
         <a href="#Screenshots"><strong>Screenshots</strong></a>
     </li>
+    <li>
+        <a href="#overall-thoughts"><strong>Overall Thoughts</strong></a>
+    </li>
 </ul>
 <hr>
 
@@ -619,7 +622,33 @@ For validating the python code within the ELHT RBS project, I used an online Pyt
 
 
 ### Issues Found During Deployment
+Thankfully, I found no issues during deployment. From the beginning, the project worked really well whether in development mode or in the deployed version. Each time I needed to update a model, things became a bit more complicated - the easiest way I found to overcome these problems was to delete the Heroku Postgres database, and create a new one, then to make migrations, migrate and create a new super user via the Heroku bash console.
+
 ### Accessibility
+
+<em>By making websites accessible, we are ensuring that all of our potential users, including people with disabilities, have a decent user experience and are able to easily access information.  By implementing accessibility best practices, I am also improving the usability of the site for all users.</em>
+
+Due to the importance and necessity of accessibility on websites, I have chosen to run all the web pages associated with the ELHT radiology booking service through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool. I found from carrying out accessibility checks on my previous projects that the Wave Accessibility tool is a very good all-round checker that looks at a range of aspects on a web page and shows which aspects need fixing or altering in line with accessibility best practices. The steps I took from first check to last check are as follows:
+<ol>
+    <li>Run each page through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool</li>
+    <li>Rectify any errors that resulted from the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> check regarding code errors and contrast errors</li>
+    <li>Re-run the web page through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool</li>
+</ol>
+
+#### Home page, contact page, privacy page, thanks page, 500, 403 and 404
+<img src="readmeassets/access-main.png">
+
+#### /information and its sub-pages (Locations, Department, Radiation, Requests and Results)
+<img src="readmeassets/access-information.png">
+
+#### /examinations and its sub-pages (xray, computed_tomography, magnetic_resonance, ultrasound, nuclear_medicine, mammography, angiography, fluoroscopy and dexa)
+<img src="readmeassets/access-examination.png">
+
+#### /book sub-pages (xray, ct, mri, ultrasound, nm, mammo, angio, fluoro and dexa)
+<img src="readmeassets/access-booking.png">
+
+None of the pages had any true errors, however all pages had the same three contrast errors - one in the header and two in the footer. These are on all pages due to the header and footer being placed on all pages via the base template. I have chosen not to address these contrast errors as they are not important to the overall user experience, and changing them would alter the overall look of the logo and make them not be true to the real thing.
+
 ### Performance Testing
 
 ## Deployment
@@ -658,7 +687,7 @@ There are many ways to deploy the project locally on your own device. The ways I
 If you want to make changes to the repo without affecting it, you can make a copy of it by 'Forking' it. This will make sure that the original repo remains unchanged.
 <ol>
     <li>Log in to your GitHub account</li>
-    <li>Navigate to the repository <a href="#"><strong>HERE</strong></a></li>
+    <li>Navigate to the repository <a href="https://github.com/DeannaCarina/ELHTRadiology"><strong>HERE</strong></a></li>
     <li>Select the 'Fork' button in the top right corner of the page (under your account image)</li>
     <li>The repo has now been copied into your own repos and you can work on it in your chosen IDE</li>
     <li>If you have any suggestions to make regards to the code to make the site better, you can put in a pull request</li>
@@ -668,7 +697,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
 #### Cloning the repo with GitPod
 <ol>
     <li>Log in to your GitHub account</li>
-    <li>Navigate to the Repository <a href="#"><strong>HERE</strong></a></li>
+    <li>Navigate to the Repository <a href="https://github.com/DeannaCarina/ELHTRadiology"><strong>HERE</strong></a></li>
     <li>Select the 'Code' button above the file list on the right had side</li>
     <li>Ensure HTTPS is selected and click the clipboard on the right of the URL to copy it</li>
     <li>Open a new workspace in GitPod</li>
@@ -681,7 +710,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
 #### Github Desktop
 <ol>
     <li>Log in to your GitHub account</li>
-    <li>Navigate to the Repository <a href="#"><strong>HERE</strong></a></li>
+    <li>Navigate to the Repository <a href="https://github.com/DeannaCarina/ELHTRadiology"><strong>HERE</strong></a></li>
     <li>Select the 'Code' button above the file list on the right had side</li>
     <li>Select 'Open with GitHub Desktop'</li>
     <li>If you haven't already installed GitHub desktop application - you will need to follow the relevant steps to do this</li>
@@ -692,7 +721,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
 #### Download and extract the zip directly from GitHub
 <ol>
     <li>Log in to your GitHub account</li>
-    <li>Navigate to the Repository <a href="#"><strong>HERE</strong></a></li>
+    <li>Navigate to the Repository <a href="https://github.com/DeannaCarina/ELHTRadiology"><strong>HERE</strong></a></li>
     <li>Select the 'Code' button above the file list on the right had side</li>
     <li>Select 'Download Zip'</li>
     <li>Once you have the Zip downloaded, open it with your preferred file decompression software</li>
@@ -763,4 +792,4 @@ As I have worked in the radiology field for nearly 7 years, all content in the w
 <img src="readmeassets/screen4.png">
 <img src="readmeassets/screen5.png">
 
-## Overall thoughts/SWOT Analysis
+<h2 id="overall-thoughts">Overall thoughts/SWOT Analysis</h2>
