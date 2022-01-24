@@ -3,7 +3,7 @@ from django.urls import path
 
 from .views import (HomeTemplateView,
                     PrivacyTemplateView, ContactTemplateView,
-                    ThanksTemplateView, AdminTemplateView,
+                    ThanksTemplateView,
                     BookXrayTemplateView, BookCtTemplateView,
                     BookMriTemplateView, BookDexaTemplateView,
                     BookMammoTemplateView, BookNmTemplateView,
@@ -15,16 +15,13 @@ from .views import (HomeTemplateView,
                     ExamboardTemplateView, XrayTemplateView, CtTemplateView,
                     MriTemplateView, UsTemplateView, NmTemplateView,
                     MammoTemplateView, FluoroTemplateView, AngioTemplateView,
-                    DexaTemplateView, Page500, Page404, Page403,
-                    Patientbooking, AdminManage)
+                    DexaTemplateView, Page500, Page404, Page403)
 
 urlpatterns = [
     path('', HomeTemplateView.as_view(), name='home'),
     path('privacy', PrivacyTemplateView.as_view(), name='privacy'),
     path('contact', ContactTemplateView.as_view(), name='contact'),
     path('thanks', ThanksTemplateView.as_view(), name='thanks'),
-    path('management/patient', Patientbooking.as_view(), name='managepatient'),
-    path('management/admin', AdminManage.as_view(), name='manageadmin'),
 
     path('book/xray', BookXrayTemplateView.as_view(), name='book_xray'),
     path('book/ct', BookCtTemplateView.as_view(), name='book_ct'),

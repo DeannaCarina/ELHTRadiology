@@ -48,10 +48,6 @@ class ThanksTemplateView(TemplateView):
     template_name = 'thanks.html'
 
 
-class AdminTemplateView(TemplateView):
-    template_name = 'admin.html'
-
-
 # Classes for booking pages
 
 

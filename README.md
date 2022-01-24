@@ -362,14 +362,132 @@ From the table, I was able to recognise which features were more likely to have 
 ### Features left to implement
 <ul>
     <li><em>An instant messaging service for patient to be able to contact the radiology department in real-time</em> - by having this feature it would enable patients to be able to contact the radiology department quickly and to be able to get an instant reply. This could be for situations such as if the patient is going to be late for their appointment, or if they need help with completing the booking form. This feature wasn't implemented because it was outside the scope of my own abilities, I haven't been taught how to do this in the code institute lessons, and I didn't want to struggle doing something that isn't necessarily 'important' when there are other ways to achieve a similar goal - e.g. the contact form.</li>
-    <li><em>The ability for patients to self-manage their radiology bookings</em> - I had hoped to implement this feature, and did start to implement it. However, I found myself struggling to do this with my lack of django experience. I also think that due to the 9 different booking forms, it made things more complicated. I started my generating a patient reference number, and I was going to use this in a single input form to generate the rest of the booking information (time, date, location etc.) to then enable the patient to either cancel or edit their booking. After a few failed attempts, I found this was much easier said than done, and took the decision to leave this feature out rather than cause potential errors with the website. If I had more time, I would likely try and find a way to implement this as I feel this is an important feature to add to the usability of the website and the overall satisfaction that users may gain.</li>
+    <li><em>The ability for patients to self-manage their radiology bookings</em> - I had hoped to implement this feature, and did start to implement it. However, I found myself struggling to do this with my lack of django experience. I also think that due to the 9 different booking forms, it made things more complicated. I started by generating a patient reference number, and I was going to use this in a single input form to generate the rest of the booking information (time, date, location etc.) to then enable the patient to either cancel or edit their booking. After a few failed attempts, I found this was much easier said than done, and took the decision to leave this feature out rather than cause potential errors with the website. If I had more time, I would likely try and find a way to implement this as I feel this is an important feature to add to the usability of the website and the overall satisfaction that users may gain. Another reason for not implementing this feature was the risk of making sensitive information available to malicious attacks. Since I started the project, I have had two companies contact me via the contact form trying to sell their products - I'm not sure how these companies have found my website, but it makes me very cautious to make certain aspects of the project more available for users (e.g. being able to retrieve data from the database). See below for screenshots of the emails I received via the website booking form.</li>
+    <img src="readmeassets/spam-email1.png" width="300px">
+    <img src="readmeassets/spam-email2.png" width="300px">
 </ul>
 
 ## Testing
 ### Functionality
+The first phase of my testing regime for the website was to look at the functionality of the website and make sure that it meets the needs of the user on the most basic levels and also to ensure that all the interactive aspects of the website all worked with no problems.
+<ul>
+    <li>All internal links on the website need to be usable, and open in the same window.
+        <ul>
+           <li>All nav-bar links are generated through the website by extending from the base.html page. By using jinja templating, this minimises the risk of code errors between pages when certain sections are meant to be perfect replicas of each other. On my first portfolio project for the Code Institute course, one of the errors that I (unfortunately) found after submission was that I hadn't copied over the nav-bar accurately to all of the pages of the site, and as such there were layout errors on one of the pages. By using templating, when checking the links in the navbar work, I only need to check on one of the pages of the website, as I know for certain that all of the nav-bars/headers/footers are exactly the same. The following nav-bar links were all checked and found to be working properly before submission: 
+                <ul>
+                    <li>There is a hidden link on all pages that is for accessibility purposes and users that use their keyboards for navigation, it is within the header section, and has the purpose of allowing the user to skip past the navigation bar. When the user navigates to a new page, they can press the 'tab' button on their keyboard and then press enter to 'skip navigation'. It saves the user time and means that for each page they navigate to, they don't need to tab through the navigation bar to access other sections of the website.</li>
+                    <li>The ELHT Radiology Booking service Logo takes the user to the home page, without opening a new window.</li>
+                    <li>The 'Home' link in the nav-bar takes the user to the home page, without opening a new window.</li>
+                    <li>Within the 'Patient Information' dropdown of the nav-bar, the 'requests' link takes the user to the request information page of the website without opening a new window.</li>
+                    <li>Within the 'Patient Information' dropdown of the nav-bar, the 'locations' link takes the user to the locations information page of the website without opening a new window.</li>
+                    <li>Within the 'Patient Information' dropdown of the nav-bar, the 'radiation' link takes the user to the radiation information page of the website without opening a new window.</li>
+                    <li>Within the 'Patient Information' dropdown of the nav-bar, the 'results' link takes the user to the results information page of the website without opening a new window.</li>
+                    <li>Within the 'Patient Information' dropdown of the nav-bar, the 'department' link takes the user to the department information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'x-ray' link takes the user to the x-ray examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'CT' link takes the user to the CT examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'MRI' link takes the user to the MRI examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Ultrasound' link takes the user to the Ultrasound examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Mammograms' link takes the user to the Mammogram examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Nuclear Medicine' link takes the user to the Nuclear Medicine examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Fluoroscopy' link takes the user to the fluoroscopy examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Angiography' link takes the user to the angiography examination information page of the website without opening a new window.</li>
+                    <li>Within the 'Examinations' dropdown of the nav-bar, the 'Dexa' link takes the user to the dexa examination information page of the website without opening a new window.</li>
+                </ul>
+           </li>
+           <li>The links found within the footer were also imported to all pages of the website using Jinga templating, and (much the same as the testing for the nav-bar) I only needed to test the links of the footer in one page to know that they would work everywhere.
+                <ul>
+                    <li>The 'Privacy' link within the footer takes the user to the privacy policy page without opening in a new window.</li>
+                    <li>The 'Contact' link within the footer takes the user to the contact page without opening a new window.</li>
+                </ul>
+           </li>
+           <li>The links found on index.html that link the user to other pages were checked before submission:
+                <ul>
+                    <li>Within the hero section of index.html, there is a link 'Book an appointment' that the user can see as soon as the user navigates to the website, this takes the user to the next section of the same page and shows the user links to specific booking forms.</li>
+                    <li>In the section that links the user to specific booking pages, there are 9 links (one for each radiology modality) that take the user to the modality they wish to book an appointment for. These were all checked before submission and navigate the user to the booking pages without opening in a new window.</li>
+                    <li>In the section titled 'Looking for information about your visit to radiology?' there are two internal links, one that navigates to the information board, and the other to the examination board. These pages basically do the same job as the nav-bar dropdown lists and the likelihood is they won't be used very often, however I wanted these to be an option for the user incase they use the 'skip navigation' option when using keyboard navigation.</li>
+                    <li>In the last section of the index page, there is an internal link to take the user to the contact page, this was checked before submission and takes the user to the contact page without opening in a new window.</li>
+                </ul>
+           </li>
+           <li>On all of the examination information pages there is an internal link to take the user to the specific modality booking page. From a UX perspective, I found this made sense as when patient navigates to the website, they may see the 'examinations' link in the nav-bar and assume this is the quickest way to book an appointment, so I wanted to make sure there is a way to get to the booking pages in multiple ways. I also felt it was important for users to have a way to learn and understand their appointment before booking so they have informed consent around their examination and know in advance wat they will be having done.
+                <ul>
+                    <li>The internal link on the 'xray' information page takes the user to the xray booking form page.</li>
+                    <li>The internal link on the 'CT' information page takes the user to the CT booking form page.</li>
+                    <li>The internal link on the 'MRI' information page takes the user to the MRI booking form page.</li>
+                    <li>The internal link on the 'Ultrasound' information page takes the user to the Ultrasound booking form page.</li>
+                    <li>The internal link on the 'Mammograms' information page takes the user to the Mammogram booking form page.</li>
+                    <li>The internal link on the 'Nuclear Medicine' information page takes the user to the Nuclear Medicine booking form page.</li>
+                    <li>The internal link on the 'Fluoroscopy' information page takes the user to the Fluoroscopy booking form page.</li>
+                    <li>The internal link on the 'Angiography' information page takes the user to the Angiography booking form page.</li>
+                    <li>The internal link on the 'Dexa' information page takes the user to the Dexa booking form page.</li>
+                </ul>
+           </li>
+           <li>There are some other internal links dotted throughout the website that were all checked before submission:
+                <ul>
+                    <li>On the nuclear medicine information page there is an internal link to the CT information page, as some Nuclear Medicine scans use CT technology as part of the examination. This link was checked and takes the user to the CT page without opening in a new window.</li>
+                </ul>
+           </li>
+        </ul>    
+    </li>       
+    <li>All external links on the website need to be usable, and open in a new window.
+        <ul>
+            <li>The links within the footer of all pages were imported using jinja templating, and much the same as the header and nav-bar, I only need to check these on one page to know that they work.</li>
+                <ul>
+                    <li>The external link to facebook in the footer, takes the user to the main facebook page by opening it up in a new tab.</li>
+                    <li>The external link to twitter in the footer, takes the user to the main facebook page by opening it up in a new tab.</li>
+                </ul>
+            </li>
+            <li>The other external links on the website that were all checked before submission:</li>
+                <ul>
+                    <li>The download link in the contact page to show the map for RBH will download the file and open it in a new tab.</li>
+                    <li>The download link in the contact page to show the map for BGH will download the file and open it in a new tab.</li>
+                    <li>The link found in the radiation information page in the 'Can I wear a lead gown' section navigates the user to the 'StatNews' website in a new tab.</li>
+                    <li>The link found in the warning banner at the top of the page for 'educational purposes' will link the user to my GitHub profile, I'm hoping this will lessen the amount of emails I get from companies trying to sell me their products. The warning banner also has a 'close' button that will remove the banner if the user choses not to see it.</li>
+                </ul>
+            </li>
+        </ul>    
+    </li>  
+    <li>All elements with an associated psuedo class work when the action is carried out (e.g. Hover).
+        <ul>
+            <li>All buttons will change colour when the user hovers over them. These include the 'book an appointment' button in index.html, the booking form links in index.html, the extra buttons in index.html that navigate to the examination and information boards, the button in the last section that navigates to the contact page, the buttons used in all forms to send the form (for either booking or contact), the buttons for downloading the maps in contact.html, and the buttons in the examination and information boards that take the user to the relevant pages.
+                <ul>
+                    <li><img src="readmeassets/gif-indexbook.gif"></li>
+                    <li><img src="readmeassets/gif-bookinglinks.gif"></li>
+                    <li><img src="readmeassets/gif-links.gif"></li>
+                    <li><img src="readmeassets/gif-contactlink.gif"></li>
+                    <li><img src="readmeassets/gif-contactbutton.gif"></li>
+                    <li><img src="readmeassets/gif-bookbutton.gif"></li>
+                    <li><img src="readmeassets/gif-examboard.gif"></li>
+                    <li><img src="readmeassets/gif-infoboard.gif"></li>
+                    <li><img src="readmeassets/gif-download.gif"></li>
+                </ul>
+            </li>
+            <li>Other elements with associated psuedo classes will work when a certain action is carried out (e.g. hover or focus)
+                <ul>
+                    <li>All form inputs will change background colour when hovered and form inputs will stay the hovered colour when the user clicks in the input field.<br>
+                        <img src="readmeassets/gif-contactform.gif"><br>
+                        <img src="readmeassets/gif-bookform.gif">
+                    </li>
+                    <li>All examination information boxes will go fully opaque when the user hovers over them to lessen any potential background distraction.<br>
+                        <img src="readmeassets/gif-examinfo.gif">
+                    </li>
+                    <li>
+                        The 'hidden' skip navigation link will come into view if the first thing the user presses on going to the website is the 'tab' button on their keyboard.<br>
+                        <img src="readmeassets/gif-skipnav.gif">
+                    </li>
+                </ul>
+            </li>
+        </ul>  
+        <ul>
+            <li>All links will have subtle style changes when the user hovers over them. This includes all nav-bar links including those in the dropdown lists, the links in the footer, and any other links throughout the website.
+                <ul>
+                    <li><img src="readmeassets/gif-nav.gif"></li>
+                    <li><img src="readmeassets/gif-footer.gif"></li>
+                    <li><img src="readmeassets/gif-warning.gif"></li>
+                </ul>
+            </li>
+        </ul>     
+</ul><br>
 
-<img src="readmeassets/spam-email1.png" width="300px">
-<img src="readmeassets/spam-email2.png" width="300px">
 
 
 ### Compatibility
@@ -380,9 +498,13 @@ Below are screenshots of all the code validation results from all pages within t
 For all HTML, CSS and JavaScript code, these all passed through validation with no errors.
 
 #### CSS
+For validating the CSS code within the ELHT RBS project, I used the <a href="https://jigsaw.w3.org/css-validator/">Jigsaw</a> online validator. The CSS came back with no errors.
+
 <img src="readmeassets/val-css.png" width="200px"> 
 
 #### HTML
+For validating the HTML code within the ELHT RBS project, I used the <a href="https://validator.w3.org/">W3C Markup</a> online validator. Each page of the website was rin through the validator individually, totalling 28 separate validation reports. All HTML reports came back with no errors.
+
 <img src="readmeassets/val-index.png" width="200px">
 <img src="readmeassets/val-contact.png" width="200px"> <img src="readmeassets/val-privacy.png" width="200px"> <img src="readmeassets/val-exam.png" width="200px">
 <img src="readmeassets/val-info.png" width="200px"> <img src="readmeassets/val-infoxray.png" width="200px"> <img src="readmeassets/val-infoct.png" width="200px">
@@ -396,13 +518,15 @@ For all HTML, CSS and JavaScript code, these all passed through validation with 
 
 
 #### JavaScript
+For validating the JavaScript code within the ELHT RBS project, I used the <a href="https://jshint.com/">JSHint</a> online validator. I copied the code from the JavaScript file in the assets folder, and also copied the JavaScript code that I had embedded in the base.html and locations.html pages to check they had no errors. All JavaScript within the project came back with no errors.
+
 <img src="readmeassets/val-js1.png" width="300px">
 <img src="readmeassets/val-js2.png" width="300px">
 <img src="readmeassets/val-js3.png" width="300px">
 
 
 #### Python
-For validating the python code within the ELHT RBS project, I used an online Python PEP8 Linter <a href="http://pep8online.com/">PEP8 ONLINE</a>. I tested all python files that contain content (manage.py, settings.py, urls.py[in the booking dir], urls.py[in ELHT_radiology dir], wsgi.py, asgi.py, models.py, views.py, apps.py and admin.py). The majority of the python files passed without any errors, howeve there were three files that had line length errors. As these particular errors don't caue any problems with the function of the website or storage of data in the database, I chose to leave these errors rather than risk having problems with the website.
+For validating the python code within the ELHT RBS project, I used an online Python PEP8 Linter <a href="http://pep8online.com/">PEP8 ONLINE</a>. I tested all python files that contain content (manage.py, settings.py, urls.py[in the booking dir], urls.py[in ELHT_radiology dir], wsgi.py, asgi.py, models.py, views.py, apps.py and admin.py). The majority of the python files passed without any errors, however there were three files that had line length errors. As these particular errors don't cause any problems with the function of the website or storage of data in the database, I chose to leave these errors rather than risk having problems with the website.
 
 <img src="readmeassets/val-py-manage.png" width="300px">
 <img src="readmeassets/val-py-models.png" width="300px">
