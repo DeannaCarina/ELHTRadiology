@@ -757,4 +757,10 @@ As I have worked in the radiology field for nearly 7 years, all content in the w
 </ul>
 
 ## Screenshots
+<img src="readmeassets/screen1.png">
+<img src="readmeassets/screen2.png">
+<img src="readmeassets/screen3.png">
+<img src="readmeassets/screen4.png">
+<img src="readmeassets/screen5.png">
 
+## Overall thoughts/SWOT Analysis
