@@ -676,9 +676,6 @@ Due to the importance and necessity of accessibility on websites, I have chosen 
     <li>Re-run the web page through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool</li>
 </ol>
 
-#### Django Testing
-By following a Django testing tutorial on Youtube, which can be found <a href="https://www.youtube.com/watch?v=IKnp2ckuhzg&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=4"><strong>HERE</strong></a> I have written some basic tests to check the urls.py and the views.py files. I wasn't very confident in doing this, and much prefer carrying out manual testing which can be seen above.
-
 #### Home page, contact page, privacy page, thanks page, 500, 403 and 404
 <img src="readmeassets/access-main.png">
 
@@ -696,6 +693,9 @@ None of the pages had any true errors, however all pages had the same three cont
 ### Performance Testing
 Below is the report generated from lighthouse via Chrome DevTools for the desktop website, I am really happy that the accessibility score is so high, especially as the website provides a healthcare-related service, however would have liked a higher score on performance (even though the score on this still isn't bad).<br>
 <img src="readmeassets/performance.png"><br>
+
+### Django Testing
+By following a Django testing tutorial on Youtube, which can be found <a href="https://www.youtube.com/watch?v=IKnp2ckuhzg&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=4"><strong>HERE</strong></a> I have written some basic tests to check the urls.py and the views.py files. I wasn't very confident in doing this, and much prefer carrying out manual testing which can be seen above.
 
 ## Deployment
 A live demo of the website can be found <a href="https://elht-rbs.herokuapp.com/" target="_blank">**HERE**</a><br>
