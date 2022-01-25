@@ -324,7 +324,7 @@ The favicon was handmade by myself using the ELHT theme colours of blue, green p
 
 
 #### Images & Videos
-All images throughout the site were taken from either Pexels, Pixabay or Shutterstock - royalty free websites. I have tried to make all the images used as relevant to the page they are on as possible, as well as keeping them simple and 'clean'. Below are all the images used - clicking them will open them in a new widow at a larger size.
+All images throughout the site were taken from either Pexels, or Shutterstock - stock photo websites. I have tried to make all the images used as relevant to the page they are on as possible, as well as keeping them simple and 'clean'. Below are all the images used - clicking them will open them in a new widow at a larger size.
 
 <img src="static/images/hero.jpg" height="200px"> <img src="static/images/extra.jpg" height="200px">
 <img src="readmeassets/white2.jpg" height="200px"> <img src="static/images/advert.jpg" height="200px">
@@ -675,6 +675,9 @@ Due to the importance and necessity of accessibility on websites, I have chosen 
     <li>Rectify any errors that resulted from the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> check regarding code errors and contrast errors</li>
     <li>Re-run the web page through the <a href="https://wave.webaim.org/" target="_blank">Wave Accessibility</a> tool</li>
 </ol>
+
+#### Django Testing
+By following a Django testing tutorial on Youtube, which can be found <a href="https://www.youtube.com/watch?v=IKnp2ckuhzg&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=4"><strong>HERE</strong></a> I have written some basic tests to check the urls.py and the views.py files. I wasn't very confident in doing this, and much prefer carrying out manual testing which can be seen above.
 
 #### Home page, contact page, privacy page, thanks page, 500, 403 and 404
 <img src="readmeassets/access-main.png">
