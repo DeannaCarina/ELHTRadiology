@@ -719,10 +719,10 @@ This project was deployed via Heroku by carrying out the following:
 <ol>
     <li>Create the gitpod repo from the template via the gitpod button in github.</li>
     <li>Log in to Heroku and create a new app.</li>
-    <li>Add the postgres add-on</li>
+    <li>Add the heroku-postgres add-on</li>
     <li>Complete the config vars section</li>
     <li>Link Heroku and GitHub accounts together</li>
-    <li>Select the repo (via Heroku) that I wanted to make an app of and give it a name in Heroku.</li>
+    <li>Select the repo (via Heroku) that you want to make an app of and give it a name in Heroku.</li>
     <li>Click on deploy.</li>
 </ol>
 
@@ -737,6 +737,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>Select the 'Fork' button in the top right corner of the page (under your account image)</li>
     <li>The repo has now been copied into your own repos and you can work on it in your chosen IDE</li>
     <li>If you have any suggestions to make regards to the code to make the site better, you can put in a pull request</li>
+    <li>In the console, run: pip install -r requirements.txt</li>
     <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
 </ol>
 
@@ -747,9 +748,9 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>Select the 'Code' button above the file list on the right had side</li>
     <li>Ensure HTTPS is selected and click the clipboard on the right of the URL to copy it</li>
     <li>Open a new workspace in GitPod</li>
-    <li>In the bash terminal type 'git clone [copy url here from step 4]'</li>
+    <li>In the bash terminal type 'git clone [repo url]'</li>
     <li>Press enter - the IDE will clone and download the repo</li>
-    <li>You can then type 'python3 -m http.server' to host the website locally - this will not run the python file, only allow you to check how the web-app looks.</li>
+    <li>In the console, run: pip install -r requirements.txt</li>
     <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
 </ol>
   
@@ -761,6 +762,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>Select 'Open with GitHub Desktop'</li>
     <li>If you haven't already installed GitHub desktop application - you will need to follow the relevant steps to do this</li>
     <li>The repo will then be copied locally onto your machine</li>
+    <li>In the console, run: pip install -r requirements.txt</li>
     <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
 </ol>
 
@@ -772,6 +774,7 @@ If you want to make changes to the repo without affecting it, you can make a cop
     <li>Select 'Download Zip'</li>
     <li>Once you have the Zip downloaded, open it with your preferred file decompression software</li>
     <li>You can then drag and drop the files from the folder into your chosen IDE or view/edit them on your local machine</li>
+    <li>In the console, run: pip install -r requirements.txt</li>
     <li>If you want to create a web-app from the repo please follow the instructions in "Project Deployment"</li>
 </ol>
   
