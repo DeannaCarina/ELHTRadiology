@@ -488,7 +488,17 @@ The first phase of my testing regime for the website was to look at the function
                     <li><img src="readmeassets/gif-warning.gif"></li>
                 </ul>
             </li>
-        </ul>     
+        </ul>
+    </li>
+    <li>
+        All forms within the website give the user instant feedback to reassure them that the form has worked. All forms give a notification email to the user/patient as well as site admin to give real-time feedback/notifications. All form submissions update the Django Postgres Database.
+        <ul>
+            <li>The image below shows the emails received in the account I used as a 'patient' to book radiology appointments, and the email account I used as the 'admin'. These show the notification emails from both a patient and admin perspective when a new booking is made. All of the emails went through with no problems.<br>
+            <img src="readmeassets/check-emails.png"></li>
+            <li>The image below shows the updated Django database for each radiology modality when a new booking is made. All bookings went through with no problems, a new patient booking reference number was generated each time and all patient submitted data was transferred.<br>
+            <img src="readmeassets/check-forms.png"></li>
+        </ul>
+    </li>     
 </ul><br>
 
 I tested the usability and intuitiveness of the website using different focus groups divided by age: <br>
