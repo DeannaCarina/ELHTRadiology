@@ -111,6 +111,12 @@ nav {
     color: white;
 }
 
+.login-nav-link {
+    background-color: white;
+    color: #0069B4;
+    border-radius: 10px;
+}
+
 .navbar-nav {
     margin: auto;
 }
@@ -181,8 +187,12 @@ nav {
         display: none;
     }
 
-    .nav-link {
-        margin-left: 5px;
+    .navbar-nav .nav-link {
+        padding-left: 5px;
+    }
+
+    .login-drop {
+        border-radius: 10px;
     }
 }
 
