@@ -1,0 +1,607 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="thanks-container">
+    <div class="thanks-hero"></div>
+    <div class="thanks-title">
+        New Bookings        
+    </div>
+        <div class="accordion-container">
+            <div class="accordion" id="accordionExample">
+
+                <!-- XRAY ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            X-Ray Appointments
+                            {% if xrayappointments %}
+                                {% for xrayappointment in xrayappointments %}
+                                    {% if xrayappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if xrayappointments %}
+                                {% for xrayappointment in xrayappointments %}
+                                    {% if xrayappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ xrayappointment.first_name }} {{ xrayappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ xrayappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ xrayappointment.sent_date }}</p>
+                                                    {% if xrayappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ xrayappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if xrayappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ xrayappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ xrayappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ xrayappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ xrayappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ xrayappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ xrayappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ xrayappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="xrayform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="xrayform">
+                                                    <input hidden="true" name="ref_number" value="{{xrayappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New X-Ray Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CT ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            CT Appointments
+                            {% if ctappointments %}
+                                {% for ctappointment in ctappointments %}
+                                    {% if ctappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if ctappointments %}
+                                {% for ctappointment in ctappointments %}
+                                    {% if ctappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ ctappointment.first_name }} {{ ctappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ ctappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ ctappointment.sent_date }}</p>
+                                                    {% if ctappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ ctappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if ctappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ ctappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ ctappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ ctappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ ctappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ ctappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ ctappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ ctappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="ctform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="ctform">
+                                                    <input hidden="true" name="ref_number" value="{{ctappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New CT Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MRI ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            MRI Appointments
+                            {% if mriappointments %}
+                                {% for mriappointment in mriappointments %}
+                                    {% if mriappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if mriappointments %}
+                                {% for mriappointment in mriappointments %}
+                                    {% if mriappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ mriappointment.first_name }} {{ mriappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ mriappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ mriappointment.sent_date }}</p>
+                                                    {% if mriappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ mriappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if mriappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ mriappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ mriappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ mriappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ mriappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ mriappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ mriappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ mriappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="mriform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="mriform">
+                                                    <input hidden="true" name="ref_number" value="{{mriappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New MRI Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ULTRASOUND ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Ultrasound Appointments
+                            {% if usappointments %}
+                                {% for usappointment in usappointments %}
+                                    {% if usappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if usappointments %}
+                                {% for usappointment in usappointments %}
+                                    {% if usappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ usappointment.first_name }} {{ usappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ usappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ usappointment.sent_date }}</p>
+                                                    {% if usappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ usappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if usappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ usappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ usappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ usappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ usappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ usappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ usappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ usappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="usform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="usform">
+                                                    <input hidden="true" name="ref_number" value="{{usappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Ultrasound Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAMMO ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Mammography Appointments
+                            {% if mammoappointments %}
+                                {% for mammoappointment in mammoappointments %}
+                                    {% if mammoappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if mammoappointments %}
+                                {% for mammoappointment in mammoappointments %}
+                                    {% if mammoappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ mammoappointment.first_name }} {{ mammoappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ mammoappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ mammoappointment.sent_date }}</p>
+                                                    {% if mammoappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ mammoappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if mammoappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ mammoappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ mammoappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ mammoappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ mammoappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ mammoappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ mammoappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ mammoappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="mammoform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="mammoform">
+                                                    <input hidden="true" name="ref_number" value="{{mammoappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Mammography Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEXA ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Dexa Appointments
+                            {% if dexaappointments %}
+                                {% for dexaappointment in dexaappointments %}
+                                    {% if dexaappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if dexaappointments %}
+                                {% for dexaappointment in dexaappointments %}
+                                    {% if dexaappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ dexaappointment.first_name }} {{ dexaappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ dexaappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ dexaappointment.sent_date }}</p>
+                                                    {% if dexaappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ dexaappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if dexaappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ dexaappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ dexaappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ dexaappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ dexaappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ dexaappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ dexaappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ dexaappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="dexaform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="dexaform">
+                                                    <input hidden="true" name="ref_number" value="{{dexaappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Dexa Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUCLEAR MEDICINE ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Nuclear Medicine Appointments
+                            {% if nmappointments %}
+                                {% for nmappointment in nmappointments %}
+                                    {% if nmappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if nmappointments %}
+                                {% for nmappointment in nmappointments %}
+                                    {% if nmappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ nmappointment.first_name }} {{ nmappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ nmappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ nmappointment.sent_date }}</p>
+                                                    {% if nmappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ nmappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if nmappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ nmappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ nmappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ nmappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ nmappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ nmappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ nmappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ nmappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="nmform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="nmform">
+                                                    <input hidden="true" name="ref_number" value="{{nmappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Nuclear Medicine Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANGIO ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Angiography Appointments
+                            {% if angioappointments %}
+                                {% for angioappointment in angioappointments %}
+                                    {% if angioappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if angioappointments %}
+                                {% for angioappointment in angioappointments %}
+                                    {% if angioappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ angioappointment.first_name }} {{ angioappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ angioappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ angioappointment.sent_date }}</p>
+                                                    {% if angioappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ angioappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if angioappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ angioappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ angioappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ angioappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ angioappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ angioappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ angioappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ angioappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="angioform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="angioform">
+                                                    <input hidden="true" name="ref_number" value="{{angioappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Angiography Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FLUORO ACCORDION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Fluoroscopy Appointments
+                            {% if fluoroappointments %}
+                                {% for fluoroappointment in fluoroappointments %}
+                                    {% if fluoroappointment.accepted == False %}
+                                            <span class="appt-alert">!</span>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if fluoroappointments %}
+                                {% for fluoroappointment in fluoroappointments %}
+                                    {% if fluoroappointment.accepted == False  %}
+                                        <div class="booking-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title"><strong>Patient Information</strong></h1>
+                                                    <p class="card-info"><span class="card-heading">Name: </span>{{ fluoroappointment.first_name }} {{ fluoroappointment.last_name }}</p>
+                                                    <p class="card-info"><span class="card-heading">Reference Number: </span>{{ fluoroappointment.ref_number }}</p>
+                                                    <p class="card-info"><span class="card-heading">Requested on: </span>{{ fluoroappointment.sent_date }}</p>
+                                                    {% if fluoroappointment.request_number %}
+                                                        <p class="card-info"><span class="card-heading">Request Number: </span>{{ fluoroappointment.request_number }}</p>
+                                                    {% endif %}
+                                                    {% if fluoroappointment.hospital_number %}
+                                                        <p class="card-info"><span class="card-heading">Hospital Number: </span>{{ fluoroappointment.hospital_number }}</p>
+                                                    {% endif %}
+                                                    <p class="card-info"><span class="card-heading">Date of Birth: </span>{{ fluoroappointment.date_of_birth }}</p>
+                                                    <p class="card-info"><span class="card-heading">Pregnancy Status: </span>{{ fluoroappointment.preg_status }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="card-title card-title-2">Exam information</h1>
+                                                    <p class="card-info"><span class="card-heading">Examination Type: </span>{{ fluoroappointment.examination_type }}</p>
+                                                    <p class="card-info"><span class="card-heading">Exam Location: </span>{{ fluoroappointment.exam_location }}</p>
+                                                    <p class="card-info"><span class="card-heading">Date of exam: </span>{{ fluoroappointment.date_of_exam }}</p>
+                                                    <p class="card-info"><span class="card-heading">Time of exam: </span>{{ fluoroappointment.time_of_exam }}</p>
+                                                </div>
+                                            </div> 
+                                            <form method="POST" action="{% url 'manage' %}" id="fluoroform">
+                                            {% csrf_token %}
+                                                <div class="form-group">
+                                                    <input hidden="true" name="form_type" value="fluoroform">
+                                                    <input hidden="true" name="ref_number" value="{{fluoroappointment.ref_number}}">
+                                                    <input class="btn-block btn-primary form-control" type="submit" value="Accept this Appointment">
+                                                </div>
+                                            </form>
+                                        </div>   
+                                    {% endif %}  
+                                {% endfor %} 
+                            {% endif %}
+                            <p class="no-new-appts">No New Fluoroscopy Appointments</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+               
+
+                
+
+
+
+
+
+
+            </div>            
+        </div>
+</div>
+{% endblock content %}
+
+
+
+

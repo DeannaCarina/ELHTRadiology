@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="thanks-container">
+    <div class="thanks-hero"></div>
+    <div class="thanks-title">
+        Worklist        
+    </div>
+        <div class="accordion-container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            X-Ray Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if xrayappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                    </tr>
+                                {% for xrayappointment in xrayappointments %}
+                                    <tr class="appointment-table-row">
+                                        <td class="d-none d-md-block">{{ xrayappointment.ref_number }}</td>
+                                        <td>{{ xrayappointment.first_name}} {{xrayappointment.last_name }}</td>
+                                        <td class="d-none d-lg-block">{{ xrayappointment.date_of_birth }}</td>
+                                        <td>{{ xrayappointment.examination_type }}</td>
+                                        <td>{{ xrayappointment.exam_location }}</td>
+                                        <td>{{ xrayappointment.date_of_exam }}</td>
+                                        <td>{{ xrayappointment.time_of_exam }}</td>
+                                    </tr>
+                                {% endfor %} 
+                                </table>
+                            {% else %}
+                            <p>No X-Ray appointments</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            CT Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if ctappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                    </tr>
+                                {% for ctappointment in ctappointments %}
+                                    <tr class="appointment-table-row">
+                                        <td class="d-none d-md-block">{{ ctappointment.ref_number }}</td>
+                                        <td>{{ ctappointment.first_name}} {{ ctappointment.last_name }}</td>
+                                        <td class="d-none d-lg-block">{{ ctappointment.date_of_birth }}</td>
+                                        <td>{{ ctappointment.examination_type }}</td>
+                                        <td>{{ ctappointment.exam_location }}</td>
+                                        <td>{{ ctappointment.date_of_exam }}</td>
+                                        <td>{{ ctappointment.time_of_exam }}</td>
+                                    </tr>
+                                {% endfor %} 
+                                </table>
+                            {% else %}
+                            <p>No CT appointments</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            MRI Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if mriappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                    </tr>
+                                {% for mriappointment in mriappointments %}
+                                    <tr class="appointment-table-row">
+                                        <td class="d-none d-md-block">{{ mriappointment.ref_number }}</td>
+                                        <td>{{ mriappointment.first_name}} {{ mriappointment.last_name }}</td>
+                                        <td class="d-none d-lg-block">{{ mriappointment.date_of_birth }}</td>
+                                        <td>{{ mriappointment.examination_type }}</td>
+                                        <td>{{ mriappointment.exam_location }}</td>
+                                        <td>{{ mriappointment.date_of_exam }}</td>
+                                        <td>{{ mriappointment.time_of_exam }}</td>
+                                    </tr>
+                                {% endfor %} 
+                                </table>
+                            {% else %}
+                            <p>No MRI appointments</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>            
+        </div>
+</div>
+{% endblock content %}
+
+
+
+

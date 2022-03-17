@@ -5,12 +5,133 @@ from django.core import mail
 from django.core.mail import BadHeaderError, send_mail
 from django.conf import settings
 from django.contrib import messages
+import datetime
 import time
 from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment, UsAppointment
 
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
+
+
+class ManageTemplateView(TemplateView):
+    template_name = 'manage.html'
+    login_required = True
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        ctappointments = CtAppointment.objects.all()
+        xrayappointments = XrayAppointment.objects.all()
+        mriappointments = MriAppointment.objects.all()
+        usappointments = UsAppointment.objects.all()
+        mammoappointments = MammoAppointment.objects.all()
+        dexaappointments = DexaAppointment.objects.all()
+        nmappointments = NmAppointment.objects.all()
+        angioappointments = AngioAppointment.objects.all()
+        fluoroappointments = FluoroAppointment.objects.all()
+        
+        context.update({
+            "ctappointments":ctappointments,
+            "xrayappointments":xrayappointments,
+            "mriappointments":mriappointments,
+            "usappointments":usappointments,
+            "mammoappointments":mammoappointments,
+            "dexaappointments":dexaappointments,
+            "nmappointments":nmappointments,
+            "angioappointments":angioappointments,
+            "fluoroappointments":fluoroappointments,
+        })
+        return context
+
+    def post(self, request):
+        if request.POST.get("form_type") == 'xrayform':
+            ref_number = request.POST.get("ref_number")
+            xrayappointment = XrayAppointment.objects.get(ref_number=ref_number)
+            xrayappointment.accepted = True
+            xrayappointment.accepted_date = datetime.datetime.now()
+            xrayappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'ctform':
+            ref_number = request.POST.get("ref_number")
+            ctappointment = CtAppointment.objects.get(ref_number=ref_number)
+            ctappointment.accepted = True
+            ctappointment.accepted_date = datetime.datetime.now()
+            ctappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'mriform':
+            ref_number = request.POST.get("ref_number")
+            mriappointment = MriAppointment.objects.get(ref_number=ref_number)
+            mriappointment.accepted = True
+            mriappointment.accepted_date = datetime.datetime.now()
+            mriappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'usform':
+            ref_number = request.POST.get("ref_number")
+            usappointment = UsAppointment.objects.get(ref_number=ref_number)
+            usappointment.accepted = True
+            usappointment.accepted_date = datetime.datetime.now()
+            usappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'mammoform':
+            ref_number = request.POST.get("ref_number")
+            mammoappointment = MammoAppointment.objects.get(ref_number=ref_number)
+            mammoappointment.accepted = True
+            mammoappointment.accepted_date = datetime.datetime.now()
+            mammoappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'dexaform':
+            ref_number = request.POST.get("ref_number")
+            dexaappointment = DexaAppointment.objects.get(ref_number=ref_number)
+            dexaappointment.accepted = True
+            dexaappointment.accepted_date = datetime.datetime.now()
+            dexaappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'nmform':
+            ref_number = request.POST.get("ref_number")
+            nmappointment = NmAppointment.objects.get(ref_number=ref_number)
+            nmappointment.accepted = True
+            nmappointment.accepted_date = datetime.datetime.now()
+            nmappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'angioform':
+            ref_number = request.POST.get("ref_number")
+            angioappointment = AngioAppointment.objects.get(ref_number=ref_number)
+            angioappointment.accepted = True
+            angioappointment.accepted_date = datetime.datetime.now()
+            angioappointment.save()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'fluoroform':
+            ref_number = request.POST.get("ref_number")
+            fluoroappointment = FluoroAppointment.objects.get(ref_number=ref_number)
+            fluoroappointment.accepted = True
+            fluoroappointment.accepted_date = datetime.datetime.now()
+            fluoroappointment.save()
+            return HttpResponseRedirect(request.path)
+
+
+
+
+    
+    
+
+
+class WorklistTemplateView(TemplateView):
+    template_name = 'worklist.html'
+    login_required = True
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        ctappointments = CtAppointment.objects.all()
+        xrayappointments = XrayAppointment.objects.all()
+        mriappointments = MriAppointment.objects.all()
+        
+        
+        context.update({
+            "ctappointments":ctappointments,
+            "xrayappointments":xrayappointments,
+            "mriappointments":mriappointments,
+        })
+        return context
 
 
 class PrivacyTemplateView(TemplateView):
