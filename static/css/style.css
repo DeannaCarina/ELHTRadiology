@@ -1972,6 +1972,10 @@ button[type="submit"] {
     margin-top: 30px;
 }
 
+.appt-alert + .appt-alert {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
     .card-container {
         margin: 15px;
