@@ -9,10 +9,19 @@
     </div>
         <div class="accordion-container">
             <div class="accordion" id="accordionExample">
+
+                <!-- CONFIRMED XRAY APPOINTMENTS -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            {% if xrayappointments %}
+                                {% for xrayappointment in xrayappointments %}
+                                    {% if xrayappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                             X-Ray Appointments
                         </button>
                     </h2>
@@ -29,29 +38,49 @@
                                         <th>Location</th>
                                         <th>Exam Date</th>
                                         <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
                                     </tr>
-                                {% for xrayappointment in xrayappointments %}
-                                    <tr class="appointment-table-row">
-                                        <td class="d-none d-md-block">{{ xrayappointment.ref_number }}</td>
-                                        <td>{{ xrayappointment.first_name}} {{xrayappointment.last_name }}</td>
-                                        <td class="d-none d-lg-block">{{ xrayappointment.date_of_birth }}</td>
-                                        <td>{{ xrayappointment.examination_type }}</td>
-                                        <td>{{ xrayappointment.exam_location }}</td>
-                                        <td>{{ xrayappointment.date_of_exam }}</td>
-                                        <td>{{ xrayappointment.time_of_exam }}</td>
-                                    </tr>
-                                {% endfor %} 
+                                    {% for xrayappointment in xrayappointments %}
+                                        {% if xrayappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ xrayappointment.ref_number }}</td>
+                                                <td>{{ xrayappointment.first_name}} {{xrayappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ xrayappointment.date_of_birth }}</td>
+                                                <td>{{ xrayappointment.examination_type }}</td>
+                                                <td>{{ xrayappointment.exam_location }}</td>
+                                                <td>{{ xrayappointment.date_of_exam }}</td>
+                                                <td>{{ xrayappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="xrayform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="xrayform">
+                                                            <input hidden="true" name="ref_number" value="{{xrayappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
                                 </table>
-                            {% else %}
-                            <p>No X-Ray appointments</p>
                             {% endif %}
                         </div>
                     </div>
                 </div>
+
+                <!-- CONFIRMED CT APPOINTMENTS -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            {% if ctappointments %}
+                                {% for ctappointment in ctappointments %}
+                                    {% if ctappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                             CT Appointments
                         </button>
                     </h2>
@@ -68,29 +97,49 @@
                                         <th>Location</th>
                                         <th>Exam Date</th>
                                         <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
                                     </tr>
-                                {% for ctappointment in ctappointments %}
-                                    <tr class="appointment-table-row">
-                                        <td class="d-none d-md-block">{{ ctappointment.ref_number }}</td>
-                                        <td>{{ ctappointment.first_name}} {{ ctappointment.last_name }}</td>
-                                        <td class="d-none d-lg-block">{{ ctappointment.date_of_birth }}</td>
-                                        <td>{{ ctappointment.examination_type }}</td>
-                                        <td>{{ ctappointment.exam_location }}</td>
-                                        <td>{{ ctappointment.date_of_exam }}</td>
-                                        <td>{{ ctappointment.time_of_exam }}</td>
-                                    </tr>
-                                {% endfor %} 
+                                    {% for ctappointment in ctappointments %}
+                                        {% if ctappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ ctappointment.ref_number }}</td>
+                                                <td>{{ ctappointment.first_name}} {{ctappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ ctappointment.date_of_birth }}</td>
+                                                <td>{{ ctappointment.examination_type }}</td>
+                                                <td>{{ ctappointment.exam_location }}</td>
+                                                <td>{{ ctappointment.date_of_exam }}</td>
+                                                <td>{{ ctappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="ctform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="ctform">
+                                                            <input hidden="true" name="ref_number" value="{{ctappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
                                 </table>
-                            {% else %}
-                            <p>No CT appointments</p>
                             {% endif %}
                         </div>
                     </div>
                 </div>
+
+                <!-- CONFIRMED MRI APPOINTMENTS -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            {% if mriappointments %}
+                                {% for mriappointment in mriappointments %}
+                                    {% if mriappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
                             MRI Appointments
                         </button>
                     </h2>
@@ -107,34 +156,391 @@
                                         <th>Location</th>
                                         <th>Exam Date</th>
                                         <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
                                     </tr>
-                                {% for mriappointment in mriappointments %}
-                                    <tr class="appointment-table-row">
-                                        <td class="d-none d-md-block">{{ mriappointment.ref_number }}</td>
-                                        <td>{{ mriappointment.first_name}} {{ mriappointment.last_name }}</td>
-                                        <td class="d-none d-lg-block">{{ mriappointment.date_of_birth }}</td>
-                                        <td>{{ mriappointment.examination_type }}</td>
-                                        <td>{{ mriappointment.exam_location }}</td>
-                                        <td>{{ mriappointment.date_of_exam }}</td>
-                                        <td>{{ mriappointment.time_of_exam }}</td>
-                                    </tr>
-                                {% endfor %} 
+                                    {% for mriappointment in mriappointments %}
+                                        {% if mriappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ mriappointment.ref_number }}</td>
+                                                <td>{{ mriappointment.first_name}} {{mriappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ mriappointment.date_of_birth }}</td>
+                                                <td>{{ mriappointment.examination_type }}</td>
+                                                <td>{{ mriappointment.exam_location }}</td>
+                                                <td>{{ mriappointment.date_of_exam }}</td>
+                                                <td>{{ mriappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="mriform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="mriform">
+                                                            <input hidden="true" name="ref_number" value="{{mriappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
                                 </table>
-                            {% else %}
-                            <p>No MRI appointments</p>
                             {% endif %}
                         </div>
                     </div>
                 </div>
 
+                <!-- CONFIRMED ULTRASOUND APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            {% if usappointments %}
+                                {% for usappointment in usappointments %}
+                                    {% if usappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Ultrasound Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if usappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for usappointment in usappointments %}
+                                        {% if usappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ usappointment.ref_number }}</td>
+                                                <td>{{ usappointment.first_name}} {{usappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ usappointment.date_of_birth }}</td>
+                                                <td>{{ usappointment.examination_type }}</td>
+                                                <td>{{ usappointment.exam_location }}</td>
+                                                <td>{{ usappointment.date_of_exam }}</td>
+                                                <td>{{ usappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="usform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="usform">
+                                                            <input hidden="true" name="ref_number" value="{{usappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CONFIRMED MAMMO APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            {% if mammoappointments %}
+                                {% for mammoappointment in mammoappointments %}
+                                    {% if mammoappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Mammography Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if mammoappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for mammoappointment in mammoappointments %}
+                                        {% if mammoappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ mammoappointment.ref_number }}</td>
+                                                <td>{{ mammoappointment.first_name}} {{mammoappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ mammoappointment.date_of_birth }}</td>
+                                                <td>{{ mammoappointment.examination_type }}</td>
+                                                <td>{{ mammoappointment.exam_location }}</td>
+                                                <td>{{ mammoappointment.date_of_exam }}</td>
+                                                <td>{{ mammoappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="mammoform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="mammoform">
+                                                            <input hidden="true" name="ref_number" value="{{mammoappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CONFIRMED DEXA APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            {% if dexaappointments %}
+                                {% for dexaappointment in dexaappointments %}
+                                    {% if dexaappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Dexa Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if dexaappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for dexaappointment in dexaappointments %}
+                                        {% if dexaappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ dexaappointment.ref_number }}</td>
+                                                <td>{{ dexaappointment.first_name}} {{dexaappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ dexaappointment.date_of_birth }}</td>
+                                                <td>{{ dexaappointment.examination_type }}</td>
+                                                <td>{{ dexaappointment.exam_location }}</td>
+                                                <td>{{ dexaappointment.date_of_exam }}</td>
+                                                <td>{{ dexaappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="dexaform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="dexaform">
+                                                            <input hidden="true" name="ref_number" value="{{dexaappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CONFIRMED NUCLEAR MEDICINE APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            {% if nmappointments %}
+                                {% for nmappointment in nmappointments %}
+                                    {% if nmappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Nuclear Medicine Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if nmappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for nmappointment in nmappointments %}
+                                        {% if nmappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ nmappointment.ref_number }}</td>
+                                                <td>{{ nmappointment.first_name}} {{nmappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ nmappointment.date_of_birth }}</td>
+                                                <td>{{ nmappointment.examination_type }}</td>
+                                                <td>{{ nmappointment.exam_location }}</td>
+                                                <td>{{ nmappointment.date_of_exam }}</td>
+                                                <td>{{ nmappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="nmform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="nmform">
+                                                            <input hidden="true" name="ref_number" value="{{nmappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CONFIRMED ANGIOGRAPHY APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            {% if angioappointments %}
+                                {% for angioappointment in angioappointments %}
+                                    {% if angioappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Angiography Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if angioappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for angioappointment in angioappointments %}
+                                        {% if angioappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ angioappointment.ref_number }}</td>
+                                                <td>{{ angioappointment.first_name}} {{angioappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ angioappointment.date_of_birth }}</td>
+                                                <td>{{ angioappointment.examination_type }}</td>
+                                                <td>{{ angioappointment.exam_location }}</td>
+                                                <td>{{ angioappointment.date_of_exam }}</td>
+                                                <td>{{ angioappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="angioform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="angioform">
+                                                            <input hidden="true" name="ref_number" value="{{angioappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
 
-
-
-
+                <!-- CONFIRMED FLUOROSCOPY APPOINTMENTS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            {% if fluoroappointments %}
+                                {% for fluoroappointment in fluoroappointments %}
+                                    {% if fluoroappointment.accepted == True %}
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            Fluoroscopy Appointments
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body card-accordion">
+                            {% if fluoroappointments %}
+                                <table class="appointment-table">
+                                    <tr class="appointment-table-header">
+                                        <th class="d-none d-md-block">Reference Number</th>
+                                        <th>Name</th>
+                                        <th class="d-none d-lg-block">Date of Birth</th>
+                                        <th>Exam Type</th>
+                                        <th>Location</th>
+                                        <th>Exam Date</th>
+                                        <th>Exam Time</th>
+                                        <th>Complete<br> & Delete</th>
+                                    </tr>
+                                    {% for fluoroappointment in fluoroappointments %}
+                                        {% if fluoroappointment.accepted == True %}
+                                            <tr class="appointment-table-row">
+                                                <td class="d-none d-md-block">{{ fluoroappointment.ref_number }}</td>
+                                                <td>{{ fluoroappointment.first_name}} {{fluoroappointment.last_name }}</td>
+                                                <td class="d-none d-lg-block">{{ fluoroappointment.date_of_birth }}</td>
+                                                <td>{{ fluoroappointment.examination_type }}</td>
+                                                <td>{{ fluoroappointment.exam_location }}</td>
+                                                <td>{{ fluoroappointment.date_of_exam }}</td>
+                                                <td>{{ fluoroappointment.time_of_exam }}</td>
+                                                <td>
+                                                    <form method="POST" action="{% url 'worklist' %}" id="fluoroform">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <input hidden="true" name="form_type" value="fluoroform">
+                                                            <input hidden="true" name="ref_number" value="{{fluoroappointment.ref_number}}">
+                                                            <input class="btn-block appt-delete btn-primary form-control" type="submit" value="X">
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %} 
+                                </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
             </div>            
         </div>
 </div>

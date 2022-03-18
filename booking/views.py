@@ -109,12 +109,6 @@ class ManageTemplateView(TemplateView):
             return HttpResponseRedirect(request.path)
 
 
-
-
-    
-    
-
-
 class WorklistTemplateView(TemplateView):
     template_name = 'worklist.html'
     login_required = True
@@ -124,14 +118,72 @@ class WorklistTemplateView(TemplateView):
         ctappointments = CtAppointment.objects.all()
         xrayappointments = XrayAppointment.objects.all()
         mriappointments = MriAppointment.objects.all()
-        
+        usappointments = UsAppointment.objects.all()
+        mammoappointments = MammoAppointment.objects.all()
+        dexaappointments = DexaAppointment.objects.all()
+        nmappointments = NmAppointment.objects.all()
+        angioappointments = AngioAppointment.objects.all()
+        fluoroappointments = FluoroAppointment.objects.all()
         
         context.update({
             "ctappointments":ctappointments,
             "xrayappointments":xrayappointments,
             "mriappointments":mriappointments,
+            "usappointments":usappointments,
+            "mammoappointments":mammoappointments,
+            "dexaappointments":dexaappointments,
+            "nmappointments":nmappointments,
+            "angioappointments":angioappointments,
+            "fluoroappointments":fluoroappointments,
         })
         return context
+
+    def post(self, request):
+        if request.POST.get("form_type") == 'xrayform':
+            ref_number = request.POST.get("ref_number")
+            xrayappointment = XrayAppointment.objects.get(ref_number=ref_number)
+            xrayappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'ctform':
+            ref_number = request.POST.get("ref_number")
+            ctappointment = CtAppointment.objects.get(ref_number=ref_number)
+            ctappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'mriform':
+            ref_number = request.POST.get("ref_number")
+            mriappointment = MriAppointment.objects.get(ref_number=ref_number)
+            mriappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'usform':
+            ref_number = request.POST.get("ref_number")
+            usappointment = UsAppointment.objects.get(ref_number=ref_number)
+            usappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'mammoform':
+            ref_number = request.POST.get("ref_number")
+            mammoappointment = MammoAppointment.objects.get(ref_number=ref_number)
+            mammoappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'dexaform':
+            ref_number = request.POST.get("ref_number")
+            dexaappointment = DexaAppointment.objects.get(ref_number=ref_number)
+            dexaappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'nmform':
+            ref_number = request.POST.get("ref_number")
+            nmappointment = NmAppointment.objects.get(ref_number=ref_number)
+            nmappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'angioform':
+            ref_number = request.POST.get("ref_number")
+            angioappointment = AngioAppointment.objects.get(ref_number=ref_number)
+            angioappointment.delete()
+            return HttpResponseRedirect(request.path)
+        elif request.POST.get("form_type") == 'fluoroform':
+            ref_number = request.POST.get("ref_number")
+            fluoroappointment = FluoroAppointment.objects.get(ref_number=ref_number)
+            xrayappointment.delete()
+        
 
 
 class PrivacyTemplateView(TemplateView):

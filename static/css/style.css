@@ -1987,6 +1987,7 @@ button[type="submit"] {
 .appointment-table {
     border: 1px solid black;
     width: 100%;
+    text-align: center;
 }
 
 .appointment-table-header {
@@ -2009,17 +2010,42 @@ button[type="submit"] {
     color: rgb(255, 255, 255);
     font-weight: 900;
     font-size: larger;
-    height: 25px;
-    width: 25px;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
     text-align: center;
-    line-height: 27px;
+    line-height: 25px;
     margin-left: 15px;
 }
 
-.appt-alert + .appt-alert {
+.fa-clipboard-list + .fa-clipboard-list {
     display: none;
 }
+
+.fa-clipboard-list {
+    color: navy;
+    font-size: larger;
+    margin-right: 20px;
+}
+
+.appt-delete {
+    background-color: red;
+    border: 1px solid rgb(0, 0, 0);
+    padding-top: 15px;
+    padding-bottom: 18px;
+    width: 38px;
+    font-size: larger;
+    font-weight: 800;
+    margin-top: 0px;
+    line-height: 0px;
+    margin-top: 10px; 
+}
+
+.appt-delete:hover {
+    background-color: rgb(255, 195, 195);
+    border: 1px solid rgb(255, 56, 56);
+}
+
 
 
 /* ---------------END OF Worklist.html--------------- */
