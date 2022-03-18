@@ -102,9 +102,10 @@
                                     {% if request.user.is_superuser %}
                                     <li><a class="dropdown-item" href="{% url 'manage' %}">New Bookings</a></li>
                                     <li><a class="dropdown-item" href="{% url 'worklist' %}">Worklist</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                                     {% else %}
                                     <li><a class="dropdown-item" href="#">My Bookings</a></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                                     {% endif %}
                                 {% else %}
                                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
