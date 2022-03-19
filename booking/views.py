@@ -183,6 +183,7 @@ class WorklistTemplateView(TemplateView):
             ref_number = request.POST.get("ref_number")
             fluoroappointment = FluoroAppointment.objects.get(ref_number=ref_number)
             fluoroappointment.delete()
+            return HttpResponseRedirect(request.path)
         
 
 
