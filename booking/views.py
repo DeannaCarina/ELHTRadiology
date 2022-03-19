@@ -182,7 +182,7 @@ class WorklistTemplateView(TemplateView):
         elif request.POST.get("form_type") == 'fluoroform':
             ref_number = request.POST.get("ref_number")
             fluoroappointment = FluoroAppointment.objects.get(ref_number=ref_number)
-            xrayappointment.delete()
+            fluoroappointment.delete()
         
 
 
