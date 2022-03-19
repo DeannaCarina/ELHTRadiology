@@ -2053,3 +2053,32 @@ button[type="submit"] {
 
 
 /* ---------------END OF Worklist.html--------------- */
+
+.signin-container {
+    height: calc(100vh - 90px);
+    padding-top: 100px;
+    padding-left: 100px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(../images/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    color: white;
+}
+
+.logged-in-as {
+    text-decoration: none;
+    color: white;
+    font-size: x-small;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 570px) {
+    .signin-container {
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+}

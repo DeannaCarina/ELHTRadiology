@@ -40,8 +40,12 @@
                     <span class="logo">
                         <span class="ELHT-radiology">ELHT Radiology</span>
                         <span class="booking-service">Booking Service</span>
+                        {% if request.user.is_authenticated %}
+                            <span class="logged-in-as">Logged in as {{ user.username }}</span>
+                        {% endif %}
                     </span>
                 </a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
