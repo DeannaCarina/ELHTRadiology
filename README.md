@@ -359,13 +359,13 @@ From the table, I was able to recognise which features were more likely to have 
     <li><em>Booking forms for all radiology modalities to enable site users to be able to arrange radiology appointments</em> - The main purpose of the website is to enable patients to self-appoint once they have a radiology request, as such I had to implement a feature to allow patients to do this. The radiology department is split into modalities, so I have implemented a separate booking form for each modality, so members of staff in the department can look at their own modality list and manage their workflow for the day.</li>
     <li><em>Educational pages on the different radiology modalities</em> - from experience, I have found that a lot of patients are unaware why they are going for a certain radiology examination and are unaware of the differences between them. By having these information pages, it will enable patients to learn about their examination and enable the patient to give informed consent when they have their procedure/images.</li>
     <li><em>Educational pages on other aspects of the radiology department/booking process</em> - from experience, I have found that many patients are confused about certain aspects of their referral/examination procedure and are nervous when they attend for their examination. By having information pages explaining all aspects of the referral/examination/results process, it can reduce the anxiety that some patients feel when attending hospitals.</li>
-    <li><em>Ability for site admins to delete/read/update/create appointments for patients on their behalf</em> - This can be achieved via the Django administration page. I had hoped to implement a log in feature for staff members to do this via the website itself, and have a page showing all booked appointments, however due to time constraints and limits in my own coding/django knowledge, I chose to leave this feature out rather than risk a buggy/unfriendly user experience.</li>
+    <li><em>Ability for site admins to delete/read/update/create appointments for patients on their behalf</em> - This can be achieved via the Django administration page and also via the manage/worklist pages which are accessible via the admin dropdown list once an admin has logged in. When a patient goes through the booking process, the appointment is then sent to 'new bookings' for the radiology team to assess and accept based on the information the patient has given. If the appointment is accepted, it is then added to the radiology worklist so the radiology tam know that the patient is coming in for an examination.</li>
 </ul>   
 
 ### Features left to implement
 <ul>
     <li><em>An instant messaging service for patient to be able to contact the radiology department in real-time</em> - by having this feature it would enable patients to be able to contact the radiology department quickly and to be able to get an instant reply. This could be for situations such as if the patient is going to be late for their appointment, or if they need help with completing the booking form. This feature wasn't implemented because it was outside the scope of my own abilities, I haven't been taught how to do this in the code institute lessons, and I didn't want to struggle doing something that isn't necessarily 'important' when there are other ways to achieve a similar goal - e.g. the contact form.</li>
-    <li><em>The ability for patients to self-manage their radiology bookings</em> - I had hoped to implement this feature, and did start to implement it. However, I found myself struggling to do this with my lack of django experience. I also think that due to the 9 different booking forms, it made things more complicated. I started by generating a patient reference number, and I was going to use this in a single input form to generate the rest of the booking information (time, date, location etc.) to then enable the patient to either cancel or edit their booking. After a few failed attempts, I found this was much easier said than done, and took the decision to leave this feature out rather than cause potential errors with the website. If I had more time, I would likely try and find a way to implement this as I feel this is an important feature to add to the usability of the website and the overall satisfaction that users may gain. Another reason for not implementing this feature was the risk of making sensitive information available to malicious attacks. Since I started the project, I have had two companies contact me via the contact form trying to sell their products - I'm not sure how these companies have found my website, but it makes me very cautious to make certain aspects of the project more available for users (e.g. being able to retrieve data from the database). See below for screenshots of the emails I received via the website booking form.</li>
+    <li><em>The ability for patients to self-manage their radiology bookings</em> - I had started the project by wanting to create a way for users to manage and edit their own radiology bookings, however from experience of working within a radiology department, it makes more sense for the radiology team to have this ability to ensure the smooth running of the department. If patients need to cancel or rearrange their bookings at the moment within the department, they must contact the department in order for a more suitable appointment to be given to the patient and their original appointment to be passed to another patient who may need it. I have implemented the ability for staff members to view/accept/delete appointments made by patients - this (I find) would be more beneficial to the department and keep staff members aware of their day-to-day work load.</li>
     <img src="readmeassets/spam-email1.png" width="300px">
     <img src="readmeassets/spam-email2.png" width="300px">
 </ul>
@@ -841,56 +841,3 @@ As I have worked in the radiology field for nearly 7 years, all content in the w
 <img src="readmeassets/screen4.png">
 <img src="readmeassets/screen5.png">
 
-<h2 id="overall-thoughts">Overall thoughts/SWOT Analysis</h2>
-
-As this has been quite a large project, I have taken some time to review how I have found the process and what I could do better in my next (and final) project.
-<table>
-    <tr>
-        <th>Strengths</th>
-        <th>Weaknesses</th>
-    </tr>
-    <tr>
-        <td>
-            <ol>
-                <li>UX/UI</li>
-                <li>Design, image selection, colour schemes</li>
-                <li>Planning and wireframes</li>
-                <li>User empathy</li>
-                <li>Accessibility consideration</li>
-                <li>Content</li>
-            </ol>
-        </td>  
-        <td>
-            <ol>
-                <li>Time Management</li>
-                <li>Confidence</li>
-                <li>Knowledge of back-end</li>
-                <li>Critical/Logical thinking</li>
-            </ol>
-        </td>  
-    </tr>
-    <tr>
-        <th>Opportunities</th>
-        <th>Threats</th>
-    </tr>
-    <tr>
-        <td>
-            <ol>
-                <li>CI Mentors</li>
-                <li>CI Peer reviews</li>
-                <li>My fiancé (DevOps Engineer)</li>
-                <li>Family and friends (for testing the website)</li>
-            </ol>
-        </td>
-        <td>
-            <ol>
-                <li>Imposter Syndrome</li>
-                <li>Full-time work in Radiology</li>
-                <li>Personal health</li>
-            </ol>
-        </td>
-    </tr>
-</table><br>
-For all of my projects so far I have really enjoyed designing and making the websites as interactive and intuitive as possible. I am a naturally empathetic person (which is pretty much a given considering I've worked in healthcare for 12 years) so I feel this gives me a distinct advantage when it comes to empathising with the prospective and potential user. I can put myself in their shoes and have an idea about what I would want from a website/application and implement those things; however my main weakness is knowing how to implement these features. I have a multitude of ideas running around my head, but putting them into practice is another matter. I hope that the knowledge and confidence needed to implement more complicated features will come with time, as I am a kinesthetic learner, I learn by doing and repeating things - this unfortunately isn't something I can implement on this course due to time constraints and as such I feel that my coding abilities (especially in languages that are more indepth and object-orientated such as Python and JavaScript) are lacking. Thankfully I have a multitude of resources around me to keep me on track and point me in the right direction, primarily my partner who is a DevOps engineer, although he can't really help when it comes to coding (as he uses very different programming languages to those I am learning), he has been a massive help when it comes to pointing me in the right direction to fix things or implement things, "<em>Half the battle is knowing what to Google</em>" - T. Wigley 2022.<br>
-With this particular project (P4), I have really enjoyed combining my knowledge of radiology with my growing knowledge of coding. I chose radiology as the main theme/topic to ensure the passion and interest I have had so far in the course as a whole is maintained, which is what I have done for all of my projects. The likelihood is that this project will never be implemented in real life due to the sensitive nature and security around the NHS and it's applications, but it has been really fun to make something that would actually make a massive positive change in the department I work in.<br>
-Unfortunately through this particular project I have had some problems with time-management due to health concerns I have had, but I am still really proud of what I have achieved in the time-frame despite these problems and despite the overarching lack of confidence/understanding in implementing features using Django/Python. I feel my strengths definitely lay in the front-end design area of software development.<br>

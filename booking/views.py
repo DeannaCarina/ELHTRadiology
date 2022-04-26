@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.core import mail
@@ -8,7 +8,7 @@ from django.contrib import messages
 import datetime
 import time
 from .models import XrayAppointment, CtAppointment, MriAppointment, FluoroAppointment, AngioAppointment, DexaAppointment, MammoAppointment, NmAppointment, UsAppointment
-
+from django.contrib.auth.decorators import login_required
 
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
